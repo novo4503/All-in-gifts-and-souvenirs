@@ -2,16 +2,16 @@ from django.shortcuts import render
 from .models import SiteImage
 from .models import Product
 
-
 def home(request):
     images = {img.name: img for img in SiteImage.objects.all()}
     products = Product.objects.filter(show_on_home=True)
 
-    print("HOME PRODUCT COUNT:", products.count())
+    featured_product = Product.objects.filter(show_on_home=True).first()
 
     return render(request, 'store/index.html', {
         'images': images,
-        'products': products
+        'products': products,
+        'featured_product': featured_product,
     })
 
 
@@ -41,6 +41,14 @@ def Jew(request):
     })
 
 
+def pants(request):
+    products = Product.objects.filter(category='pants')
+
+    return render(request, 'store/Pants.html', {
+        'products': products
+    })
+
+
 def about_us(request):
     return render(request, 'store/about_us.html')
 
@@ -52,12 +60,15 @@ def product_detail(request, slug):
     product = Product.objects.get(slug=slug)
     return render(request, 'store/Product_Detail.html', {'product': product})
 
+
 def category_products(request, category):
+    images = {img.name: img for img in SiteImage.objects.all()}
     products = Product.objects.filter(category=category)
 
     return render(request, 'store/Jew.html', {
+        'images': images,
         'products': products,
-        'category': category
+        'category': category,
     })
 
 

@@ -14,10 +14,27 @@ class Product(models.Model):
     CATEGORY_CHOICES = [
         ('women', 'Women'),
         ('men', 'Men'),
+        ('kids', 'Kids'),
         ('jewelry', 'Jewelry'),
         ('bottle','Bottle'),
         ('bag','Bag'),
-        ('hat','Hat')
+        ('hat','Hat'),
+        ('shorts','Shorts'),
+        ('dress-shirt','Dress-Shirt'),
+        ('pants','Pants'),
+        ('tshirt','TShirt'),
+        ('kids-t-shirts', 'Kids T-Shirts'),
+        ('jamaica-outfits', 'Jamaica Outfits'),
+        ('kids-dresses', 'Kids Dresses'),
+        ('baby-onesies', 'Baby Onesies'),
+        ('silver-jewelry', 'Silver Jewelry'),
+        ('necklaces', 'Necklaces'),
+        ('bob-marley-bracelets', 'Bob Marley Bracelets'),
+        ('earrings', 'Earrings'),
+        ('baseball', 'Baseball'),
+        ('fedora', 'Fedora'),
+        ('visor', 'Visor'),
+        ('rasta-tams', 'Rasta Tams'),
     ]
 
     name = models.CharField(max_length=100)

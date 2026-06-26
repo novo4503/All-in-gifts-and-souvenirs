@@ -1539,63 +1539,35 @@ footer .container {
 															
 																	
 																		
-									 	<div class="first grid-sizer wishlist-disabled col-md-3 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile wcpa_has_options product type-product post-22372 status-publish instock product_cat-sunscreen product_cat-vacation-essentials product_tag-panama-jack-beauty product_tag-skincare-essentials product_tag-sun-protection has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
-        		<div class="content-product ">
-			
-			
-				{% for product in products %}
+									 	{% for product in products %}
+<div class="wishlist-disabled col-md-3 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile product">
+    <div class="content-product">
 
-<div class="product-image-wrapper hover-effect-disable">
+        <div class="product-image-wrapper hover-effect-disable">
+            {% if product.image %}
+            <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link"
+               href="{% url 'Product_Detail' product.slug %}">
+                <img width="300" height="300"
+                     src="{{ product.image.url }}"
+                     class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                     alt="{{ product.name }}">
+            </a>
+            {% endif %}
+        </div>
 
-    <a
-        class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link"
-        href="{% url 'Product_Detail' product.id %}"
-		
+        <div class="text-center product-details">
+            <h2 class="product-title">
+                <a href="{% url 'Product_Detail' product.slug %}">
+                    {{ product.name }}
+                </a>
+            </h2>
 
-    >
-        {% if product.image %}
-            <img
-                width="300"
-                height="300"
-                src="{{ product.image.url }}"
-                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                alt="{{ product.name }}"
-                decoding="async">
-        {% endif %}
-    </a>
-	{{ product.name }}
+            <span class="price">$ {{ product.price }}</span>
+        </div>
 
-    <footer class="footer-product">
-        <a
-            href="{% url 'Product_Detail' product.id %}"
-			
-
-            class="button product_type_simple add_to_cart_button wcpa_add_to_cart_button"
-        >
-            View Product
-        </a>
-
-        <span class="show-quickly">
-            Quick View
-        </span>
-    </footer>
-
+    </div>
 </div>
-
 {% endfor %}
-
-				
-					<div class="text-center product-details">							<h2 class="product-title">
-								<a href="https://www.greenapples.store/shop/after-sun-lotion-panama-jack-8-oz/">{{product.name}}</a>
-                            </h2>
-						
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>11.10</bdi></span></span>
-
-						
-                        
-                                        </div>
-									         		</div><!-- .content-product -->
-	</div>
 
 								
 																	
@@ -2165,7 +2137,8 @@ footer .container {
 				<div class="product-image-wrapper hover-effect-disable">
 
 										                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link" href="https://www.greenapples.store/shop/men-swim-shorts/" data-images="">
-                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[3][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[20][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" width="300" height="300" src="{{images.A20.image.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail not-transparent" alt="Men Swim Shorts" decoding="async" loading="lazy"  sizes="auto, (max-width: 300px) 100vw, 300px" data-has-transparency="false" data-dominant-color="b1afa1" style="--dominant-color: #b1afa1;">                        </a>
+
+                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[3][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[20][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" width="300" height="300" src="{{product.image.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail not-transparent" alt="Men Swim Shorts" decoding="async" loading="lazy"  sizes="auto, (max-width: 300px) 100vw, 300px" data-has-transparency="false" data-dominant-color="b1afa1" style="--dominant-color: #b1afa1;">                        </a>
 											<footer class="footer-product">
                             <a href="https://www.greenapples.store/shop/men-swim-shorts/" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_25739" data-quantity="1" class="button product_type_variable add_to_cart_button wcpa_add_to_cart_button" data-product_id="25739" data-product_sku="" aria-label="Select options for “Men Swim Shorts”" rel="nofollow" data-product_name="Men Swim Shorts">Select options</a>	<span id="woocommerce_loop_add_to_cart_link_describedby_25739" class="screen-reader-text">
 		This product has multiple variants. The options may be chosen on the product page	</span>

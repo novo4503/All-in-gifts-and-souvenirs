@@ -30,9 +30,12 @@ urlpatterns = [
     path('contact-us/', views.contact_us, name='contact_us'),
     path('Jew/', views.Jew, name='Jew'),
     path('product/<slug:slug>/', views.product_detail, name='Product_Detail'),
-    path("category/<str:category>/", views.category_products, name="category_products"),
+    path('category/<str:category>/', views.category_products, name='category_products'),
     path('shorts/', views.shorts, name='shorts'),
-      
+    path('category/<str:category>/', views.category_products, name='category_products'),
+    path('pants/', views.pants, name='pants'),
+    
+    
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
