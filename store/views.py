@@ -49,6 +49,24 @@ def pants(request):
     })
 
 
+def category_products(request, category):
+    products = Product.objects.filter(category=category)
+
+    return render(request, 'store/Pants.html', {
+        'products': products,
+        'category': category
+    })
+
+
+
+def tshirt(request):
+    products = Product.objects.filter(category='t-shirt')
+
+    return render(request, 'store/T-Shirt.html', {
+        'products': products
+    })
+
+
 def about_us(request):
     return render(request, 'store/about_us.html')
 
