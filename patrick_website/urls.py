@@ -27,13 +27,13 @@ urlpatterns = [
     path('women/', views.women, name='women'),
     path('men/', views.men, name='men'),
     path('about-us/', views.about_us, name='about_us'),
-    path('contact-us/', views.contact_us, name='contact_us'),
     path('Jew/', views.Jew, name='Jew'),
     path('product/<slug:slug>/', views.product_detail, name='Product_Detail'),
     path('category/<str:category>/', views.category_products, name='category_products'),
     path('shorts/', views.shorts, name='shorts'),
-    path('category/<str:category>/', views.category_products, name='category_products'),
     path('pants/', views.pants, name='pants'),
+    path('contact-us/', views.contact_us, name='contact_us'),
+    path('search/', views.search_products, name='search_products'),
     
     
 ]

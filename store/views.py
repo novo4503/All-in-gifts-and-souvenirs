@@ -1,12 +1,12 @@
-from django.shortcuts import render
-from .models import SiteImage
-from .models import Product
+from django.shortcuts import render, get_object_or_404
+from django.db.models import Q
+from .models import SiteImage, Product
+
 
 def home(request):
     images = {img.name: img for img in SiteImage.objects.all()}
     products = Product.objects.filter(show_on_home=True)
-
-    featured_product = Product.objects.filter(show_on_home=True).first()
+    featured_product = products.first()
 
     return render(request, 'store/index.html', {
         'images': images,
@@ -15,55 +15,25 @@ def home(request):
     })
 
 
-def women(request):
-    images = {img.name: img for img in SiteImage.objects.all()}
-    products = Product.objects.filter(category='women')
+def search_products(request):
+    query = request.GET.get('q', '')
 
-    return render(request, 'store/women.html', {
-        'images': images,
-        'products': products
-    })
+    products = Product.objects.filter(
+        Q(name__icontains=query) |
+        Q(category__icontains=query)
+    ) if query else Product.objects.none()
 
-
-def men(request):
-    products = Product.objects.filter(category='men')
-
-    return render(request, 'store/men.html', {
-        'products': products
-    })
-
-
-def Jew(request):
-    products = Product.objects.filter(category='jewelry')
-
-    return render(request, 'store/Jew.html', {
-        'products': products
-    })
-
-
-def pants(request):
-    products = Product.objects.filter(category='pants')
-
-    return render(request, 'store/Pants.html', {
-        'products': products
-    })
-
-
-def category_products(request, category):
-    products = Product.objects.filter(category=category)
-
-    return render(request, 'store/Pants.html', {
+    return render(request, 'store/search_results.html', {
         'products': products,
-        'category': category
+        'query': query,
     })
 
 
+def contact_us(request):
+    images = {img.name: img for img in SiteImage.objects.all()}
 
-def tshirt(request):
-    products = Product.objects.filter(category='t-shirt')
-
-    return render(request, 'store/T-Shirt.html', {
-        'products': products
+    return render(request, 'store/contact_us.html', {
+        'images': images,
     })
 
 
@@ -71,12 +41,55 @@ def about_us(request):
     return render(request, 'store/about_us.html')
 
 
-def contact_us(request):
-    return render(request, 'store/contact_us.html')
+def women(request):
+    images = {img.name: img for img in SiteImage.objects.all()}
+    products = Product.objects.filter(category='women')
 
-def product_detail(request, slug):
-    product = Product.objects.get(slug=slug)
-    return render(request, 'store/Product_Detail.html', {'product': product})
+    return render(request, 'store/women.html', {
+        'images': images,
+        'products': products,
+    })
+
+
+def men(request):
+    products = Product.objects.filter(category='men')
+
+    return render(request, 'store/men.html', {
+        'products': products,
+    })
+
+
+def Jew(request):
+    products = Product.objects.filter(category='jewelry')
+
+    return render(request, 'store/Jew.html', {
+        'products': products,
+    })
+
+
+def pants(request):
+    products = Product.objects.filter(category='pants')
+
+    return render(request, 'store/Pants.html', {
+        'products': products,
+    })
+
+
+def shorts(request):
+    products = Product.objects.filter(category='shorts')
+
+    return render(request, 'store/Jew.html', {
+        'products': products,
+        'category': 'shorts',
+    })
+
+
+def tshirt(request):
+    products = Product.objects.filter(category='t-shirt')
+
+    return render(request, 'store/T-Shirt.html', {
+        'products': products,
+    })
 
 
 def category_products(request, category):
@@ -90,10 +103,14 @@ def category_products(request, category):
     })
 
 
-def shorts(request):
-    products = Product.objects.filter(category='shorts')
+def product_detail(request, slug):
+    product = get_object_or_404(Product, slug=slug)
 
-    return render(request, 'store/Jew.html', {
-        'products': products,
-        'category': 'shorts'
+    related_products = Product.objects.filter(
+        category=product.category
+    ).exclude(id=product.id)[:4]
+
+    return render(request, 'store/Product_Detail.html', {
+        'product': product,
+        'related_products': related_products,
     })
