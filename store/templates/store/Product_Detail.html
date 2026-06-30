@@ -327,15 +327,34 @@ font-size: large;
 a.glink {
     
     padding: 10px !important;
+	display:none;
 }
 
 a.glink img {
 	padding: 3px !important;
+	display:none;
+}
+
+
+.et-mobile-panel-wrapper, .et_b_mobile-panel-more_toggle .et-mini-content, .et_b_mobile-panel-more_toggle_02 .et-mini-content, .et-mobile-panel .et_column {
+    background: #43a047;
+    background-color: skyblue;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
 .item-link{
 	background-color:skyblue !important;
+}
+
+
+.et-content_toggle .et-mini-content.active, .et-off-canvas .et-mini-content.active {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    opacity: 1;
+    visibility: visible;
+	background-color: skyblue;
 }
 
 .footer-widgets,
@@ -1084,7 +1103,7 @@ footer span,
 
     <div class="et_element et_b_header-logo justify-content-center">
         <a href="https://www.greenapples.store">
-            <span><img data-od-removed-fetchpriority="high" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::SPAN]/*[1][self::IMG]" width="1200" height="216" src="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg" class="et_b_header-logo-img" alt="Logo Green Apples" srcset="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg " 2x="" decoding="async"></span>            
+            <span><img data-od-removed-fetchpriority="high" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::SPAN]/*[1][self::IMG]" width="1200" height="216" src="{% static 'store/logotorro.png' %}" class="et_b_header-logo-img" alt="Logo Green Apples" 2x="" decoding="async"></span>            
         </a>
     </div>
 
@@ -1127,10 +1146,7 @@ footer span,
 		            <div class="et_b-tab-content active" data-tab-name="menu">
 				                    <div class="et_element et_b_header-menu header-mobile-menu flex align-items-center" data-title="Menu">
 						<div class="menu-main-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-1431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1431 item-level-0 item-design-dropdown"><a href="https://www.greenapples.store/" class="item-link">Home</a></li>
-<li id="menu-item-1432" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1432 item-level-0 item-design-dropdown"><a href="https://www.greenapples.store/shop/" class="item-link">Shop Online</a></li>
-<li id="menu-item-27588" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27588 item-level-0 item-design-dropdown"><a href="https://mallshuttle.com/" class="item-link">Mall Shuttle</a></li>
-<li id="menu-item-1433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1433 item-level-0 item-design-dropdown"><a href="https://www.greenapples.store/blog/" class="item-link">Blog</a></li>
-<li id="menu-item-1430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1430 item-level-0 item-design-dropdown"><a href="https://www.greenapples.store/about-us/" class="item-link">About us</a></li>
+
 <li id="menu-item-1429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429 item-level-0 item-design-dropdown"><a href="https://www.greenapples.store/contact-us/" class="item-link">Contact us</a></li>
 </ul></div>                    </div>
 				            </div>
@@ -1370,11 +1386,7 @@ footer span,
     <a href="https://www.greenapples.store/my-account/" class=" flex full-width align-items-center  justify-content-inherit">
 			<span class="flex justify-content-center align-items-center flex-wrap">
 
-				                    <span class="et_b-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>					</span>
-								
-				                    <span class="et-element-label inline-block ">
-						Login					</span>
+				                    
 								
 				
 			</span>
@@ -1384,17 +1396,7 @@ footer span,
 
 
 
-<div class="et_element et_b_header-socials et-socials flex flex-nowrap align-items-center  justify-content-center flex-row">
-	        <a href="https://www.facebook.com/greenapples.store" rel="nofollow" data-tooltip="Facebook" title="Facebook">
-            <span class="screen-reader-text hidden">Facebook</span>
-			<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M13.488 8.256v-3c0-0.84 0.672-1.488 1.488-1.488h1.488v-3.768h-2.976c-2.472 0-4.488 2.016-4.488 4.512v3.744h-3v3.744h3v12h4.512v-12h3l1.488-3.744h-4.512z"></path></svg>        </a>
-	        <a href="https://youtube.com/channel/UCJTcbPPI__ki68LTOKRX8hw" rel="nofollow" data-tooltip="Youtube" title="Youtube">
-            <span class="screen-reader-text hidden">Youtube</span>
-			<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path d="M31.050 7.041c-0.209-0.886-0.874-1.597-1.764-1.879-2.356-0.748-7.468-1.47-13.286-1.47s-10.93 0.722-13.287 1.47c-0.889 0.282-1.555 0.993-1.764 1.879-0.394 1.673-0.95 4.776-0.95 8.959s0.556 7.286 0.95 8.959c0.209 0.886 0.874 1.597 1.764 1.879 2.356 0.748 7.468 1.47 13.286 1.47s10.93-0.722 13.287-1.47c0.889-0.282 1.555-0.993 1.764-1.879 0.394-1.673 0.95-4.776 0.95-8.959s-0.556-7.286-0.95-8.959zM12.923 20.923v-9.846l9.143 4.923-9.143 4.923z"></path></svg>        </a>
-	        <a href="https://www.instagram.com/greenapples.store/" rel="nofollow" data-tooltip="Instagram" title="Instagram">
-            <span class="screen-reader-text hidden">Instagram</span>
-			<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.512 0h-9.024c-4.128 0-7.488 3.36-7.488 7.488v9c0 4.152 3.36 7.512 7.488 7.512h9c4.152 0 7.512-3.36 7.512-7.488v-9.024c0-4.128-3.36-7.488-7.488-7.488zM21.744 16.512c0 2.904-2.352 5.256-5.256 5.256h-9c-2.904 0-5.256-2.352-5.256-5.256v-9.024c0-2.904 2.352-5.256 5.256-5.256h9c2.904 0 5.256 2.352 5.256 5.256v9.024zM12 6c-3.312 0-6 2.688-6 6s2.688 6 6 6 6-2.688 6-6-2.688-6-6-6zM12 15.744c-2.064 0-3.744-1.68-3.744-3.744s1.68-3.744 3.744-3.744 3.744 1.68 3.744 3.744c0 2.064-1.68 3.744-3.744 3.744zM19.248 5.544c0 0.437-0.355 0.792-0.792 0.792s-0.792-0.355-0.792-0.792c0-0.437 0.355-0.792 0.792-0.792s0.792 0.355 0.792 0.792z"></path></svg>        </a>
-	</div>
+
 
             </div>
         </div>
@@ -1408,7 +1410,7 @@ footer span,
 
     <div class="et_element et_b_header-logo align-start mob-align-center et_element-top-level">
         <a href="https://www.greenapples.store">
-            <span><img data-od-removed-fetchpriority="high" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::SPAN]/*[1][self::IMG]" width="1200" height="216" src="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg" class="et_b_header-logo-img" alt="Logo Green Apples" srcset="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg " 2x="" decoding="async"></span><span class="fixed"><img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[2][self::SPAN]/*[1][self::IMG]" width="1200" height="216" src="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg" class="et_b_header-logo-img" alt="Logo Green Apples" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg 1200w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-600x108.jpg 600w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-300x54.jpg 300w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-1024x184.jpg 1024w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-768x138.jpg 768w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-1x1.jpg 1w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-10x2.jpg 10w" sizes="(max-width: 1200px) 100vw, 1200px"></span>            
+            <span><img data-od-removed-fetchpriority="high" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::SPAN]/*[1][self::IMG]" width="1200" height="216" src="{% static 'store/logotorro.png' %}" class="et_b_header-logo-img" alt="Logo Green Apples"  2x="" decoding="async"></span><span class="fixed"><img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[2][self::SPAN]/*[1][self::IMG]" width="1200" height="216" src="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg" class="et_b_header-logo-img" alt="Logo Green Apples" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples.jpg 1200w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-600x108.jpg 600w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-300x54.jpg 300w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-1024x184.jpg 1024w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-768x138.jpg 768w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-1x1.jpg 1w, https://www.greenapples.store/wp-content/uploads/2021/05/Logo-Green-Apples-10x2.jpg 10w" sizes="(max-width: 1200px) 100vw, 1200px"></span>            
         </a>
     </div>
 
@@ -2024,17 +2026,7 @@ footer span,
 				
             </a>
 			        </div>
-		        <div class="et_column flex align-items-center justify-content-center  et_b_mobile-panel-custom">
-            <a href="https://mallshuttle.com/" class="currentColor flex flex-col align-items-center ">
-				
-				                    <span class="et_b-icon">
-							<span class="et-svg"><img data-od-xpath="/HTML/BODY/DIV[@class='et-mobile-panel-wrapper dt-hide etheme-sticky-panel et_element pos-fixed bottom full-width']/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::A]/*[1][self::SPAN]/*[1][self::SPAN]/*[1][self::IMG]" loading="lazy" width="150" height="150" src="https://www.greenapples.store/wp-content/uploads/2023/01/carshuttle-150x150.png" class="" alt="" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2023/01/carshuttle-150x150.png 150w, https://www.greenapples.store/wp-content/uploads/2023/01/carshuttle-100x100.png 100w, https://www.greenapples.store/wp-content/uploads/2023/01/carshuttle-1x1.png 1w, https://www.greenapples.store/wp-content/uploads/2023/01/carshuttle-10x10.png 10w, https://www.greenapples.store/wp-content/uploads/2023/01/carshuttle.png 224w" sizes="auto, (max-width: 150px) 100vw, 150px"></span>						</span>
-								
-				                    <span class="text-nowrap">
-							Shuttle						</span>
-				
-            </a>
-			        </div>
+		       
 		        <div class="et_column flex align-items-center justify-content-center  et_b_mobile-panel-custom">
             <a href="https://www.instagram.com/greenapples.store/" class="currentColor flex flex-col align-items-center ">
 				
@@ -2046,17 +2038,7 @@ footer span,
 				
             </a>
 			        </div>
-		        <div class="et_column flex align-items-center justify-content-center  et_b_mobile-panel-custom">
-            <a href="https://www.facebook.com/prem.samtani" class="currentColor flex flex-col align-items-center ">
-				
-				                    <span class="et_b-icon">
-							<span class="et-svg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M13.488 8.256v-3c0-0.84 0.672-1.488 1.488-1.488h1.488v-3.768h-2.976c-2.472 0-4.488 2.016-4.488 4.512v3.744h-3v3.744h3v12h4.512v-12h3l1.488-3.744h-4.512z"></path></svg></span>						</span>
-								
-				                    <span class="text-nowrap">
-							FB						</span>
-				
-            </a>
-			        </div>
+		        
 		        <div class="et_column flex align-items-center justify-content-center  et_b_mobile-panel-custom">
             <a href="https://www.greenapples.store/contact-us/" class="currentColor flex flex-col align-items-center ">
 				
