@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-	<link rel="icon" type="image/x-icon" href="{% static 'store/locator.png' %}">
+	
 <script async="" src="https://chimpstatic.com/mcjs-connected/js/users/06b7f061e8055d7e4046dafdb/d388baee686640ddcb501ea53.js"></script><script async="" src="https://chimpstatic.com/mcjs-connected/js/users/06b7f061e8055d7e4046dafdb/d388baee686640ddcb501ea53.js"></script><script>window._wca = window._wca || [];</script>
 
 
@@ -1858,195 +1858,44 @@ footer span,
 
         </div>
 	        <div class="element-Dbuvt et_column et_product-block mob-full-width mob-full-width-children justify-content-start" style="width:100%;" data-key="element-Dbuvt" data-width="100" data-start="0">
-			<div class="related-products-wrapper products-hover-only-icons"><h2 class="products-title related-products-title"><span>Related products</span></h2>				<div class="row products products-loop products-grid related-products row-count-6" data-row-count="6">
+			<div class="related-products-wrapper products-hover-only-icons">
+    <h2 class="products-title related-products-title">
+        <span>Related products</span>
+    </h2>
 
-				
-									
-					 	<div class="first grid-sizer wishlist-disabled col-md-2 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile wcpa_has_options product type-product post-19851 status-publish instock product_cat-luggages product_cat-vacation-essentials has-post-thumbnail taxable shipping-taxable purchasable product-type-variable">
-        		<div class="content-product ">
-			
-			
-				<div class="product-image-wrapper hover-effect-disable">
+    <div class="row products products-loop products-grid related-products row-count-4">
 
-										                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link" href="https://www.greenapples.store/shop/suitcase-4-wheels-black/" data-images="">
-                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" width="300" height="300" src="https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Suitcase 4 Wheels Black" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9818.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9818-100x100.jpeg 100w" sizes="auto, (max-width: 300px) 100vw, 300px">                        </a>
-											<footer class="footer-product">
-                            <a href="https://www.greenapples.store/shop/suitcase-4-wheels-black/" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_19851" data-quantity="1" class="button product_type_variable add_to_cart_button wcpa_add_to_cart_button" data-product_id="19851" data-product_sku="" aria-label="Select options for “Suitcase 4 Wheels Black”" rel="nofollow" data-product_name="Suitcase 4 Wheels Black">Select options</a>	<span id="woocommerce_loop_add_to_cart_link_describedby_19851" class="screen-reader-text">
-		This product has multiple variants. The options may be chosen on the product page	</span>
-									<span class="show-quickly" data-prodid="19851">Quick View</span>
-                                                            						</footer>
-									</div>
+        {% for related in related_products %}
+            <div class="col-md-3 col-sm-6 col-xs-6 product">
+                <div class="content-product">
 
-				
-					<div class="text-center product-details">							<h2 class="product-title">
-								<a href="https://www.greenapples.store/shop/suitcase-4-wheels-black/">Suitcase 4 Wheels Black</a>
-                            </h2>
-						
-	<span class="price"><span class="woocommerce-Price-amount amount" aria-hidden="true"><bdi><span class="woocommerce-Price-currencySymbol">$</span>69.99</bdi></span> <span aria-hidden="true">–</span> <span class="woocommerce-Price-amount amount" aria-hidden="true"><bdi><span class="woocommerce-Price-currencySymbol">$</span>89.99</bdi></span><span class="screen-reader-text">Price range: $69.99 through $89.99</span></span>
+                    <div class="product-image-wrapper hover-effect-disable">
+                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                           href="{% url 'Product_Detail' related.slug %}">
+                            {% if related.image %}
+                                <img src="{{ related.image.url }}" alt="{{ related.name }}">
+                            {% endif %}
+                        </a>
+                    </div>
 
-						
-                        
-                                        </div>
-									         		</div><!-- .content-product -->
-	</div>
+                    <div class="text-center product-details">
+                        <h2 class="product-title">
+                            <a href="{% url 'Product_Detail' related.slug %}">
+                                {{ related.name }}
+                            </a>
+                        </h2>
 
-				
-									
-					 	<div class="wishlist-disabled col-md-2 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile wcpa_has_options product type-product post-21103 status-publish instock product_cat-thermal-mugs product_cat-mugs product_cat-vacation-essentials product_tag-stainless-steel-coffee-mug product_tag-stainless-steel-thermal-mug product_tag-thermal-mug has-post-thumbnail taxable shipping-taxable purchasable product-type-variable">
-        		<div class="content-product ">
-			
-			
-				<div class="product-image-wrapper hover-effect-disable">
+                        <span class="price">${{ related.price }}</span>
+                    </div>
 
-										                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link" href="https://www.greenapples.store/shop/thermal-mug-stainless-steel/" data-images="">
-                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" width="300" height="300" src="https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Thermal Mug Stainless Steel 16 Oz" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-1024x1024.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112-100x100.jpeg 100w, https://www.greenapples.store/wp-content/uploads/2022/09/img_8112.jpeg 1080w" sizes="auto, (max-width: 300px) 100vw, 300px">                        </a>
-											<footer class="footer-product">
-                            <a href="https://www.greenapples.store/shop/thermal-mug-stainless-steel/" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_21103" data-quantity="1" class="button product_type_variable add_to_cart_button wcpa_add_to_cart_button" data-product_id="21103" data-product_sku="" aria-label="Select options for “Thermal Mug Stainless Steel 16 Oz”" rel="nofollow" data-product_name="Thermal Mug Stainless Steel 16 Oz">Select options</a>	<span id="woocommerce_loop_add_to_cart_link_describedby_21103" class="screen-reader-text">
-		This product has multiple variants. The options may be chosen on the product page	</span>
-									<span class="show-quickly" data-prodid="21103">Quick View</span>
-                                                            						</footer>
-									</div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No related products yet.</p>
+        {% endfor %}
 
-				
-					<div class="text-center product-details">							<h2 class="product-title">
-								<a href="https://www.greenapples.store/shop/thermal-mug-stainless-steel/">Thermal Mug Stainless Steel 16 Oz</a>
-                            </h2>
-						
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>14.99</bdi></span></span>
-
-						
-                        
-                                        </div>
-									         		</div><!-- .content-product -->
-	</div>
-
-				
-									
-					 	<div class="wishlist-disabled col-md-2 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile wcpa_has_options product type-product post-21497 status-publish last instock product_cat-souvenirs-gifts product_cat-vacation-essentials product_cat-water product_cat-water-shoes product_cat-water-shoes-vacation-essentials has-post-thumbnail taxable shipping-taxable purchasable product-type-variable">
-        		<div class="content-product ">
-			
-			
-				<div class="product-image-wrapper hover-effect-disable">
-
-										                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link" href="https://www.greenapples.store/shop/water-shoes-jamaica-rasta-color-tie-dye/" data-images="">
-                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" width="300" height="300" src="https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Water Shoes Jamaica Rasta Color Tie Dye" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-300x300.jpg 300w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-1024x1024.jpg 1024w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-150x150.jpg 150w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-768x768.jpg 768w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-1x1.jpg 1w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-10x10.jpg 10w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-600x600.jpg 600w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1-100x100.jpg 100w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0111-1.jpg 1080w" sizes="auto, (max-width: 300px) 100vw, 300px">                        </a>
-											<footer class="footer-product">
-                            <a href="https://www.greenapples.store/shop/water-shoes-jamaica-rasta-color-tie-dye/" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_21497" data-quantity="1" class="button product_type_variable add_to_cart_button wcpa_add_to_cart_button" data-product_id="21497" data-product_sku="" aria-label="Select options for “Water Shoes Jamaica Rasta Color Tie Dye”" rel="nofollow" data-product_name="Water Shoes Jamaica Rasta Color Tie Dye">Select options</a>	<span id="woocommerce_loop_add_to_cart_link_describedby_21497" class="screen-reader-text">
-		This product has multiple variants. The options may be chosen on the product page	</span>
-									<span class="show-quickly" data-prodid="21497">Quick View</span>
-                                                            						</footer>
-									</div>
-
-				
-					<div class="text-center product-details">							<h2 class="product-title">
-								<a href="https://www.greenapples.store/shop/water-shoes-jamaica-rasta-color-tie-dye/">Water Shoes Jamaica Rasta Color Tie Dye</a>
-                            </h2>
-						
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>9.99</bdi></span></span>
-
-						
-                        
-                                        </div>
-									         		</div><!-- .content-product -->
-	</div>
-
-				
-									
-					 	<div class="first grid-sizer wishlist-disabled col-md-2 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile wcpa_has_options product type-product post-5120 status-publish instock product_cat-vacation-essentials product_cat-water-sports-gears has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
-        		<div class="content-product et-product-height-calculated">
-			
-			
-				<div class="product-image-wrapper hover-effect-disable">
-
-										                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link" href="https://www.greenapples.store/shop/intex-55648e-aqua-flow-adult-swim-set-mask-with-snorkel/" data-images="">
-                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[4][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" width="300" height="300" src="https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Intex 55648E Aqua Flow Adult  Swim Set Mask with Snorkel" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-1024x1024.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-100x100.jpeg 100w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2315.jpeg 1080w" sizes="auto, (max-width: 300px) 100vw, 300px">                        </a>
-											<footer class="footer-product">
-                            <a href="https://www.greenapples.store/shop/intex-55648e-aqua-flow-adult-swim-set-mask-with-snorkel/" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_5120" data-quantity="1" class="button product_type_simple add_to_cart_button wcpa_add_to_cart_button" data-product_id="5120" data-product_sku="" aria-label="Add to cart: “Intex 55648E Aqua Flow Adult  Swim Set Mask with Snorkel”" rel="nofollow" data-success_message="“Intex 55648E Aqua Flow Adult  Swim Set Mask with Snorkel” has been added to your cart" data-product_name="Intex 55648E Aqua Flow Adult  Swim Set Mask with Snorkel">Select options</a>	<span id="woocommerce_loop_add_to_cart_link_describedby_5120" class="screen-reader-text">
-			</span>
-									<span class="show-quickly" data-prodid="5120">Quick View</span>
-                                                            						</footer>
-									</div>
-
-				
-					<div class="text-center product-details">							<h2 class="product-title">
-								<a href="https://www.greenapples.store/shop/intex-55648e-aqua-flow-adult-swim-set-mask-with-snorkel/">Intex 55648E Aqua Flow Adult  Swim Set Mask with Snorkel</a>
-                            </h2>
-						
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>24.99</bdi></span></span>
-
-						
-                        
-                                        </div>
-									         		</div><!-- .content-product -->
-	</div>
-
-				
-									
-					 	<div class="wishlist-disabled col-md-2 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile wcpa_has_options product type-product post-19791 status-publish instock product_cat-luggages product_cat-vacation-essentials has-post-thumbnail taxable shipping-taxable purchasable product-type-variable">
-        		<div class="content-product et-product-height-calculated">
-			
-			
-				<div class="product-image-wrapper hover-effect-disable">
-
-										                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link" href="https://www.greenapples.store/shop/suitcase-4-wheel-black-zipper/" data-images="">
-                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[5][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" width="300" height="300" src="https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Suitcase 4 Wheels Black Zipper" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9745.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2021/06/img_9745-100x100.jpeg 100w" sizes="auto, (max-width: 300px) 100vw, 300px">                        </a>
-											<footer class="footer-product">
-                            <a href="https://www.greenapples.store/shop/suitcase-4-wheel-black-zipper/" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_19791" data-quantity="1" class="button product_type_variable add_to_cart_button wcpa_add_to_cart_button" data-product_id="19791" data-product_sku="" aria-label="Select options for “Suitcase 4 Wheels Black Zipper”" rel="nofollow" data-product_name="Suitcase 4 Wheels Black Zipper">Select options</a>	<span id="woocommerce_loop_add_to_cart_link_describedby_19791" class="screen-reader-text">
-		This product has multiple variants. The options may be chosen on the product page	</span>
-									<span class="show-quickly" data-prodid="19791">Quick View</span>
-                                                            						</footer>
-									</div>
-
-				
-					<div class="text-center product-details">							<h2 class="product-title">
-								<a href="https://www.greenapples.store/shop/suitcase-4-wheel-black-zipper/">Suitcase 4 Wheels Black Zipper</a>
-                            </h2>
-						
-	<span class="price"><span class="woocommerce-Price-amount amount" aria-hidden="true"><bdi><span class="woocommerce-Price-currencySymbol">$</span>69.99</bdi></span> <span aria-hidden="true">–</span> <span class="woocommerce-Price-amount amount" aria-hidden="true"><bdi><span class="woocommerce-Price-currencySymbol">$</span>89.99</bdi></span><span class="screen-reader-text">Price range: $69.99 through $89.99</span></span>
-
-						
-                        
-                                        </div>
-									         		</div><!-- .content-product -->
-	</div>
-
-				
-									
-					 	<div class="wishlist-disabled col-md-2 col-sm-6 col-xs-6 product-hover-disable product-view-mask3 view-color-white et_cart-on hide-hover-on-mobile wcpa_has_options product type-product post-21509 status-publish last instock product_cat-souvenirs-gifts product_cat-vacation-essentials product_cat-water product_cat-water-shoes product_cat-water-shoes-vacation-essentials has-post-thumbnail taxable shipping-taxable purchasable product-type-variable">
-        		<div class="content-product et-product-height-calculated">
-			
-			
-				<div class="product-image-wrapper hover-effect-disable">
-
-										                        <a class="product-content-image woocommerce-LoopProduct-link woocommerce-loop-product__link" href="https://www.greenapples.store/shop/water-shoes-jamaica-flag-color-tie-dye/" data-images="">
-                            <img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[2][self::DIV]/*[6][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" width="300" height="300" src="https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Water Shoes Jamaica Flag Color Tie Dye Women" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-300x300.jpg 300w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-1024x1024.jpg 1024w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-150x150.jpg 150w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-768x768.jpg 768w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-1x1.jpg 1w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-10x10.jpg 10w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-600x600.jpg 600w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1-100x100.jpg 100w, https://www.greenapples.store/wp-content/uploads/2023/01/IMG_0112-1.jpg 1080w" sizes="auto, (max-width: 300px) 100vw, 300px">                        </a>
-											<footer class="footer-product">
-                            <a href="https://www.greenapples.store/shop/water-shoes-jamaica-flag-color-tie-dye/" aria-describedby="woocommerce_loop_add_to_cart_link_describedby_21509" data-quantity="1" class="button product_type_variable add_to_cart_button wcpa_add_to_cart_button" data-product_id="21509" data-product_sku="" aria-label="Select options for “Water Shoes Jamaica Flag Color Tie Dye Women”" rel="nofollow" data-product_name="Water Shoes Jamaica Flag Color Tie Dye Women">Select options</a>	<span id="woocommerce_loop_add_to_cart_link_describedby_21509" class="screen-reader-text">
-		This product has multiple variants. The options may be chosen on the product page	</span>
-									<span class="show-quickly" data-prodid="21509">Quick View</span>
-                                                            						</footer>
-									</div>
-
-				
-					<div class="text-center product-details">							<h2 class="product-title">
-								<a href="https://www.greenapples.store/shop/water-shoes-jamaica-flag-color-tie-dye/">Water Shoes Jamaica Flag Color Tie Dye Women</a>
-                            </h2>
-						
-	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>11.10</bdi></span></span>
-
-						
-                        
-                                        </div>
-									         		</div><!-- .content-product -->
-	</div>
-
-				
-								
-				</div> <!-- .row -->					</div>        </div>
-				</div>
-		</div>
-		
-			</div>
+    </div>
+</div>
 
 
 

@@ -103,12 +103,14 @@ def category_products(request, category):
     })
 
 
+ 
+
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
 
     related_products = Product.objects.filter(
         category=product.category
-    ).exclude(id=product.id)[:4]
+    ).exclude(id=product.id).order_by('?')[:4]
 
     return render(request, 'store/Product_Detail.html', {
         'product': product,

@@ -742,10 +742,10 @@ footer .container {
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center mob-justify-content-center flex-basis-full et_element-top-level et-content-dropdown">
 		
 	    
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+        <!--form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">-->
 			
                 <div class="input-row flex align-items-center " data-search-mode="dark">
-                    					<select style="width: 100%; max-width: calc(122px + 1.4em)" name="product_cat" id="product_cat-551" class="postform">
+                    					<!--<select style="width: 100%; max-width: calc(122px + 1.4em)" name="product_cat" id="product_cat-551" class="postform">
 	<option value="0" selected="selected">All categories</option>
 	<option class="level-0" value="bob-marley-store">Bob Marley Store</option>
 	<option class="level-1" value="bob-marley-bags-bag-packs">&nbsp;&nbsp;&nbsp;Bob Marley Bags &amp; Bag Packs</option>
@@ -906,29 +906,29 @@ footer .container {
 	<option class="level-2" value="tanks-tops">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tanks</option>
 	<option class="level-2" value="tees">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tees</option>
 	<option class="level-1" value="women-t-shirts">&nbsp;&nbsp;&nbsp;Women T-Shirts</option>
-</select>
-                    <label class="screen-reader-text" for="et_b-header-search-input-88">Search input</label>
-                    <input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-88" name="s">
-					
-					                        <input type="hidden" name="post_type" value="product">
-					
-                                            <input type="hidden" name="et_search" value="true">
-                    					
-					                    <span class="buttons-wrapper flex flex-nowrap pos-relative">
-                    <span class="clear flex-inline justify-content-center align-items-center pointer">
-                        <span class="et_b-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 24 24"><path d="M13.056 12l10.728-10.704c0.144-0.144 0.216-0.336 0.216-0.552 0-0.192-0.072-0.384-0.216-0.528-0.144-0.12-0.336-0.216-0.528-0.216 0 0 0 0 0 0-0.192 0-0.408 0.072-0.528 0.216l-10.728 10.728-10.704-10.728c-0.288-0.288-0.768-0.288-1.056 0-0.168 0.144-0.24 0.336-0.24 0.528 0 0.216 0.072 0.408 0.216 0.552l10.728 10.704-10.728 10.704c-0.144 0.144-0.216 0.336-0.216 0.552s0.072 0.384 0.216 0.528c0.288 0.288 0.768 0.288 1.056 0l10.728-10.728 10.704 10.704c0.144 0.144 0.336 0.216 0.528 0.216s0.384-0.072 0.528-0.216c0.144-0.144 0.216-0.336 0.216-0.528s-0.072-0.384-0.216-0.528l-10.704-10.704z"></path></svg>
-                        </span>
-                    </span>
-                    <button type="submit" class="search-button flex justify-content-center align-items-center pointer" aria-label="Search button">
-                        <span class="et_b-loader"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 24 24"><path d="M23.784 22.8l-6.168-6.144c1.584-1.848 2.448-4.176 2.448-6.576 0-5.52-4.488-10.032-10.032-10.032-5.52 0-10.008 4.488-10.008 10.008s4.488 10.032 10.032 10.032c2.424 0 4.728-0.864 6.576-2.472l6.168 6.144c0.144 0.144 0.312 0.216 0.48 0.216s0.336-0.072 0.456-0.192c0.144-0.12 0.216-0.288 0.24-0.48 0-0.192-0.072-0.384-0.192-0.504zM18.696 10.080c0 4.752-3.888 8.64-8.664 8.64-4.752 0-8.64-3.888-8.64-8.664 0-4.752 3.888-8.64 8.664-8.64s8.64 3.888 8.64 8.664z"></path></svg>                    <span class="screen-reader-text">Search</span></button>
-                </span>
-                </div>
-				
-											                <div class="ajax-results-wrapper"><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div></div>
-			        </form>
-		</div>
+</select>-->
+                    <form action="{% url 'search_products' %}" method="get" role="search" class="django-search-form">
+    <div class="input-row flex align-items-center" data-search-mode="dark">
+
+        <label class="screen-reader-text" for="search-input">Search input</label>
+
+        <input
+            type="text"
+            placeholder="Search products..."
+            autocomplete="off"
+            class="form-control"
+            id="search-input"
+            name="q">
+
+        <button type="submit" class="search-button flex justify-content-center align-items-center pointer" aria-label="Search button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.784 22.8l-6.168-6.144c1.584-1.848 2.448-4.176 2.448-6.576 0-5.52-4.488-10.032-10.032-10.032-5.52 0-10.008 4.488-10.008 10.008s4.488 10.032 10.032 10.032c2.424 0 4.728-0.864 6.576-2.472l6.168 6.144c0.144 0.144 0.312 0.216 0.48 0.216s0.336-0.072 0.456-0.192c0.144-0.12 0.216-0.288 0.24-0.48 0-0.192-0.072-0.384-0.192-0.504zM18.696 10.080c0 4.752-3.888 8.64-8.664 8.64-4.752 0-8.64-3.888-8.64-8.664 0-4.752 3.888-8.64 8.664-8.64s8.64 3.888 8.64 8.664z"></path>
+            </svg>
+            <span class="screen-reader-text">Search</span>
+        </button>
+
+    </div>
+</form>
 
 
 <div class="et_element et_b_header-html_block header-html_block4"><p></p><div class="gtranslate_wrapper gt_container--j2xjwc" id="gt-wrapper-74595967"><!-- GTranslate: https://gtranslate.com --><a href="#" title="Arabic" data-gt-lang="ar" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/ar.svg" width="48" height="48" alt="ar"></a><a href="#" title="Chinese (Simplified)" data-gt-lang="zh-CN" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/zh-CN.svg" width="48" height="48" alt="zh-CN"></a><a href="#" title="Dutch" data-gt-lang="nl" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/nl.svg" width="48" height="48" alt="nl"></a><a href="#" title="English" data-gt-lang="en" class="glink nturl notranslate gt-current-lang"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/en-us.svg" width="48" height="48" alt="en"></a><a href="#" title="French" data-gt-lang="fr" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/fr.svg" width="48" height="48" alt="fr"></a><a href="#" title="German" data-gt-lang="de" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/de.svg" width="48" height="48" alt="de"></a><a href="#" title="Italian" data-gt-lang="it" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/it.svg" width="48" height="48" alt="it"></a><a href="#" title="Japanese" data-gt-lang="ja" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/ja.svg" width="48" height="48" alt="ja"></a><a href="#" title="Portuguese" data-gt-lang="pt" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/pt.svg" width="48" height="48" alt="pt"></a><a href="#" title="Russian" data-gt-lang="ru" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/ru.svg" width="48" height="48" alt="ru"></a><a href="#" title="Spanish" data-gt-lang="es" class="glink nturl notranslate"><img loading="lazy" src="https://cdn.gtranslate.net/flags/svg/es.svg" width="48" height="48" alt="es"></a><div id="google_translate_element2"></div></div><p></p></div>
