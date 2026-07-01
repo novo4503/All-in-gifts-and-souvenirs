@@ -303,6 +303,11 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","i
 }
 
 
+.related-products-title span {
+    border-bottom: 2px solid #4d90fe !important;
+    padding-bottom: 13px;
+}
+
 .single-product form.cart table.variations td.label label, .single-product form.cart table.variations th.label label {
     font-size: 1.14rem;
     background-color: black;
@@ -476,10 +481,21 @@ footer .container,
 .footer-widgets .col-md-12,
 .et-footers-wrapper,
 .et-footers-wrapper .footer,
-.et-footers-wrapper .footer .container {
+.et-footers-wrapper .footer .container,
+.et-footers-wrapper .footer .row,
+.et-footers-wrapper .footer .footer-widgets,
+.et-footers-wrapper .footer .elementor,
+.et-footers-wrapper .footer .e-con,
+.et-footers-wrapper .footer .e-con-inner,
+.et-footers-wrapper .footer .elementor-section,
+.et-footers-wrapper .footer .elementor-column {
     background: skyblue !important;
     background-color: skyblue !important;
     background-image: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
 }
 
 /* Footer text and links */
@@ -498,6 +514,37 @@ footer span,
     color: white !important;
 }
 
+/* Force the footer wrapper to span the full viewport */
+.et-footers-wrapper,
+.et-footers-wrapper .footer,
+.et-footers-wrapper .footer .container,
+.et-footers-wrapper .footer .row,
+.et-footers-wrapper .footer .footer-widgets,
+.et-footers-wrapper .footer-widget,
+.et-footers-wrapper .elementor,
+.et-footers-wrapper .elementor .elementor-element,
+.et-footers-wrapper .elementor .elementor-column,
+.et-footers-wrapper .elementor .elementor-section,
+.et-footers-wrapper .e-con-boxed,
+.et-footers-wrapper .e-con-inner {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 0 !important;
+}
+
+.et-footers-wrapper .row,
+.et-footers-wrapper .footer-widgets,
+.et-footers-wrapper .footer-widget,
+.et-footers-wrapper .elementor .elementor-element,
+.et-footers-wrapper .elementor .elementor-column,
+.et-footers-wrapper .elementor .elementor-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
 .button:hover {
     background-color: skyblue !important;
@@ -572,22 +619,18 @@ footer span,
 <div class="et_promo_text_carousel swiper-entry pos-relative arrows-hovered ">
 	<div class="swiper-container stop-on-hover et_element swiper-swiper-unique-id-0 initialized swiper-container-initialized swiper-container-horizontal second-initialized" data-loop="true" data-speed="400" data-breakpoints="1" data-xs-slides="1" data-sm-slides="1" data-md-slides="1" data-lt-slides="1" data-slides-per-view="1" data-slides-per-group="1" data-autoplay="2000" id="swiper-unique-id-0">
 		<div class="header-promo-text et-promo-text-carousel swiper-wrapper" id="swiper-wrapper-d043210f417f5d249" aria-live="off" style="transition-duration: 400ms; transform: translate3d(-1098px, 0px, 0px);"><div class="swiper-slide flex justify-content-center align-items-center swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" style="width: 356px; margin-right: 10px;" role="group" aria-label="1 / 5">
-					<span class="et_b-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M23.5 9.5c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5h-23c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5 1.379 0 2.5 1.122 2.5 2.5s-1.121 2.5-2.5 2.5c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h23c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5-1.379 0-2.5-1.122-2.5-2.5s1.121-2.5 2.5-2.5zM20 12c0 1.76 1.306 3.221 3 3.464v3.036h-22v-3.036c1.694-0.243 3-1.704 3-3.464s-1.306-3.221-3-3.464v-3.036h22v3.036c-1.694 0.243-3 1.704-3 3.464zM6.5 10.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c-0-0.276-0.224-0.5-0.5-0.5zM6.5 6.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c-0-0.276-0.224-0.5-0.5-0.5zM6.5 14.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c-0-0.276-0.224-0.5-0.5-0.5zM17.5 10.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5zM17.5 6.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5zM17.5 14.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5z"></path></svg></span>					<span class="text-nowrap">Use Promo Code to Get 10 % discount</span>
-																<a class="text-nowrap" href="https://www.greenapples.store/contact-us/">Contact Us</a>
+					
 									</div>
 							<div class="swiper-slide flex justify-content-center align-items-center swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 356px; margin-right: 10px;" role="group" aria-label="2 / 5">
-					<span class="et_b-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M22.080 16.488c-3.504-2.808-4.776-1.44-6.144 0l-0.24 0.24c-0.24 0.216-0.936 0-1.752-0.528-0.912-0.6-2.040-1.584-3.288-2.832-4.128-4.152-3.384-5.016-3.336-5.040l0.24-0.24c1.416-1.392 2.736-2.688-0.072-6.144-0.936-1.152-1.872-1.728-2.832-1.776-1.368-0.096-2.496 1.080-3.336 1.968-0.12 0.144-0.264 0.288-0.408 0.432-1.032 1.008-1.056 3.192-0.048 5.832 1.056 2.832 3.192 5.952 6 8.736 2.76 2.76 5.856 4.896 8.736 6 1.32 0.504 2.496 0.744 3.504 0.744 1.032 0 1.848-0.264 2.328-0.744 0.144-0.12 0.312-0.264 0.456-0.432 0.912-0.864 2.040-1.944 1.992-3.36-0.024-0.96-0.624-1.896-1.8-2.856zM6.744 7.224l-0.24 0.24c-1.128 1.152-0.096 3.216 3.384 6.672 1.344 1.344 2.496 2.328 3.48 2.976 1.44 0.936 2.52 1.056 3.192 0.36l0.264-0.264c1.296-1.296 1.944-1.944 4.584 0.168 0.888 0.72 1.344 1.368 1.368 1.968 0.024 0.912-0.936 1.8-1.632 2.448-0.192 0.144-0.336 0.312-0.48 0.456-0.672 0.648-2.544 0.552-4.656-0.24-2.64-0.984-5.616-3-8.328-5.712-2.688-2.592-4.704-5.544-5.76-8.28-0.768-2.136-0.864-4.008-0.216-4.632 0.072-0.072 0.144-0.168 0.216-0.24s0.144-0.144 0.216-0.24c0.744-0.816 1.56-1.632 2.4-1.632h0.072c0.624 0.024 1.272 0.48 1.968 1.344 2.136 2.664 1.44 3.36 0.168 4.608zM19.008 10.104c0.096 0.048 0.168 0.048 0.24 0.048 0.24 0 0.432-0.144 0.528-0.36 0.648-1.584 0.264-3.408-0.96-4.632-1.248-1.248-3.168-1.608-4.8-0.888-0.144 0.048-0.264 0.168-0.312 0.312s-0.048 0.312 0 0.432c0.048 0.144 0.168 0.264 0.312 0.312s0.312 0.048 0.456-0.024c1.176-0.528 2.592-0.288 3.504 0.624 0.888 0.888 1.152 2.232 0.696 3.384-0.072 0.336 0.072 0.696 0.336 0.792zM12.504 1.896c0.144 0.048 0.312 0.048 0.456-0.024 2.592-1.176 5.712-0.6 7.752 1.416 1.968 1.968 2.568 4.896 1.512 7.488-0.12 0.288 0.048 0.648 0.312 0.744 0.096 0.048 0.168 0.048 0.24 0.048 0.24 0 0.456-0.144 0.504-0.336 1.224-3.024 0.552-6.456-1.752-8.76-2.376-2.376-6-3.024-9.024-1.656-0.144 0.048-0.264 0.168-0.312 0.312s-0.048 0.312 0 0.432c0.048 0.168 0.168 0.264 0.312 0.336z"></path></svg></span>					<span class="text-nowrap">Same Day Free Delivery in Most Resorts</span>
+					<span class="et_b-icon"></span>					
 														</div>
 							<div class="swiper-slide flex justify-content-center align-items-center swiper-slide-prev" data-swiper-slide-index="1" style="width: 356px; margin-right: 10px;" role="group" aria-label="3 / 5">
-					<span class="et_b-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M23.448 7.248h-3.24v-1.032c0-0.528-0.432-0.96-0.96-0.96h-11.784c-0.528 0-0.96 0.432-0.96 0.96v2.304h-3.048c0 0 0 0 0 0-0.192 0-0.384 0.096-0.48 0.264l-1.56 2.736h-0.864c-0.312 0-0.552 0.24-0.552 0.552v4.416c0 0.288 0.24 0.552 0.552 0.552h1.032c0.264 1.032 1.176 1.728 2.208 1.728 0.144 0 0.288-0.024 0.432-0.048 0.888-0.168 1.584-0.816 1.8-1.68h1.032c0.048 0 0.12-0.024 0.168-0.024 0.072 0.024 0.168 0.024 0.24 0.024h5.040c0.288 1.176 1.44 1.92 2.64 1.68 0.888-0.168 1.584-0.816 1.8-1.68h2.328c0.528 0 0.96-0.432 0.96-0.96v-3.48h2.4c0.312 0 0.552-0.24 0.552-0.552s-0.24-0.552-0.552-0.552h-2.4v-1.032h0.288c0.312 0 0.552-0.24 0.552-0.552s-0.24-0.552-0.552-0.552h-0.288v-1.032h3.24c0.312 0 0.552-0.24 0.552-0.552-0.024-0.288-0.264-0.528-0.576-0.528zM16.848 7.8c0 0.312 0.24 0.552 0.552 0.552h1.728v1.032h-4.68c-0.312 0-0.552 0.24-0.552 0.552s0.24 0.552 0.552 0.552h4.656v1.032h-2.568c-0.144 0-0.288 0.048-0.384 0.168-0.096 0.096-0.168 0.24-0.168 0.384 0 0.312 0.24 0.552 0.552 0.552h2.544v3.312h-2.16c-0.144-0.552-0.456-1.008-0.936-1.344-0.504-0.336-1.104-0.48-1.704-0.36-0.888 0.168-1.584 0.816-1.8 1.68l-4.92-0.024 0.024-9.552 11.496 0.024v0.888h-1.728c-0.264 0-0.504 0.24-0.504 0.552zM14.712 15.288c0.648 0 1.2 0.528 1.2 1.2 0 0.648-0.528 1.2-1.2 1.2-0.648 0-1.2-0.528-1.2-1.2 0.024-0.672 0.552-1.2 1.2-1.2zM3.792 15.288c0.648 0 1.2 0.528 1.2 1.2 0 0.648-0.528 1.2-1.2 1.2s-1.2-0.528-1.2-1.2c0.024-0.672 0.552-1.2 1.2-1.2zM6.48 12.6v3.312h-0.48c-0.144-0.552-0.456-1.008-0.936-1.344-0.504-0.336-1.104-0.48-1.704-0.36-0.888 0.168-1.584 0.816-1.8 1.68h-0.48v-3.288h5.4zM6.48 9.624v1.896h-3.792l1.080-1.872h2.712z"></path></svg></span>					<span class="text-nowrap">Ship Worldwide ( Except Liquor)</span>
+					<span class="et_b-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M23.448 7.248h-3.24v-1.032c0-0.528-0.432-0.96-0.96-0.96h-11.784c-0.528 0-0.96 0.432-0.96 0.96v2.304h-3.048c0 0 0 0 0 0-0.192 0-0.384 0.096-0.48 0.264l-1.56 2.736h-0.864c-0.312 0-0.552 0.24-0.552 0.552v4.416c0 0.288 0.24 0.552 0.552 0.552h1.032c0.264 1.032 1.176 1.728 2.208 1.728 0.144 0 0.288-0.024 0.432-0.048 0.888-0.168 1.584-0.816 1.8-1.68h1.032c0.048 0 0.12-0.024 0.168-0.024 0.072 0.024 0.168 0.024 0.24 0.024h5.040c0.288 1.176 1.44 1.92 2.64 1.68 0.888-0.168 1.584-0.816 1.8-1.68h2.328c0.528 0 0.96-0.432 0.96-0.96v-3.48h2.4c0.312 0 0.552-0.24 0.552-0.552s-0.24-0.552-0.552-0.552h-2.4v-1.032h0.288c0.312 0 0.552-0.24 0.552-0.552s-0.24-0.552-0.552-0.552h-0.288v-1.032h3.24c0.312 0 0.552-0.24 0.552-0.552-0.024-0.288-0.264-0.528-0.576-0.528zM16.848 7.8c0 0.312 0.24 0.552 0.552 0.552h1.728v1.032h-4.68c-0.312 0-0.552 0.24-0.552 0.552s0.24 0.552 0.552 0.552h4.656v1.032h-2.568c-0.144 0-0.288 0.048-0.384 0.168-0.096 0.096-0.168 0.24-0.168 0.384 0 0.312 0.24 0.552 0.552 0.552h2.544v3.312h-2.16c-0.144-0.552-0.456-1.008-0.936-1.344-0.504-0.336-1.104-0.48-1.704-0.36-0.888 0.168-1.584 0.816-1.8 1.68l-4.92-0.024 0.024-9.552 11.496 0.024v0.888h-1.728c-0.264 0-0.504 0.24-0.504 0.552zM14.712 15.288c0.648 0 1.2 0.528 1.2 1.2 0 0.648-0.528 1.2-1.2 1.2-0.648 0-1.2-0.528-1.2-1.2 0.024-0.672 0.552-1.2 1.2-1.2zM3.792 15.288c0.648 0 1.2 0.528 1.2 1.2 0 0.648-0.528 1.2-1.2 1.2s-1.2-0.528-1.2-1.2c0.024-0.672 0.552-1.2 1.2-1.2zM6.48 12.6v3.312h-0.48c-0.144-0.552-0.456-1.008-0.936-1.344-0.504-0.336-1.104-0.48-1.704-0.36-0.888 0.168-1.584 0.816-1.8 1.68h-0.48v-3.288h5.4zM6.48 9.624v1.896h-3.792l1.080-1.872h2.712z"></path></svg></span>				
 																<a class="text-nowrap" href="https://www.greenapples.store/shop/">Shop Now</a>
 									</div>
-							<div class="swiper-slide flex justify-content-center align-items-center swiper-slide-visible swiper-slide-active" data-swiper-slide-index="2" style="width: 356px; margin-right: 10px;" role="group" aria-label="4 / 5">
-					<span class="et_b-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M23.5 9.5c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5h-23c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5 1.379 0 2.5 1.122 2.5 2.5s-1.121 2.5-2.5 2.5c-0.276 0-0.5 0.224-0.5 0.5v4c0 0.276 0.224 0.5 0.5 0.5h23c0.276 0 0.5-0.224 0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5-1.379 0-2.5-1.122-2.5-2.5s1.121-2.5 2.5-2.5zM20 12c0 1.76 1.306 3.221 3 3.464v3.036h-22v-3.036c1.694-0.243 3-1.704 3-3.464s-1.306-3.221-3-3.464v-3.036h22v3.036c-1.694 0.243-3 1.704-3 3.464zM6.5 10.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c-0-0.276-0.224-0.5-0.5-0.5zM6.5 6.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c-0-0.276-0.224-0.5-0.5-0.5zM6.5 14.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c-0-0.276-0.224-0.5-0.5-0.5zM17.5 10.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5zM17.5 6.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5zM17.5 14.5c-0.276 0-0.5 0.224-0.5 0.5v2c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-2c0-0.276-0.224-0.5-0.5-0.5z"></path></svg></span>					<span class="text-nowrap">Use Promo Code to Get 10 % discount</span>
-																<a class="text-nowrap" href="https://www.greenapples.store/contact-us/">Contact Us</a>
-									</div>
+					
 					<div class="swiper-slide flex justify-content-center align-items-center swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 356px; margin-right: 10px;" role="group" aria-label="5 / 5">
-					<span class="et_b-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M22.080 16.488c-3.504-2.808-4.776-1.44-6.144 0l-0.24 0.24c-0.24 0.216-0.936 0-1.752-0.528-0.912-0.6-2.040-1.584-3.288-2.832-4.128-4.152-3.384-5.016-3.336-5.040l0.24-0.24c1.416-1.392 2.736-2.688-0.072-6.144-0.936-1.152-1.872-1.728-2.832-1.776-1.368-0.096-2.496 1.080-3.336 1.968-0.12 0.144-0.264 0.288-0.408 0.432-1.032 1.008-1.056 3.192-0.048 5.832 1.056 2.832 3.192 5.952 6 8.736 2.76 2.76 5.856 4.896 8.736 6 1.32 0.504 2.496 0.744 3.504 0.744 1.032 0 1.848-0.264 2.328-0.744 0.144-0.12 0.312-0.264 0.456-0.432 0.912-0.864 2.040-1.944 1.992-3.36-0.024-0.96-0.624-1.896-1.8-2.856zM6.744 7.224l-0.24 0.24c-1.128 1.152-0.096 3.216 3.384 6.672 1.344 1.344 2.496 2.328 3.48 2.976 1.44 0.936 2.52 1.056 3.192 0.36l0.264-0.264c1.296-1.296 1.944-1.944 4.584 0.168 0.888 0.72 1.344 1.368 1.368 1.968 0.024 0.912-0.936 1.8-1.632 2.448-0.192 0.144-0.336 0.312-0.48 0.456-0.672 0.648-2.544 0.552-4.656-0.24-2.64-0.984-5.616-3-8.328-5.712-2.688-2.592-4.704-5.544-5.76-8.28-0.768-2.136-0.864-4.008-0.216-4.632 0.072-0.072 0.144-0.168 0.216-0.24s0.144-0.144 0.216-0.24c0.744-0.816 1.56-1.632 2.4-1.632h0.072c0.624 0.024 1.272 0.48 1.968 1.344 2.136 2.664 1.44 3.36 0.168 4.608zM19.008 10.104c0.096 0.048 0.168 0.048 0.24 0.048 0.24 0 0.432-0.144 0.528-0.36 0.648-1.584 0.264-3.408-0.96-4.632-1.248-1.248-3.168-1.608-4.8-0.888-0.144 0.048-0.264 0.168-0.312 0.312s-0.048 0.312 0 0.432c0.048 0.144 0.168 0.264 0.312 0.312s0.312 0.048 0.456-0.024c1.176-0.528 2.592-0.288 3.504 0.624 0.888 0.888 1.152 2.232 0.696 3.384-0.072 0.336 0.072 0.696 0.336 0.792zM12.504 1.896c0.144 0.048 0.312 0.048 0.456-0.024 2.592-1.176 5.712-0.6 7.752 1.416 1.968 1.968 2.568 4.896 1.512 7.488-0.12 0.288 0.048 0.648 0.312 0.744 0.096 0.048 0.168 0.048 0.24 0.048 0.24 0 0.456-0.144 0.504-0.336 1.224-3.024 0.552-6.456-1.752-8.76-2.376-2.376-6-3.024-9.024-1.656-0.144 0.048-0.264 0.168-0.312 0.312s-0.048 0.312 0 0.432c0.048 0.168 0.168 0.264 0.312 0.336z"></path></svg></span>					<span class="text-nowrap">Same Day Free Delivery in Most Resorts</span>
+					<span class="et_b-icon"></span>					
 														</div></div>
 					<div class="swiper-custom-left swiper-button-prev mob-hide swiper-button-prev-swiper-unique-id-0" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-d043210f417f5d249">
 			</div>
@@ -878,7 +921,7 @@ footer span,
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center mob-justify-content-center flex-basis-full et_element-top-level et-content-dropdown">
 		
 	    
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+        
 			
                 <div class="input-row flex align-items-center " data-search-mode="dark">
                     					<select style="width: 100%; max-width: calc(122px + 1.4em)" name="product_cat" id="product_cat-159" class="postform">
@@ -1042,13 +1085,14 @@ footer span,
 	<option class="level-2" value="tanks-tops">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tanks</option>
 	<option class="level-2" value="tees">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tees</option>
 	<option class="level-1" value="women-t-shirts">&nbsp;&nbsp;&nbsp;Women T-Shirts</option>
+
 </select>
+<form action="{% url 'search_products' %}" method="get" role="search" class="django-search-form">
+
                     <label class="screen-reader-text" for="et_b-header-search-input-16">Search input</label>
-                    <input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-16" name="s">
+                    <input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-16" name="q">
 					
-					                        <input type="hidden" name="post_type" value="product">
-					
-                                            <input type="hidden" name="et_search" value="true">
+					                       
                     					
 					                    <span class="buttons-wrapper flex flex-nowrap pos-relative">
                     <span class="clear flex-inline justify-content-center align-items-center pointer">
@@ -1112,7 +1156,7 @@ footer span,
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center flex-basis-full et-content-dropdown">
 		
 	    
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+        
 			
                 <div class="input-row flex align-items-center et-overflow-hidden" data-search-mode="dark">
                     					                    <label class="screen-reader-text" for="et_b-header-search-input-77">Search input</label>
@@ -1145,7 +1189,7 @@ footer span,
 			        </div>
 		            <div class="et_b-tab-content active" data-tab-name="menu">
 				                    <div class="et_element et_b_header-menu header-mobile-menu flex align-items-center" data-title="Menu">
-						<div class="menu-main-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-1431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1431 item-level-0 item-design-dropdown"><a href="https://www.greenapples.store/" class="item-link">Home</a></li>
+						<div class="menu-main-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-1431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1431 item-level-0 item-design-dropdown"><a href="/" class="item-link">Home</a></li>
 
 <li id="menu-item-1429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429 item-level-0 item-design-dropdown"><a href="https://www.greenapples.store/contact-us/" class="item-link">Contact us</a></li>
 </ul></div>                    </div>
@@ -1549,7 +1593,7 @@ footer span,
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center mob-justify-content-center flex-basis-full et_element-top-level et-content-dropdown">
 		
 	    
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+        <form action="https://www.allingiftssouvenirs.com/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
 			
                 <div class="input-row flex align-items-center et-overflow-hidden" data-search-mode="dark">
                     					                    <label class="screen-reader-text" for="et_b-header-search-input-41">Search input</label>
@@ -1696,17 +1740,13 @@ footer span,
 </div>
 				
 				
-		<div class="swiper-custom-left swiper-button-prev-swiper-unique-id-1 swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c5889910acdc1f24" aria-disabled="true"></div>
-                  <div class="swiper-custom-right swiper-button-next-swiper-unique-id-1" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c5889910acdc1f24" aria-disabled="false"></div>
+		
             
     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 
     
             
-			<div class="swiper-custom-left thumbnails-bottom swiper-button-prev-swiper-unique-id-2 swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-45bc6482275ede110" aria-disabled="true"></div>
-                  <div class="swiper-custom-right thumbnails-bottom swiper-button-next-swiper-unique-id-2" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-45bc6482275ede110" aria-disabled="false"></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-		    </div>
+			
         
 							<select id="pa_style" class="" name="attribute_pa_style" data-attribute_name="attribute_pa_style" data-show_option_none="yes"><option value="">Choose an option</option><option value="1" class="attached enabled">1</option><option value="2" class="attached enabled">2</option><option value="3" class="attached enabled">3</option><option value="4" class="attached enabled">4</option><option value="5" class="attached enabled">5</option><option value="6" class="attached enabled">6</option><option value="7" class="attached enabled">7</option><option value="8" class="attached enabled">8</option><option value="9" class="attached enabled">9</option><option value="10" class="attached enabled">10</option><option value="11" class="attached enabled">11</option><option value="12" class="attached enabled">12</option></select><a class="reset_variations" href="#" aria-label="Clear options" style="visibility: hidden;">Clear</a>						
 					
@@ -1768,9 +1808,7 @@ footer span,
 							<div class="description_tab et-woocommerce-tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
 					<a href="#tab-description" role="tab" aria-controls="tab-description">Description</a>
 				</div>
-											<div class="et_custom_tab_01_tab et-woocommerce-tab" id="tab-title-et_custom_tab_01" role="tab" aria-controls="tab-et_custom_tab_01">
-					<a href="#tab-et_custom_tab_01" role="tab" aria-controls="tab-et_custom_tab_01">Shipping &amp; delivery</a>
-				</div>
+											
 											<div class="additional_information_tab et-woocommerce-tab" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
 					<a href="#tab-additional_information" role="tab" aria-controls="tab-additional_information">Additional information</a>
 				</div>
@@ -1905,13 +1943,7 @@ footer span,
     <div class="posts-navigation">
 		            <div class="posts-nav-btn prev-post">
                 <div class="post-info">
-                    <div class="post-details">
-                        <a href="https://www.greenapples.store/shop/wave-runner-ball/" class="post-title">
-							Wave Runner Ball                        </a>
-						<p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>11.99</bdi></span></p>                    </div>
-                    <a href="https://www.greenapples.store/shop/wave-runner-ball/">
-						<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[2][self::A]/*[1][self::IMG]" loading="lazy" width="90" height="90" src="https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-100x100.jpeg" class="attachment-90x90 size-90x90 wp-post-image" alt="" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-100x100.jpeg 100w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-1024x1024.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2228.jpeg 1080w" sizes="auto, (max-width: 90px) 100vw, 90px">                    </a>
-                </div>
+                    
                 <span class="post-nav-arrow">
                         <i class="et-icon et-left-arrow"></i>
                     </span>
@@ -1921,14 +1953,7 @@ footer span,
 					<span class="post-nav-arrow">
                         <i class="et-icon et-right-arrow"></i>
                     </span>
-                <div class="post-info">
-                    <a href="https://www.greenapples.store/shop/men-swim-trunks-jamaican-pattern/">
-						<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[2][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" width="90" height="90" src="https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-100x100.jpeg" class="attachment-90x90 size-90x90 wp-post-image" alt="" decoding="async" srcset="https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-100x100.jpeg 100w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-1024x1024.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2590-1.jpeg 1080w" sizes="auto, (max-width: 90px) 100vw, 90px">                    </a>
-                    <div class="post-details">
-                        <a href="https://www.greenapples.store/shop/men-swim-trunks-jamaican-pattern/" class="post-title">
-							Men Swim Trunks Jamaican Patte...                        </a>
-						<p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>22.22</bdi></span></p>                    </div>
-                </div>
+               
             </div>
 		    </div>
 

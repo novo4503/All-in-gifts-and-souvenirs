@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
-from .models import SiteImage, Product
+from .models import Category, SiteImage, Product
+from django.core.paginator import Paginator
 
 
 def home(request):
@@ -115,4 +116,21 @@ def product_detail(request, slug):
     return render(request, 'store/Product_Detail.html', {
         'product': product,
         'related_products': related_products,
+    })
+
+
+
+def category_products(request, category):
+    images = {img.name: img for img in SiteImage.objects.all()}
+
+    products = Product.objects.filter(category=category)
+
+    paginator = Paginator(products, 30)  # 30 products per page
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'store/Jew.html', {
+        'images': images,
+        'page_obj': page_obj,
+        'category': category,
     })

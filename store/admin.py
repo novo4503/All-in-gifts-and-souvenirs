@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import SiteImage, Product
+from .models import Category, SiteImage, Product
 
 
 @admin.register(Product)
@@ -33,4 +33,7 @@ class SiteImageAdmin(admin.ModelAdmin):
         return "No image uploaded"
 
     image_preview.short_description = "Image Preview"
+
+
+admin.site.register(Category)
 
