@@ -347,6 +347,102 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","i
 }
 
 
+
+
+
+.mobile-header-wrapper .et_col-xs-6 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.mobile-header-wrapper .et_col-xs-6 .et_b_header-logo {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.mobile-header-wrapper .et_col-xs-6 .et_b_header-logo img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 160px !important;
+    height: auto !important;
+}
+
+
+.mobile-header-wrapper .et-wrap-columns {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr 1fr !important;
+    align-items: center !important;
+}
+
+.mobile-header-wrapper .et_col-xs-6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-self: center !important;
+    text-align: center !important;
+}
+
+.mobile-header-wrapper .et_col-xs-6 .et_b_header-logo img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 150px !important;
+    height: auto !important;
+}
+
+
+.mobile-header-wrapper .et_b_header-search {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    display: block !important;
+    clear: both !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+}
+
+.mobile-header-wrapper .django-search-form {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+
+.mobile-header-wrapper .header-main {
+    --content-zoom: calc(100em * .01);
+    background: skyblue;
+    background-color: skyblue;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #ffffff;
+}
+
+
+.mobile-header-wrapper .header-main .et-wrap-columns, .mobile-header-wrapper .header-main .widget_nav_menu .menu > li > a
+ {
+    min-height: 50px;
+    background: skyblue;
+}
+
+.mobile-header-wrapper .django-search-form .input-row {
+    width: 100% !important;
+    display: flex !important;
+}
+
+.mobile-header-wrapper .django-search-form .form-control {
+    width: 100% !important;
+    flex: 1 !important;
+}
+
+
+.et-content_toggle .et-mini-content.active, .et-off-canvas .et-mini-content.active {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    opacity: 1;
+    visibility: visible;
+    background: skyblue;
+}
+
+
 .single-product form.cart table.variations td.label label, .single-product form.cart table.variations th.label label {
     font-size: 1.14rem;
     background-color: black;
@@ -402,6 +498,7 @@ footer .container {
 
 
 #comments ul.page-numbers .current, #comments ul.page-numbers a:hover, .dokan-pagination-container .dokan-pagination li.active a, .dokan-pagination-container li a:hover, .etheme-pagination .current, .etheme-pagination a:hover, .woocommerce-pagination .current, .woocommerce-pagination a:hover
+
 
  {
     color: #fff;
@@ -996,7 +1093,9 @@ footer .container {
 			<div class="et-wrap-columns flex align-items-center">		
 				
 		
-        <div class="et_column et_col-xs-3 et_col-xs-offset-0 pos-static">
+        
+
+</div>
 			
 
 <div class="et_element et_b_header-mobile-menu  static et-content_toggle et-off-canvas et-content-left toggles-by-arrow" data-item-click="item">
@@ -1017,7 +1116,7 @@ footer .container {
 				
 	<!--<p>/media/site_images/logotorros_8eZUydN.jpeg</p>-->
     <div class="et_element et_b_header-logo justify-content-center">
-        <a href="https://www.greenapples.store">
+        <a href="/">
             <span><img width="1200" height="216" src="/media/site_images/logotorros_8eZUydN.jpeg" alt="All in  gifts and  souvenirs" class="et_b_header-logo-img" decoding="async"></span>            
         </a>
     </div>
@@ -1320,8 +1419,63 @@ footer .container {
 				
 		
         <div class="et_column et_col-xs-6 et_col-xs-offset-0">
-			
+			<div class="et_element et_b_header-logo mob-align-center">
+        <a href="{% url 'home' %}">
+            <img src="/media/site_images/logotorros_8eZUydN.jpeg"
+                 alt="All In Gifts & Souvenirs"
+                 class="et_b_header-logo-img">
+        </a>
+    </div>
 
+</div>
+
+<!--test2-->
+
+<div class="et_element et_b_header-search flex align-items-center justify-content-center flex-basis-full">
+
+    <form action="{% url 'search_products' %}" method="get" role="search" class="django-search-form">
+
+        <div class="input-row flex align-items-center et-overflow-hidden">
+
+            <label class="screen-reader-text" for="mobile-search-input">
+                Search input
+            </label>
+
+            <input
+                type="text"
+                id="mobile-search-input"
+                name="q"
+                class="form-control"
+                placeholder="Search for Vacation Essentials, Gifts, Clothing, Jewelry..."
+                autocomplete="off">
+
+            <button type="submit"
+                    class="search-button flex justify-content-center align-items-center pointer"
+                    aria-label="Search">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="1em"
+                     height="1em"
+                     fill="currentColor"
+                     viewBox="0 0 24 24">
+                    <path d="M23.784 22.8l-6.168-6.144c1.584-1.848 2.448-4.176 2.448-6.576 0-5.52-4.488-10.032-10.032-10.032-5.52 0-10.008 4.488-10.008 10.008s4.488 10.032 10.032 10.032c2.424 0 4.728-0.864 6.576-2.472l6.168 6.144c.144.144.312.216.48.216s.336-.072.456-.192c.144-.12.216-.288.24-.48 0-.192-.072-.384-.192-.504zM18.696 10.08c0 4.752-3.888 8.64-8.664 8.64-4.752 0-8.64-3.888-8.64-8.664 0-4.752 3.888-8.64 8.664-8.64s8.64 3.888 8.64 8.664z"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+
+
+
+
+			
+<!--test-->
    
 
         </div>
@@ -1420,14 +1574,7 @@ footer .container {
 			
         </div>
 
-		<div class="et_element et_b_header-search flex align-items-center justify-content-center flex-basis-full">
-    <form action="{% url 'search_products' %}" method="get" role="search" class="django-search-form">
-        <div class="input-row flex align-items-center et-overflow-hidden">
-            <input type="text" name="q" placeholder="Looking for the perfect Jamaican souvenir?" class="form-control">
-            <button type="submit" class="search-button">Search</button>
-        </div>
-    </form>
-</div>
+		
 
 
 		
@@ -1440,17 +1587,48 @@ footer .container {
 </div>        </div>
 
 
-<div class="et_element et_b_header-search flex align-items-center justify-content-center flex-basis-full">
-    <form action="{% url 'search_products' %}" method="get" role="search" class="django-search-form">
-        <div class="input-row flex align-items-center et-overflow-hidden">
-            <input type="text" name="q" placeholder="Looking for the perfect Jamaican souvenir?" class="form-control">
-            <button type="submit" class="search-button">Search</button>
-        </div>
-    </form>
-</div>
+
 	</div>		</div>
 	</div>
 </div>
+<div class="et_element et_b_header-search flex align-items-center justify-content-center flex-basis-full">
+
+    <form action="{% url 'search_products' %}" method="get" role="search" class="django-search-form">
+
+        <div class="input-row flex align-items-center et-overflow-hidden">
+
+            <label class="screen-reader-text" for="mobile-search-input">
+                Search input
+            </label>
+
+            <input
+                type="text"
+                id="mobile-search-input"
+                name="q"
+                class="form-control"
+                placeholder="Search for Vacation Essentials, Gifts, Clothing, Jewelry..."
+                autocomplete="off">
+
+            <button type="submit"
+                    class="search-button flex justify-content-center align-items-center pointer"
+                    aria-label="Search">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="1em"
+                     height="1em"
+                     fill="currentColor"
+                     viewBox="0 0 24 24">
+                    <path d="M23.784 22.8l-6.168-6.144c1.584-1.848 2.448-4.176 2.448-6.576 0-5.52-4.488-10.032-10.032-10.032-5.52 0-10.008 4.488-10.008 10.008s4.488 10.032 10.032 10.032c2.424 0 4.728-0.864 6.576-2.472l6.168 6.144c.144.144.312.216.48.216s.336-.072.456-.192c.144-.12.216-.288.24-.48 0-.192-.072-.384-.192-.504zM18.696 10.08c0 4.752-3.888 8.64-8.664 8.64-4.752 0-8.64-3.888-8.64-8.664 0-4.752 3.888-8.64 8.664-8.64s8.64 3.888 8.64 8.664z"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
 
         <div class="container ">
             <div class="row">
@@ -1507,7 +1685,7 @@ footer .container {
 								
 												
 												
-													<div class="row products products-loop products-grid with-ajax row-count-4" data-row-count="4">
+													<div class="row products products-loop products-grid row-count-4" data-row-count="4">
 
     <div class="et-loader product-ajax">
         <svg class="loader-circular" viewBox="25 25 50 50" width="30" height="30">
@@ -1550,38 +1728,43 @@ footer .container {
     </div>
 </div>
 
-<div class="pagination">
 
-    {% if page_obj.has_previous %}
-        <a href="?page=1">First</a>
-        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
-    {% endif %}
-
-    <span>
-        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-    </span>
-
-    {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">Next</a>
-        <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-    {% endif %}
-
-</div>
 
 								
 																	
 																		
 									 	
 </div> <!-- .row -->												
-						                            <div class="after-shop-loop"><nav class="woocommerce-pagination" aria-label="Product Pagination">
-	<ul class="page-numbers">
-	<li><span aria-label="Page 1" aria-current="page" class="page-numbers current">1</span></li>
-	<li><a aria-label="Page 2" class="page-numbers" href="?page=2">2</a></li>
-	<li><a aria-label="Page 3" class="page-numbers" href="?page=3">3</a></li>
-	<li><a aria-label="Page 4" class="page-numbers" href="?page=4">4</a></li>
-	<li><a class="next page-numbers" href="https://www.greenapples.store/product-category/vacation-essentials/page/2/"><i class="et-icon et-right-arrow"><span class="screen-reader-text hidden">next</span></i></a></li>
-</ul>
-</nav>
+						                            <div class="after-shop-loop">
+    <nav class="woocommerce-pagination" aria-label="Product Pagination">
+        <ul class="page-numbers">
+
+            {% if page_obj.has_previous %}
+                <li>
+                    <a class="prev page-numbers" href="?page={{ page_obj.previous_page_number }}">←</a>
+                </li>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <li>
+                        <span aria-label="Page {{ num }}" aria-current="page" class="page-numbers current">{{ num }}</span>
+                    </li>
+                {% else %}
+                    <li>
+                        <a aria-label="Page {{ num }}" class="page-numbers" href="?page={{ num }}">{{ num }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <li>
+                    <a class="next page-numbers" href="?page={{ page_obj.next_page_number }}">→</a>
+                </li>
+            {% endif %}
+
+        </ul>
+    </nav>
 </div>
 												
 																	
@@ -1843,7 +2026,7 @@ footer .container {
 				<div class="elementor-widget-container">
 							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
 							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-70f9c21" href="https://www.instagram.com/greenapples.store/" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-70f9c21" href="https://www.instagram.com/allingiftssouvenirs" target="_blank">
 						<span class="elementor-screen-only">Instagram</span>
 						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
 				</span>

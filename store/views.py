@@ -61,10 +61,18 @@ def men(request):
 
 
 def Jew(request):
-    products = Product.objects.filter(category='jewelry')
+    images = {img.name: img for img in SiteImage.objects.all()}
+
+    products = Product.objects.filter(category='jewelry').order_by("-id")
+
+    paginator = Paginator(products, 5)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
 
     return render(request, 'store/Jew.html', {
-        'products': products,
+        'images': images,
+        'page_obj': page_obj,
+        'category': 'jewelry',
     })
 
 
@@ -77,10 +85,17 @@ def pants(request):
 
 
 def shorts(request):
-    products = Product.objects.filter(category='shorts')
+    images = {img.name: img for img in SiteImage.objects.all()}
+
+    products = Product.objects.filter(category='shorts').order_by("-id")
+
+    paginator = Paginator(products, 5)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
 
     return render(request, 'store/Jew.html', {
-        'products': products,
+        'images': images,
+        'page_obj': page_obj,
         'category': 'shorts',
     })
 
@@ -125,7 +140,7 @@ def category_products(request, category):
 
     products = Product.objects.filter(category=category)
 
-    paginator = Paginator(products, 5)  # 30 products per page
+    paginator = Paginator(products, 5)  # 5 products per page
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
