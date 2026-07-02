@@ -8,21 +8,24 @@
 
 
 	<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->
-	<title>Bucket Hat Jamaican Flag Colors - Gift Shop (Shopping Shuttle &amp; Delivery to Resorts available)</title>
+	<title>{{ product.name }} - All In Gifts & Souvenirs</title>
 	<meta name="description" content="Showcase your Jamaican heritage with our stylish Bucket Hat, featuring the bold colors of the Jamaican flag. Perfect for cultural festivals or everyday wear, this hat combines vibrant style with comfort. Limited-time offer available!">
 	<link rel="icon" type="image/png" href="{% static 'store/f2.png' %}?v=3" sizes="32x32">
 	<link rel="icon" type="image/png" href="{% static 'store/f2.png' %}?v=3" sizes="192x192">
 	<link rel="apple-touch-icon" href="{% static 'store/f2.png' %}?v=3">
 <meta name="msapplication-TileImage" content="{% static 'store/f2.png' %}?v=3">
-	<link rel="canonical" href="https://www.greenapples.store/shop/bucket-hat-jamaican-flag-colors/">
+	<link rel="canonical" href="https://www.allingiftssouvenirs.com/product/{{ product.slug }}/">
+
 	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Bucket Hat Jamaican Flag Colors - Gift Shop (Shopping Shuttle &amp; Delivery to Resorts available)">
-	<meta property="og:description" content="Showcase your Jamaican heritage with our stylish Bucket Hat, featuring the bold colors of the Jamaican flag. Perfect for cultural festivals or everyday wear, this hat combines vibrant style with comfort. Limited-time offer available!">
-	<meta property="og:url" content="https://www.greenapples.store/shop/bucket-hat-jamaican-flag-colors/">
-	<meta property="og:site_name" content="Gift Shop (Shopping Shuttle &amp; Delivery to Resorts available)">
-	<meta property="article:modified_time" content="2024-03-05T20:48:46+00:00">
-	<meta property="og:image" content="https://www.greenapples.store/wp-content/uploads/2024/02/img_2285.jpeg">
+	<meta property="og:type" content="product">
+	<meta property="og:title" content="{{ product.name }} - All In Gifts & Souvenirs">
+	<meta property="og:description" content="{{ product.description|striptags|truncatechars:160 }}">
+	<meta property="og:url" content="https://www.allingiftssouvenirs.com/product/{{ product.slug }}/">
+	<meta property="og:site_name" content="All In Gifts & Souvenirs">
+
+	{% if product.image %}
+	<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ product.image.url }}">
+	{% endif %}
 	<meta property="og:image:width" content="1080">
 	<meta property="og:image:height" content="1080">
 	<meta property="og:image:type" content="image/jpeg">
@@ -519,12 +522,6 @@ footer span,
     color: white !important;
 }
 
-/* Force the footer wrapper to span the full viewport */
-.et-footers-wrapper,
-.et-footers-wrapper .footer,
-.et-footers-wrapper .footer .container,
-.et-footers-wrapper .footer .row,
-.et-footers-wrapper .footer .footer-widgets,
 .et-footers-wrapper .footer-widget,
 .et-footers-wrapper .elementor,
 .et-footers-wrapper .elementor .elementor-element,
@@ -536,8 +533,71 @@ footer span,
     max-width: 100vw !important;
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
-    padding: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
+
+/* EXTRA FOOTER FIX */
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100% !important;
+}
+
+body {
+    min-height: 100vh !important;
+}
+
+.template-container,
+.template-content,
+.page-wrapper {
+    min-height: 100vh !important;
+}
+
+.et-footers-wrapper {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
+/* FOOTER HEIGHT FIX - make blue footer touch bottom */
+.et-footers-wrapper {
+    background: skyblue !important;
+    min-height: calc(100vh - 70px) !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.et-footers-wrapper .footer,
+.et-footers-wrapper .elementor,
+.et-footers-wrapper .elementor-section,
+.et-footers-wrapper .elementor-container,
+.et-footers-wrapper .elementor-column,
+.et-footers-wrapper .elementor-widget-wrap,
+.et-footers-wrapper .e-con,
+.et-footers-wrapper .e-con-inner {
+    background: skyblue !important;
+}
+
+/* stretch the actual blue area down */
+.et-footers-wrapper .elementor-section,
+.et-footers-wrapper .e-con,
+.et-footers-wrapper .e-con-inner {
+    min-height: calc(100vh - 70px) !important;
+}
+
+/* remove page bottom spacing */
+html,
+body {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 
 .et-footers-wrapper .row,
 .et-footers-wrapper .footer-widgets,
