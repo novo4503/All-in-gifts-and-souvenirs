@@ -125,7 +125,7 @@ def category_products(request, category):
 
     products = Product.objects.filter(category=category)
 
-    paginator = Paginator(products, 30)  # 30 products per page
+    paginator = Paginator(products, 5)  # 30 products per page
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
