@@ -928,7 +928,7 @@ a.menu-title.et-column-title[title="View More"] {
 			
 
     <div class="et_element et_b_header-logo align-start mob-align-center et_element-top-level">
-        <a href="https://www.greenapples.store">
+        <a href="/">
             <span><img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[1][self::HEADER]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::SPAN]/*[1][self::IMG]" width="1200" height="216" src="/media/site_images/logotorros_8eZUydN.jpeg" class="et_b_header-logo-img" alt="Logo Green Apples"></span><span class="fixed"><img data-od-added-fetchpriority="" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[1][self::DIV]/*[1][self::DIV]/*[1][self::HEADER]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[2][self::SPAN]/*[1][self::IMG]" fetchpriority="low" width="1200" height="216" src="/media/site_images/logotorros_8eZUydN.jpeg" class="et_b_header-logo-img" alt="Logo Green Apples" decoding="async"></span>            
         </a>
     </div>
@@ -1771,12 +1771,12 @@ a.menu-title.et-column-title[title="View More"] {
 						<div class="elementor-element elementor-element-079eb2c elementor-widget elementor-widget-html" data-id="079eb2c" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<h3><marquee behavior="alternate" loop="Infinite" scrollamount="5">
-<a class="btn navbar-btn" href="/liquor-store/">Bob Marley</a>
-<a class="btn navbar-btn" href="/clothing-store/">Jewlery</a>
-<a class="btn  navbar-btn" href="/product-category/vacation-essentials/">Mens Clothing</a>
-<a class="btn navbar-btn" href="/product-category/bob-marley-store/">Bob Marley Store</a>
-<a class="btn  navbar-btn" href="/product-category/caps-and-hats/">Caps &amp; Hats</a>
-<a class="btn  navbar-btn" href="/jamaicas-best/">Jamaica's Best</a>
+<a class="btn navbar-btn" href="{% url 'category_products' 'all-bob-marley' %}">Bob Marley</a>
+<a class="btn navbar-btn" href="{% url 'category_products' 'all-jewelry' %}">Jewlery</a>
+<a class="btn  navbar-btn" href="{% url 'category_products' 'all-mens-clothing' %}">Mens Clothing</a>
+<a class="btn navbar-btn" href="{% url 'category_products' 'all-womens-clothing' %}">Womens Clothing</a>
+<a class="btn  navbar-btn" href="{% url 'category_products' 'all-caps-and-hats' %}">Caps &amp; Hats</a>
+<a class="btn  navbar-btn" href="{% url 'category_products' 'all-bags' %}">Bags</a>
 </marquee></h3>				</div>
 				</div>
 					</div>
