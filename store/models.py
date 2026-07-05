@@ -8,7 +8,7 @@ class SiteImage(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -24,12 +24,12 @@ class Product(models.Model):
         ('men', 'Men'),
         ('kids', 'Kids'),
         ('jewelry', 'Jewelry'),
-        ('bottle','Bottle'),
-        ('hat','Hat'),
-        ('shorts','Shorts'),
-        ('dress-shirt','Dress-Shirt'),
-        ('pants','Pants'),
-        ('tshirt','TShirt'),
+        ('bottle', 'Bottle'),
+        ('hat', 'Hat'),
+        ('shorts', 'Shorts'),
+        ('dress-shirt', 'Dress-Shirt'),
+        ('pants', 'Pants'),
+        ('tshirt', 'TShirt'),
         ('kids-t-shirts', 'Kids T-Shirts'),
         ('jamaica-outfits', 'Jamaica Outfits'),
         ('kids-dresses', 'Kids Dresses'),
@@ -70,6 +70,7 @@ class Product(models.Model):
         ('all-bags', 'All Bags'),
         ('all-caps-and-hats', 'All Caps & Hats'),
         ('all-bottles', 'All Bottles'),
+        ('all-childrens-clothing', 'All Childrens Clothing'),
     ]
 
     name = models.CharField(max_length=100)
@@ -95,11 +96,10 @@ class Product(models.Model):
     )
 
     category = models.CharField(
-        max_length=20,
+        max_length=50,
         choices=CATEGORY_CHOICES,
         default='women'
     )
-
 
     show_on_home = models.BooleanField(default=False)
 
@@ -117,13 +117,18 @@ class Product(models.Model):
 
         super().save(*args, **kwargs)
 
-
-   
-
     def __str__(self):
         return self.name
-    
 
 
+class ProductImage(models.Model):
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name="gallery_images"
+    )
+    image = models.ImageField(upload_to="product_gallery/")
+    angle_name = models.CharField(max_length=100, blank=True)
 
-
+    def __str__(self):
+        return f"{self.product.name} image"
