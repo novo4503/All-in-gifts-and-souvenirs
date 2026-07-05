@@ -71,6 +71,7 @@ class Product(models.Model):
         ('all-caps-and-hats', 'All Caps & Hats'),
         ('all-bottles', 'All Bottles'),
         ('all-childrens-clothing', 'All Childrens Clothing'),
+        ('all-cigars', 'All Cigars'),
     ]
 
     name = models.CharField(max_length=100)
