@@ -313,16 +313,13 @@ marquee {
 
 
 
-
-
-
 	</style>
 
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<script async="" src="https://chimpstatic.com/mcjs-connected/js/users/06b7f061e8055d7e4046dafdb/d388baee686640ddcb501ea53.js"></script><script>window._wca = window._wca || [];</script>
+<script async="" src="https://chimpstatic.com/mcjs-connected/js/users/06b7f061e8055d7e4046dafdb/d388baee686640ddcb501ea53.js"></script><script async="" src="https://chimpstatic.com/mcjs-connected/js/users/06b7f061e8055d7e4046dafdb/d388baee686640ddcb501ea53.js"></script><script async="" src="https://chimpstatic.com/mcjs-connected/js/users/06b7f061e8055d7e4046dafdb/d388baee686640ddcb501ea53.js"></script><script>window._wca = window._wca || [];</script>
 
 	<!-- This site is optimized with the Yoast SEO plugin v26.7 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>All in gift souvenirs</title>
@@ -623,15 +620,15 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","i
 .et_product-block .woocommerce-variation-add-to-cart, .et_product-block form.cart, .product-content .woocommerce-variation-add-to-cart, .product-content form.cart {
     display: block !important;
 
-    
-    
+    /* display: flex; */
+    /* -webkit-box-align: center; */
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: inherit;
     -ms-flex-pack: inherit;
-    
+    /* justify-content: inherit; */
 }
 
 
@@ -657,7 +654,7 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","i
 .single-product form.cart table.variations td.label label, .single-product form.cart table.variations th.label label {
     font-size: 1.14rem;
     background-color: black;
-    
+    font-size: bolder;
     font-weight: bolder;
     color: white !important;
     width: 90% !important;
@@ -703,7 +700,7 @@ footer .container {
     margin: 0 auto !important;
 }
 </style>
-<style type="text/css" class="et_custom-css">.btn-checkout:hover,.btn-view-wishlist:hover{opacity:1 !important}.content-page,.page-content{padding-bottom:50px}.products-loop .content-product .product-details,.swiper-container .content-product .product-details{text-align:start}.products-loop .content-product .star-rating,.swiper-container .content-product .star-rating{margin-left:0}.carousel-area.products-slider{padding:13px 12px 0}.content-product .products-page-cats a{font-size:11px;text-transform:uppercase}.grid-post-body,.single-post .post-heading{text-align:center}.sidebar-widget .widget-title span,.upsell-products .widget-title span{font-size:18px}.related-products-title{border-bottom:1px solid #e1e1e1;padding-bottom:15px}.related-products-title span{border-bottom:2px solid #4caf50;padding-bottom:13px}.woocommerce-pagination ul li span,.etheme-pagination span,.after-shop-loop a,.etheme-pagination a{border-radius:4px}.footer .et-mailchimp input[type="submit"],.footer .et-mailchimp input[type="email"]{border-radius:4px !important;border-color:transparent !important}.footer .mc4wp-form .et-mailchimp{background-color:#fff;border-radius:4px !important}input.dokan-form-control,input[type="text"],input[type="number"],input[type="email"],input[type="search"],input[type="password"],input[type="tel"],input[type="url"],.with-border-radius{border-radius:4px}@media (min-width:993px){.container,.et-container{padding-left:30px;padding-right:30px}.products-loop .product:hover,.carousel-area .product-slide:hover{box-shadow:0 0 10px 3px rgba(0,0,0,.1);z-index:2;transform:translateY(-5px) scale(1.007);border-radius:5px}.products-loop .type-product{padding-top:15px}.products-loop .content-product{margin-bottom:15px}.products-loop .product,.swiper-container .product-slide{transition:all .2s ease-in-out}}@media (min-width:768px) and (max-width:992px){.container,.et-container{padding-left:30px;padding-right:30px}}.swiper-custom-right:not(.et-swiper-elementor-nav),.swiper-custom-left:not(.et-swiper-elementor-nav){background:transparent !important}@media only screen and (max-width:1830px){.swiper-custom-left,.middle-inside .swiper-entry .swiper-button-prev,.middle-inside.swiper-entry .swiper-button-prev{left:-15px}.swiper-custom-right,.middle-inside .swiper-entry .swiper-button-next,.middle-inside.swiper-entry .swiper-button-next{right:-15px}.middle-inbox .swiper-entry .swiper-button-prev,.middle-inbox.swiper-entry .swiper-button-prev{left:8px}.middle-inbox .swiper-entry .swiper-button-next,.middle-inbox.swiper-entry .swiper-button-next{right:8px}.swiper-entry:hover .swiper-custom-left,.middle-inside .swiper-entry:hover .swiper-button-prev,.middle-inside.swiper-entry:hover .swiper-button-prev{left:-5px}.swiper-entry:hover .swiper-custom-right,.middle-inside .swiper-entry:hover .swiper-button-next,.middle-inside.swiper-entry:hover .swiper-button-next{right:-5px}.middle-inbox .swiper-entry:hover .swiper-button-prev,.middle-inbox.swiper-entry:hover .swiper-button-prev{left:5px}.middle-inbox .swiper-entry:hover .swiper-button-next,.middle-inbox.swiper-entry:hover .swiper-button-next{right:5px}}.header-main-menu.et_element-top-level .menu{margin-right:-5px;margin-left:-5px}@media only screen and (max-width:992px){.header-wrapper,.site-header-vertical{display:none}}@media only screen and (min-width:993px){.mobile-header-wrapper{display:none}}.swiper-container{width:auto}.content-product .product-content-image img,.category-grid img,.categoriesCarousel .category-grid img{width:100%}.etheme-elementor-slider:not(.swiper-container-initialized,.swiper-initialized) .swiper-slide{max-width:calc(100% / var(--slides-per-view,4))}.etheme-elementor-slider[data-animation]:not(.swiper-container-initialized,.swiper-initialized,[data-animation=slide],[data-animation=coverflow]) .swiper-slide{max-width:100%}body:not([data-elementor-device-mode]) .etheme-elementor-off-canvas__container{transition:none;opacity:0;visibility:hidden;position:fixed}</style>
+<style id="kirki-inline-styles"></style><style type="text/css" class="et_custom-css">.btn-checkout:hover,.btn-view-wishlist:hover{opacity:1 !important}.content-page,.page-content{padding-bottom:50px}.products-loop .content-product .product-details,.swiper-container .content-product .product-details{text-align:start}.products-loop .content-product .star-rating,.swiper-container .content-product .star-rating{margin-left:0}.carousel-area.products-slider{padding:13px 12px 0}.content-product .products-page-cats a{font-size:11px;text-transform:uppercase}.grid-post-body,.single-post .post-heading{text-align:center}.sidebar-widget .widget-title span,.upsell-products .widget-title span{font-size:18px}.related-products-title{border-bottom:1px solid #e1e1e1;padding-bottom:15px}.related-products-title span{border-bottom:2px solid #4caf50;padding-bottom:13px}.woocommerce-pagination ul li span,.etheme-pagination span,.after-shop-loop a,.etheme-pagination a{border-radius:4px}.footer .et-mailchimp input[type="submit"],.footer .et-mailchimp input[type="email"]{border-radius:4px !important;border-color:transparent !important}.footer .mc4wp-form .et-mailchimp{background-color:#fff;border-radius:4px !important}input.dokan-form-control,input[type="text"],input[type="number"],input[type="email"],input[type="search"],input[type="password"],input[type="tel"],input[type="url"],.with-border-radius{border-radius:4px}@media (min-width:993px){.container,.et-container{padding-left:30px;padding-right:30px}.products-loop .product:hover,.carousel-area .product-slide:hover{box-shadow:0 0 10px 3px rgba(0,0,0,.1);z-index:2;transform:translateY(-5px) scale(1.007);border-radius:5px}.products-loop .type-product{padding-top:15px}.products-loop .content-product{margin-bottom:15px}.products-loop .product,.swiper-container .product-slide{transition:all .2s ease-in-out}}@media (min-width:768px) and (max-width:992px){.container,.et-container{padding-left:30px;padding-right:30px}}.swiper-custom-right:not(.et-swiper-elementor-nav),.swiper-custom-left:not(.et-swiper-elementor-nav){background:transparent !important}@media only screen and (max-width:1830px){.swiper-custom-left,.middle-inside .swiper-entry .swiper-button-prev,.middle-inside.swiper-entry .swiper-button-prev{left:-15px}.swiper-custom-right,.middle-inside .swiper-entry .swiper-button-next,.middle-inside.swiper-entry .swiper-button-next{right:-15px}.middle-inbox .swiper-entry .swiper-button-prev,.middle-inbox.swiper-entry .swiper-button-prev{left:8px}.middle-inbox .swiper-entry .swiper-button-next,.middle-inbox.swiper-entry .swiper-button-next{right:8px}.swiper-entry:hover .swiper-custom-left,.middle-inside .swiper-entry:hover .swiper-button-prev,.middle-inside.swiper-entry:hover .swiper-button-prev{left:-5px}.swiper-entry:hover .swiper-custom-right,.middle-inside .swiper-entry:hover .swiper-button-next,.middle-inside.swiper-entry:hover .swiper-button-next{right:-5px}.middle-inbox .swiper-entry:hover .swiper-button-prev,.middle-inbox.swiper-entry:hover .swiper-button-prev{left:5px}.middle-inbox .swiper-entry:hover .swiper-button-next,.middle-inbox.swiper-entry:hover .swiper-button-next{right:5px}}.header-main-menu.et_element-top-level .menu{margin-right:-5px;margin-left:-5px}@media only screen and (max-width:992px){.header-wrapper,.site-header-vertical{display:none}}@media only screen and (min-width:993px){.mobile-header-wrapper{display:none}}.swiper-container{width:auto}.content-product .product-content-image img,.category-grid img,.categoriesCarousel .category-grid img{width:100%}.etheme-elementor-slider:not(.swiper-container-initialized,.swiper-initialized) .swiper-slide{max-width:calc(100% / var(--slides-per-view,4))}.etheme-elementor-slider[data-animation]:not(.swiper-container-initialized,.swiper-initialized,[data-animation=slide],[data-animation=coverflow]) .swiper-slide{max-width:100%}body:not([data-elementor-device-mode]) .etheme-elementor-off-canvas__container{transition:none;opacity:0;visibility:hidden;position:fixed}</style>
 
 
 <link rel="icon" href="static/store/f2.png" sizes="32x32">
@@ -737,15 +734,15 @@ footer .container {
 .et_product-block .woocommerce-variation-add-to-cart, .et_product-block form.cart, .product-content .woocommerce-variation-add-to-cart, .product-content form.cart {
     display: block !important;
 
-    
-    
+    /* display: flex; */
+    /* -webkit-box-align: center; */
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: inherit;
     -ms-flex-pack: inherit;
-    
+    /* justify-content: inherit; */
 }
 
 
@@ -778,7 +775,7 @@ marquee {
 .single-product form.cart table.variations td.label label, .single-product form.cart table.variations th.label label {
     font-size: 1.14rem;
     background-color: black;
-    
+    font-size: bolder;
     font-weight: bolder;
     color: white !important;
     width: 90% !important;
@@ -845,7 +842,7 @@ a.glink img {
 
 
 </style>
-<link data-od-added-tag="" rel="preload" fetchpriority="high" as="image" href="https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1.jpeg" imagesrcset="https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-100x100.jpeg 100w" imagesizes="(max-width: 1024px) 100vw, 1024px" media="screen and (width &lt;= 782px)">
+<style id="kirki-inline-styles"></style><style type="text/css" class="et_custom-css">.btn-checkout:hover,.btn-view-wishlist:hover{opacity:1 !important}.content-page,.page-content{padding-bottom:50px}.products-loop .content-product .product-details,.swiper-container .content-product .product-details{text-align:start}.products-loop .content-product .star-rating,.swiper-container .content-product .star-rating{margin-left:0}.carousel-area.products-slider{padding:13px 12px 0}.content-product .products-page-cats a{font-size:11px;text-transform:uppercase}.grid-post-body,.single-post .post-heading{text-align:center}.sidebar-widget .widget-title span,.upsell-products .widget-title span{font-size:18px}.related-products-title{border-bottom:1px solid #e1e1e1;padding-bottom:15px}.related-products-title span{border-bottom:2px solid #4caf50;padding-bottom:13px}.woocommerce-pagination ul li span,.etheme-pagination span,.after-shop-loop a,.etheme-pagination a{border-radius:4px}.footer .et-mailchimp input[type="submit"],.footer .et-mailchimp input[type="email"]{border-radius:4px !important;border-color:transparent !important}.footer .mc4wp-form .et-mailchimp{background-color:#fff;border-radius:4px !important}input.dokan-form-control,input[type="text"],input[type="number"],input[type="email"],input[type="search"],input[type="password"],input[type="tel"],input[type="url"],.with-border-radius{border-radius:4px}@media (min-width:993px){.container,.et-container{padding-left:30px;padding-right:30px}.products-loop .product:hover,.carousel-area .product-slide:hover{box-shadow:0 0 10px 3px rgba(0,0,0,.1);z-index:2;transform:translateY(-5px) scale(1.007);border-radius:5px}.products-loop .type-product{padding-top:15px}.products-loop .content-product{margin-bottom:15px}.products-loop .product,.swiper-container .product-slide{transition:all .2s ease-in-out}}@media (min-width:768px) and (max-width:992px){.container,.et-container{padding-left:30px;padding-right:30px}}.swiper-custom-right:not(.et-swiper-elementor-nav),.swiper-custom-left:not(.et-swiper-elementor-nav){background:transparent !important}@media only screen and (max-width:1830px){.swiper-custom-left,.middle-inside .swiper-entry .swiper-button-prev,.middle-inside.swiper-entry .swiper-button-prev{left:-15px}.swiper-custom-right,.middle-inside .swiper-entry .swiper-button-next,.middle-inside.swiper-entry .swiper-button-next{right:-15px}.middle-inbox .swiper-entry .swiper-button-prev,.middle-inbox.swiper-entry .swiper-button-prev{left:8px}.middle-inbox .swiper-entry .swiper-button-next,.middle-inbox.swiper-entry .swiper-button-next{right:8px}.swiper-entry:hover .swiper-custom-left,.middle-inside .swiper-entry:hover .swiper-button-prev,.middle-inside.swiper-entry:hover .swiper-button-prev{left:-5px}.swiper-entry:hover .swiper-custom-right,.middle-inside .swiper-entry:hover .swiper-button-next,.middle-inside.swiper-entry:hover .swiper-button-next{right:-5px}.middle-inbox .swiper-entry:hover .swiper-button-prev,.middle-inbox.swiper-entry:hover .swiper-button-prev{left:5px}.middle-inbox .swiper-entry:hover .swiper-button-next,.middle-inbox.swiper-entry:hover .swiper-button-next{right:5px}}.header-main-menu.et_element-top-level .menu{margin-right:-5px;margin-left:-5px}@media only screen and (max-width:992px){.header-wrapper,.site-header-vertical{display:none}}@media only screen and (min-width:993px){.mobile-header-wrapper{display:none}}.swiper-container{width:auto}.content-product .product-content-image img,.category-grid img,.categoriesCarousel .category-grid img{width:100%}.etheme-elementor-slider:not(.swiper-container-initialized,.swiper-initialized) .swiper-slide{max-width:calc(100% / var(--slides-per-view,4))}.etheme-elementor-slider[data-animation]:not(.swiper-container-initialized,.swiper-initialized,[data-animation=slide],[data-animation=coverflow]) .swiper-slide{max-width:100%}body:not([data-elementor-device-mode]) .etheme-elementor-off-canvas__container{transition:none;opacity:0;visibility:hidden;position:fixed}</style><link data-od-added-tag="" rel="preload" fetchpriority="high" as="image" href="https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1.jpeg" imagesrcset="https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2021/07/Attachment-1-5-1-100x100.jpeg 100w" imagesizes="(max-width: 1024px) 100vw, 1024px" media="screen and (width &lt;= 782px)">
 <link data-od-added-tag="" rel="preload" fetchpriority="high" as="image" href="https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288.jpg" imagesrcset="https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288.jpg 1080w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-300x300.jpg 300w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-1024x1024.jpg 1024w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-150x150.jpg 150w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-768x768.jpg 768w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-600x600.jpg 600w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-100x100.jpg 100w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-1x1.jpg 1w, https://www.greenapples.store/wp-content/uploads/2024/03/IMG_4288-10x10.jpg 10w" imagesizes="(max-width: 1080px) 100vw, 1080px" media="screen and (782px &lt; width)">
 
 
@@ -2163,7 +2160,7 @@ a.menu-title.et-column-title[title="View More"] {
 						<div class="elementor-element elementor-element-e8c332a elementor-absolute elementor-widget elementor-widget-image" data-id="e8c332a" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 																<a href="{% url 'category_products' 'women' %}">
-							<img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1080px) 100vw, 1080px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1080" height="1080" src="{% static 'store/womenoriginal.png' %}" class="attachment-full size-full wp-image-23848" alt="" sizes="(max-width: 1080px) 100vw, 1080px">								</a>
+							<img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1080px) 100vw, 1080px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1080" height="1080" src="{% static 'store/w1 final.png' %}" class="attachment-full size-full wp-image-23848" alt="" sizes="(max-width: 1080px) 100vw, 1080px">								</a>
 															</div>
 				</div>
 					</div>
@@ -2285,7 +2282,7 @@ a.menu-title.et-column-title[title="View More"] {
 						<div class="elementor-element elementor-element-29a491c elementor-absolute elementor-widget elementor-widget-image" data-id="29a491c" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 																<a href="{% url 'category_products' 'kids' %}">
-							<img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1080px) 100vw, 1080px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1080" height="1080" src="{% static 'store/children-CLOTHES.png' %}" class="attachment-full size-full wp-image-23847" alt="" sizes="(max-width: 1080px) 100vw, 1080px">								</a>
+							<img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1080px) 100vw, 1080px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1080" height="1080" src="{% static 'store/child1_final.png' %}" class="attachment-full size-full wp-image-23847" alt="" sizes="(max-width: 1080px) 100vw, 1080px">								</a>
 															</div>
 				</div>
 					</div>

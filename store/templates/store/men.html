@@ -1,5 +1,12 @@
 {%load static%}
 <html lang="en-US"><head>
+<style>
+/* Make search-button and search-icon hover use skyblue and ensure readable icon */
+.search-button, .search-icon { background-color: transparent !important; color: skyblue !important; border: none !important; }
+.search-button svg, .search-icon svg { fill: skyblue !important; color: skyblue !important; }
+.search-button:hover, .search-icon:hover, .search-button:focus, .search-icon:focus { background-color: skyblue !important; color: black !important; }
+.search-button:hover svg, .search-icon:hover svg, .search-button:focus svg, .search-icon:focus svg { fill: white !important; color: white !important; }
+</style>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -748,7 +755,7 @@ footer .container {
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center mob-justify-content-center flex-basis-full et_element-top-level et-content-dropdown">
 		
 	    
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+		<form action="{% url 'search_products' %}" role="search" class="django-search-form input-input" method="get">
 			
                 <div class="input-row flex align-items-center " data-search-mode="dark">
                     					<select style="width: 100%; max-width: calc(122px + 1.4em)" name="product_cat" id="product_cat-551" class="postform">
@@ -914,7 +921,7 @@ footer .container {
 	<option class="level-1" value="women-t-shirts">&nbsp;&nbsp;&nbsp;Women T-Shirts</option>
 </select>
                     <label class="screen-reader-text" for="et_b-header-search-input-88">Search input</label>
-                    <input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-88" name="s">
+                    <input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-88" name="q">
 					
 					                        <input type="hidden" name="post_type" value="product">
 					
@@ -982,15 +989,11 @@ footer .container {
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center flex-basis-full et-content-dropdown">
 		
 	    
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+		<form action="{% url 'search_products' %}" role="search" class="django-search-form input-input" method="get">
 			
                 <div class="input-row flex align-items-center et-overflow-hidden" data-search-mode="dark">
                     					                    <label class="screen-reader-text" for="et_b-header-search-input-66">Search input</label>
-                    <input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-66" name="s">
-					
-					                        <input type="hidden" name="post_type" value="product">
-					
-                                            <input type="hidden" name="et_search" value="true">
+					<input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-66" name="q">
                     					
 					                    <span class="buttons-wrapper flex flex-nowrap pos-relative">
                     <span class="clear flex-inline justify-content-center align-items-center pointer">
@@ -1435,11 +1438,11 @@ footer .container {
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center mob-justify-content-center flex-basis-full et_element-top-level et-content-dropdown">
 		
 	    
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+		<form action="{% url 'search_products' %}" role="search" class="django-search-form input-input" method="get">
 			
                 <div class="input-row flex align-items-center et-overflow-hidden" data-search-mode="dark">
                     					                    <label class="screen-reader-text" for="et_b-header-search-input-68">Search input</label>
-                    <input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-68" name="s">
+					<input type="text" value="" placeholder="Search for Vacation Essentials, Gifts, Liquor, Clothing, Cigars ……." autocomplete="off" class="form-control" id="et_b-header-search-input-68" name="q">
 					
 					                        <input type="hidden" name="post_type" value="product">
 					
