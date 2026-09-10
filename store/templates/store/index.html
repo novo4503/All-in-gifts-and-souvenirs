@@ -312,6 +312,26 @@ marquee {
 }
 
 
+/* Keep all absolutely-positioned homepage product images under the cart */
+.elementor-element-581bcf5,
+.elementor-element-e8c332a,
+.elementor-element-29a491c,
+.elementor-element-d63d329,
+.elementor-element-60f114f,
+.elementor-element-f639b68,
+.elementor-element-02ccf69,
+.elementor-element-23ec157,
+.elementor-element-edb6f59 {
+    z-index: 0 !important;
+}
+
+
+.search-icon:hover {
+    background-color: #87CEEB !important;
+    color: white !important;
+}
+
+
 
 
 
@@ -1491,7 +1511,7 @@ a.menu-title.et-column-title[title="View More"] {
 <div class="et_element et_b_header-search flex align-items-center   et-content-right justify-content-center flex-basis-full et-content-dropdown">
 
 
-        <form action="https://www.greenapples.store/" role="search" data-min="3" data-per-page="100" class="ajax-search-form  ajax-with-suggestions input-input " method="get">
+        <form action="{% url 'search_products' %}" method="get" role="search" class="django-search-form">
 
                 <div class="input-row flex align-items-center et-overflow-hidden" data-search-mode="dark">
                     					                    <label class="screen-reader-text" for="et_b-header-search-input-23">Search input</label>
