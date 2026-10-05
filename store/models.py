@@ -21,6 +21,8 @@ class Category(models.Model):
 class Product(models.Model):
     CATEGORY_CHOICES = [
         ('women', 'Women'),
+        ('shoes', 'Shoes'),
+        ('bathsuit', 'Bathsuit'),
         ('men', 'Men'),
         ('kids', 'Kids'),
         ('jewelry', 'Jewelry'),
@@ -72,6 +74,10 @@ class Product(models.Model):
         ('all-bottles', 'All Bottles'),
         ('all-childrens-clothing', 'All Childrens Clothing'),
         ('all-cigars', 'All Cigars'),
+        ('jamaica-souvenir-figurines', 'Jamaica Souvenir Figurines'),
+        ('kids-souvenir-toys', "Kids' Souvenir Toys"),
+        ('wooden-toys', 'Wooden Toys'),
+        ('miniature-cars-vehicles', 'Miniature Cars & Vehicles'),
     ]
 
     name = models.CharField(max_length=100)

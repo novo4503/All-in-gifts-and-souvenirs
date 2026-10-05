@@ -6,6 +6,7 @@
 }
 
 @media screen and (max-width: 768px) {
+
     .tg-Quantiy {
         display: none;
     }
@@ -220,7 +221,7 @@ a.btn.navbar-btn:hover {
 
 .elementor-image-box-wrapper .elementor-image-box-img {
     overflow: hidden !important;
-    border-radius: 50% !important;
+    border-radius: 15px !important;
     aspect-ratio: 1 / 1;
     width: 100%;
 }
@@ -230,7 +231,7 @@ a.btn.navbar-btn:hover {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    border-radius: 50% !important;
+    border-radius: 15px !important;
     display: block !important;
 }
 
@@ -329,6 +330,150 @@ marquee {
 .search-icon:hover {
     background-color: #87CEEB !important;
     color: white !important;
+}
+
+
+/* ONLY the big Bottles image */
+.elementor-element-edb6f59 img {
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+
+
+/* Make the new circle the same size as the others */
+.elementor-element-42347ef .elementor-image-box-img {
+    width: 132px !important;
+    max-width: 132px !important;
+    height: 132px !important;
+    max-height: 132px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden !important;
+}
+
+.elementor-element-42347ef .elementor-image-box-img a {
+    display: block !important;
+    width: 132px !important;
+    max-width: 132px !important;
+    height: 132px !important;
+}
+
+.elementor-element-42347ef .elementor-image-box-img img {
+    display: block !important;
+    width: 132px !important;
+    max-width: 132px !important;
+    height: 132px !important;
+    max-height: 132px !important;
+    object-fit: cover !important;
+}
+
+
+
+.new-category-circle {
+    width: 132px !important;
+    height: 132px !important;
+    margin: 0 auto !important;
+}
+
+
+
+
+
+.new-category-circle a,
+.new-category-circle img {
+    width: 132px !important;
+    height: 132px !important;
+    object-fit: cover !important;
+}
+
+
+
+
+
+
+
+
+
+/* Cigar image - 20% smaller */
+.elementor-element-0f41cd6 .elementor-image-box-img {
+    width: 106px !important;
+    height: 106px !important;
+    max-width: 106px !important;
+    max-height: 106px !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+}
+
+.elementor-element-0f41cd6 .elementor-image-box-img img {
+    width: 106px !important;
+    height: 106px !important;
+    max-width: 106px !important;
+    max-height: 106px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+
+/* Align Cigar with category row */
+.elementor-element-bec8f85 .elementor-container {
+    align-items: flex-start !important;
+}
+
+
+
+
+
+
+img[data-dominant-color]:not(.has-transparency)
+Specificity: (0,2,1)
+ {
+    background-color: white;
+ }
+
+ img {
+    background-color: white !important;
+}
+
+
+/* Move ONLY the Cigar down */
+.elementor-element-bec8f85 .elementor-element-0f41cd6 {
+    position: relative !important;
+    top: 50px !important;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .elementor-element-bec8f85 .elementor-element-0f41cd6 {
+        position: relative !important;
+        top: 100px !important;
+        display: block !important;
+        z-index: 10 !important;
+    }
+}
+
+
+/* Remove green area beside footer */
+.et-footers-wrapper {
+    overflow: hidden !important;
+}
+
+
+
+.extra-category-image {
+    width: 250px !important;
+    height: 250px !important;
+    object-fit: contain !important;
+
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 
@@ -643,15 +788,15 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","i
 .et_product-block .woocommerce-variation-add-to-cart, .et_product-block form.cart, .product-content .woocommerce-variation-add-to-cart, .product-content form.cart {
     display: block !important;
 
-    
-    
+
+
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: inherit;
     -ms-flex-pack: inherit;
-    
+
 }
 
 
@@ -677,7 +822,7 @@ var wc_add_to_cart_variation_params = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","i
 .single-product form.cart table.variations td.label label, .single-product form.cart table.variations th.label label {
     font-size: 1.14rem;
     background-color: black;
-    
+
     font-weight: bolder;
     color: white !important;
     width: 90% !important;
@@ -757,15 +902,15 @@ footer .container {
 .et_product-block .woocommerce-variation-add-to-cart, .et_product-block form.cart, .product-content .woocommerce-variation-add-to-cart, .product-content form.cart {
     display: block !important;
 
-    
-    
+
+
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: inherit;
     -ms-flex-pack: inherit;
-    
+
 }
 
 
@@ -798,7 +943,7 @@ marquee {
 .single-product form.cart table.variations td.label label, .single-product form.cart table.variations th.label label {
     font-size: 1.14rem;
     background-color: black;
-    
+
     font-weight: bolder;
     color: white !important;
     width: 90% !important;
@@ -947,7 +1092,7 @@ a.menu-title.et-column-title[title="View More"] {
 
 <span class="et_connect-block-sep"></span>
 
-<div class="et_element et_b_header-html_block header-html_block1"><p><i class="et-icon et-calendar et_b-icon"></i>Mon - Fri 9:30 am - 7:30 pm&nbsp;</p></div>
+<div class="et_element et_b_header-html_block header-html_block1"><p><i class="et-icon et-calendar et_b-icon"></i>Sun - Sat 9:30 am - 7:30 pm&nbsp;</p></div>
 
 </div>        </div>
 
@@ -1869,7 +2014,7 @@ a.menu-title.et-column-title[title="View More"] {
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-a0c4738 elementor-position-top elementor-widget elementor-widget-image-box" data-id="a0c4738" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="{% url 'category_products' 'men' %}" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[3][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="/media/site_images/mens_1.png" class="attachment-full size-full wp-image-20032 top-seller-image" alt="T-Shirt Top Seller" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="{% url 'category_products' 'men' %}" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[3][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="{{images.mens.image.url}}" class="attachment-full size-full wp-image-20032 top-seller-image" alt="T-Shirt Top Seller" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
 				</div>
 					</div>
 		</div>
@@ -1930,19 +2075,97 @@ a.menu-title.et-column-title[title="View More"] {
 			<div class="elementor-widget-wrap">
 							</div>
 		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ba24736" data-id="ba24736" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-0f41cd6 elementor-position-top elementor-widget elementor-widget-image-box" data-id="0f41cd6" data-element_type="widget" data-widget_type="image-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="{% url 'category_products' 'cigar' %}" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1080px) 100vw, 1080px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[5][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1080" height="1080" src="{{images.cigar.image.url}}" class="attachment-full size-full wp-image-21599" alt="" sizes="(max-width: 1080px) 100vw, 1080px"></a></figure></div>				</div>
-				</div>
-					</div>
-		</div>
+
 				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-42347ef" data-id="42347ef" data-element_type="column">
 			<div class="elementor-widget-wrap">
 							</div>
 		</div>
 					</div>
+
+                    <!-- THIRD ROW -->
+<div class="elementor-container elementor-column-gap-default bottom-category-row">
+
+    <!-- LEFT: SHOES -->
+    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element">
+        <div class="elementor-widget-wrap elementor-element-populated">
+
+            <div class="elementor-element elementor-position-top elementor-widget elementor-widget-image-box shoe-image">
+                <div class="elementor-widget-container">
+
+                    <div class="elementor-image-box-wrapper new-category-circle">
+                        <figure class="elementor-image-box-img new-category-circle">
+
+                            <a href="{% url 'category_products' 'bathsuit' %}" tabindex="-1">
+                                <img
+                                    src="{{images.bathsuit.image.url}}"
+                                    class="attachment-full size-full"
+                                    alt="">
+                            </a>
+
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- CENTER: CIGAR -->
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element">
+    <div class="elementor-widget-wrap elementor-element-populated">
+
+        <div class="elementor-element elementor-position-top elementor-widget elementor-widget-image-box">
+            <div class="elementor-widget-container">
+
+                <div class="elementor-image-box-wrapper new-category-circle">
+                    <figure class="elementor-image-box-img new-category-circle">
+
+                        <a href="{% url 'category_products' 'cigar' %}" tabindex="-1">
+                            <img
+                                src="{{images.cigar.image.url}}"
+                                class="attachment-full size-full"
+                                alt="Cigars">
+                        </a>
+
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- RIGHT: SECOND IMAGE -->
+    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element">
+        <div class="elementor-widget-wrap elementor-element-populated">
+
+            <div class="elementor-element elementor-position-top elementor-widget elementor-widget-image-box">
+                <div class="elementor-widget-container">
+
+                    <div class="elementor-image-box-wrapper new-category-circle">
+                        <figure class="elementor-image-box-img new-category-circle">
+
+                            <a href="{% url 'category_products' 'shoes' %}" tabindex="-1">
+                                <img
+                                    src="{{images.shoeff.image.url}}"
+                                    class="attachment-full size-full"
+                                    alt="">
+                            </a>
+
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 		</section>
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-b05ecff elementor-section-boxed elementor-section-height-default elementor-section-height-default animated fadeInUp" data-id="b05ecff" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_mobile&quot;:&quot;fadeIn&quot;}">
 						<div class="elementor-container elementor-column-gap-default">
@@ -2059,7 +2282,7 @@ a.menu-title.et-column-title[title="View More"] {
 						<div class="elementor-element elementor-element-581bcf5 elementor-absolute elementor-widget elementor-widget-image" data-id="581bcf5" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 																<a href="/Jew/">
-							<img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1080px) 100vw, 1080px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1080" height="1080" src="/media/site_images/bob__marley__collection_Kgcghjv.png" class="attachment-full size-full wp-image-25121 not-transparent" alt="" sizes="(max-width: 1080px) 100vw, 1080px" data-has-transparency="false" data-dominant-color="dad5cf" style="--dominant-color: #dad5cf">								</a>
+							<img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1080px) 100vw, 1080px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[6][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1080" height="1080" src="{{images.menbottompage.image.url}}" class="attachment-full size-full wp-image-25121 not-transparent" alt="" sizes="(max-width: 1080px) 100vw, 1080px" data-has-transparency="false" data-dominant-color="dad5cf" style="--dominant-color: #dad5cf">								</a>
 															</div>
 				</div>
 					</div>
@@ -3067,7 +3290,1089 @@ a.menu-title.et-column-title[title="View More"] {
 		</div>
 					</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-b1ee641 elementor-section-boxed elementor-section-height-default elementor-section-height-default animated fadeInUp" data-id="b1ee641" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+
+		<!--test-->
+
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
+					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
+			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
+						</a><div class="elementor-element elementor-element-a791583 elementor-widget elementor-widget-et_menu_list" data-id="a791583" data-element_type="widget" data-widget_type="et_menu_list.default"><a href="/Jew/">
+				</a><div class="elementor-widget-container"><a href="/Jew/">
+
+        </a><ul class="et-menu-list  menu-list-3580 text-left"><a href="/Jew/">
+
+            </a><li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-302"><a href="/Jew/">
+
+
+                <div class="item-title-holder ">
+
+                    <a class="menu-title et-column-title  " href="/category/toys/" target="_self" title="Sterling Silver Jewelry">
+
+                    <h3>Toys</h3>
+                    </a>
+
+                </div>
+
+        	        		</a><div class="menu-sublist"><a href="/Jew/"></a><ul><a href="/Jew/">
+            </a><li class="menu-item  menu-item-4719"><a href="/Jew/">
+
+
+                </a><div class="subitem-title-holder    elementor-repeater-item-244b2dc"><a href="/Jew/">
+
+                    </a><a class="menu-title et-column-title  " href="/category/jamaica-souvenir-figurines/" target="_self" title="Jamaican Charms">
+
+                    <h4>Jamaica Souvenir Figurines</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2976">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-3a5472f">
+
+                    <a class="menu-title et-column-title  " href="/category/kids-souvenir-toys/" target="_self" title="Pendants">
+
+                    <h4>Kids Souvenir Toys</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-6956">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-521d4ec">
+
+                    <a class="menu-title et-column-title  " href="/category/jamaican-themed-toys/" target="_self" title="Rings">
+
+                    <h4>Jamaican-Themed Toys</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2933">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/miniature-cars-vehicles/" target="_self" title="Bangles">
+
+                    <h4>Miniature Cars & Vehicles</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+            <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/wooden-toys/" target="_self" title="Bangles">
+
+                    <h4>Wooden Toys</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-1898">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-5ba1b16">
+
+                    <a class="menu-title et-column-title  " href="/category/toys/" target="_self" title="View More">
+
+                    <h4>View More</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+
+            <!--here   test-->
+
+
+
+
+
+
+
+
+
+
+        </ul></div>
+
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+
+
+
+        <!--hopef-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/category/toys/">
+							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.Toys_Bottom.image.url}}" class="attachment-full size-full wp-image-18376" alt="Island Trinketz Charms" sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<!--test-->
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
+					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
+			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
+						</a><div class="elementor-element elementor-element-a791583 elementor-widget elementor-widget-et_menu_list" data-id="a791583" data-element_type="widget" data-widget_type="et_menu_list.default"><a href="/Jew/">
+				</a><div class="elementor-widget-container"><a href="/Jew/">
+
+        </a><ul class="et-menu-list  menu-list-3580 text-left"><a href="/Jew/">
+
+            </a><li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-302"><a href="/Jew/">
+
+
+                <div class="item-title-holder ">
+
+                    <a class="menu-title et-column-title  " href="/category/sunscreen/" target="_self" title="Sterling Silver Jewelry">
+
+                    <h3>Sunscreen</h3>
+                    </a>
+
+                </div>
+
+        	        		</a><div class="menu-sublist"><a href="/Jew/"></a><ul><a href="/Jew/">
+            </a><li class="menu-item  menu-item-4719"><a href="/Jew/">
+
+
+                </a><div class="subitem-title-holder    elementor-repeater-item-244b2dc"><a href="/Jew/">
+
+                    </a><a class="menu-title et-column-title  " href="/category/water-bottles/" target="_self" title="Jamaican Charms">
+
+                    <h4>SPF 30 Sunscreen</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2976">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-3a5472f">
+
+                    <a class="menu-title et-column-title  " href="/category/thermal-bottles/" target="_self" title="Pendants">
+
+                    <h4>SPF 50 Sunscreen</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-6956">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-521d4ec">
+
+                    <a class="menu-title et-column-title  " href="/category/mugs/" target="_self" title="Rings">
+
+                    <h4>SPF 100 Sunscreen</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2933">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/sports-bottles/" target="_self" title="Bangles">
+
+                    <h4>SPF 15 Sunscreen</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-1898">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-5ba1b16">
+
+                    <a class="menu-title et-column-title  " href="/category/sunscreen/" target="_self" title="View More">
+
+                    <h4>View More</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+
+            <!--here   test-->
+
+
+
+
+
+
+
+
+
+
+        </ul></div>
+
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+
+
+
+        <!--hopef-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/category/sunscreen/">
+							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.SunscreenOG.image.url}}" class="attachment-full size-full wp-image-18376" alt="Island Trinketz Charms" sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+
+		<!--test2-->
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
+					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
+			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
+						</a><div class="elementor-element elementor-element-a791583 elementor-widget elementor-widget-et_menu_list" data-id="a791583" data-element_type="widget" data-widget_type="et_menu_list.default"><a href="/Jew/">
+				</a><div class="elementor-widget-container"><a href="/Jew/">
+
+        </a><ul class="et-menu-list  menu-list-3580 text-left"><a href="/Jew/">
+
+            </a><li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-302"><a href="/Jew/">
+
+
+                <div class="item-title-holder ">
+
+                    <a class="menu-title et-column-title  " href="/category/bottles/" target="_self" title="Sterling Silver Jewelry">
+
+                    <h3>Jamaican  Treats</h3>
+                    </a>
+
+                </div>
+
+        	        		</a><div class="menu-sublist"><a href="/Jew/"></a><ul><a href="/Jew/">
+            </a><li class="menu-item  menu-item-4719"><a href="/Jew/">
+
+
+                </a><div class="subitem-title-holder    elementor-repeater-item-244b2dc"><a href="/Jew/">
+
+                    </a><a class="menu-title et-column-title  " href="/category/banana-drops/" target="_self" title="Jamaican Charms">
+
+                    <h4>Banana Drops</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2976">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-3a5472f">
+
+                    <a class="menu-title et-column-title  " href="/category/plantain-chips/" target="_self" title="Pendants">
+
+                    <h4>plaintain chips</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-6956">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-521d4ec">
+
+                    <a class="menu-title et-column-title  " href="/category/coconut-drop/" target="_self" title="Rings">
+
+                    <h4>Coconut Drop</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2933">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/gizzada/" target="_self" title="Bangles">
+
+                    <h4>Gizzada</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-1898">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-5ba1b16">
+
+                    <a class="menu-title et-column-title  " href="/category/all-bottles/" target="_self" title="View More">
+
+                    <h4>View More</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+
+            <!--here   test-->
+
+
+
+
+
+
+
+
+
+
+        </ul></div>
+
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+
+
+
+        <!--hopef-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/Jew/">
+							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.Jamaican_Treats.image.url}}" class="attachment-full size-full wp-image-18376" alt="Island Trinketz Charms" sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<!--test4-->
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
+					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
+			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
+						</a><div class="elementor-element elementor-element-a791583 elementor-widget elementor-widget-et_menu_list" data-id="a791583" data-element_type="widget" data-widget_type="et_menu_list.default"><a href="/Jew/">
+				</a><div class="elementor-widget-container"><a href="/Jew/">
+
+        </a><ul class="et-menu-list  menu-list-3580 text-left"><a href="/Jew/">
+
+            </a><li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-302"><a href="/Jew/">
+
+
+                <div class="item-title-holder ">
+
+                    <a class="menu-title et-column-title  " href="/category/cigars/" target="_self" title="Sterling Silver Jewelry">
+
+                    <h3>Cigars</h3>
+                    </a>
+
+                </div>
+
+        	        		</a><div class="menu-sublist"><a href="/Jew/"></a><ul><a href="/Jew/">
+            </a><li class="menu-item  menu-item-4719"><a href="/Jew/">
+
+
+                </a><div class="subitem-title-holder    elementor-repeater-item-244b2dc"><a href="/Jew/">
+
+                    </a><a class="menu-title et-column-title  " href="/category/cohiba/" target="_self" title="Jamaican Charms">
+
+                    <h4>Cohiba</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2976">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-3a5472f">
+
+                    <a class="menu-title et-column-title  " href="/category/montecristo/" target="_self" title="Pendants">
+
+                    <h4>Montecristo</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-6956">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-521d4ec">
+
+                    <a class="menu-title et-column-title  " href="/category/romeo-y-julieta/" target="_self" title="Rings">
+
+                    <h4>Romeo y Julieta</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2933">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/partagas/" target="_self" title="Bangles">
+
+                    <h4>Partagás </h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+            <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/h-upmann/" target="_self" title="Bangles">
+
+                    <h4>H. Upmann </h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-1898">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-5ba1b16">
+
+                    <a class="menu-title et-column-title  " href="/category/cigars/" target="_self" title="View More">
+
+                    <h4>View More</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+
+            <!--here   test-->
+
+
+
+
+
+
+
+
+
+
+        </ul></div>
+
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+
+
+
+        <!--hopef-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/category/cigars/">
+							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.cigar_bottom.image.url}}" class="attachment-full size-full wp-image-18376" alt="Island Trinketz Charms" sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+
+		<!--test4-->
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
+					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
+			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
+						</a><div class="elementor-element elementor-element-a791583 elementor-widget elementor-widget-et_menu_list" data-id="a791583" data-element_type="widget" data-widget_type="et_menu_list.default"><a href="/Jew/">
+				</a><div class="elementor-widget-container"><a href="/Jew/">
+
+        </a><ul class="et-menu-list  menu-list-3580 text-left"><a href="/Jew/">
+
+            </a><li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-302"><a href="/Jew/">
+
+
+                <div class="item-title-holder ">
+
+                    <a class="menu-title et-column-title  " href="/category/towels/" target="_self" title="Sterling Silver Jewelry">
+
+                    <h3>Towels</h3>
+                    </a>
+
+                </div>
+
+        	        		</a><div class="menu-sublist"><a href="/Jew/"></a><ul><a href="/Jew/">
+            </a><li class="menu-item  menu-item-4719"><a href="/Jew/">
+
+
+                </a><div class="subitem-title-holder    elementor-repeater-item-244b2dc"><a href="/Jew/">
+
+                    </a><a class="menu-title et-column-title  " href="/category/striped-towels/" target="_self" title="Jamaican Charms">
+
+                    <h4>Striped Towels</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2976">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-3a5472f">
+
+                    <a class="menu-title et-column-title  " href="/category/bob-marley-towels/" target="_self" title="Pendants">
+
+                    <h4>Bob Marley Towels</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-6956">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-521d4ec">
+
+                    <a class="menu-title et-column-title  " href="/category/beach-towels/" target="_self" title="Rings">
+
+                    <h4>Beach Towels</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+            <li class="menu-item  menu-item-1898">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-5ba1b16">
+
+                    <a class="menu-title et-column-title  " href="/category/towels/" target="_self" title="View More">
+
+                    <h4>View More</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+
+            <!--here   test-->
+
+
+
+
+
+
+
+
+
+
+        </ul></div>
+
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+
+
+
+        <!--hopef-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/category/towels/">
+							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.Towels_Bottom.image.url}}" class="attachment-full size-full wp-image-18376" alt="Island Trinketz Charms" sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<!--test3-->
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
+					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
+			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
+						</a><div class="elementor-element elementor-element-a791583 elementor-widget elementor-widget-et_menu_list" data-id="a791583" data-element_type="widget" data-widget_type="et_menu_list.default"><a href="/Jew/">
+				</a><div class="elementor-widget-container"><a href="/Jew/">
+
+        </a><ul class="et-menu-list  menu-list-3580 text-left"><a href="/Jew/">
+
+            </a><li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-302"><a href="/Jew/">
+
+
+                <div class="item-title-holder ">
+
+                    <a class="menu-title et-column-title  " href="/category/spices/" target="_self" title="Sterling Silver Jewelry">
+
+                    <h3>Spices</h3>
+                    </a>
+
+                </div>
+
+        	        		</a><div class="menu-sublist"><a href="/Jew/"></a><ul><a href="/Jew/">
+            </a><li class="menu-item  menu-item-4719"><a href="/Jew/">
+
+
+                </a><div class="subitem-title-holder    elementor-repeater-item-244b2dc"><a href="/Jew/">
+
+                    </a><a class="menu-title et-column-title  " href="/category/jamaican-jerk-seasoning/" target="_self" title="Jamaican Charms">
+
+                    <h4>Jamaican jerk seasoning</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2976">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-3a5472f">
+
+                    <a class="menu-title et-column-title  " href="/category/jamaican-curry-powder/" target="_self" title="Pendants">
+
+                    <h4>Jamaican curry powder</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-6956">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-521d4ec">
+
+                    <a class="menu-title et-column-title  " href="/category/fish-seasoning/" target="_self" title="Rings">
+
+                    <h4>Fish seasoning</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2933">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/chicken-seasoning/" target="_self" title="Bangles">
+
+                    <h4>Chicken seasoning</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+             <li class="menu-item  menu-item-2933">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/cinnamon-powder/" target="_self" title="Bangles">
+
+                    <h4>Cinnamon powder</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-1898">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-5ba1b16">
+
+                    <a class="menu-title et-column-title  " href="/category/all-bottles/" target="_self" title="View More">
+
+                    <h4>"View More"</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+
+            <!--here   test-->
+
+
+
+
+
+
+
+
+
+
+        </ul></div>
+
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+
+
+
+        <!--hopef-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/Jew/">
+							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.Spicies_Bottom.image.url}}"    class=" extra-category-image attachment-full size-full wp-image-18376" alt="Island Trinketz Charms" sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+		<!--test6-->
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
+					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
+			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
+						</a><div class="elementor-element elementor-element-a791583 elementor-widget elementor-widget-et_menu_list" data-id="a791583" data-element_type="widget" data-widget_type="et_menu_list.default"><a href="/Jew/">
+				</a><div class="elementor-widget-container"><a href="/Jew/">
+
+        </a><ul class="et-menu-list  menu-list-3580 text-left"><a href="/Jew/">
+
+            </a><li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-302"><a href="/Jew/">
+
+
+                <div class="item-title-holder ">
+
+                    <a class="menu-title et-column-title  " href="/category/bottles/" target="_self" title="Sterling Silver Jewelry">
+
+                    <h3>Liquor</h3>
+                    </a>
+
+                </div>
+
+        	        		</a><div class="menu-sublist"><a href="/Jew/"></a><ul><a href="/Jew/">
+            </a><li class="menu-item  menu-item-4719"><a href="/Jew/">
+
+
+                </a><div class="subitem-title-holder    elementor-repeater-item-244b2dc"><a href="/Jew/">
+
+                    </a><a class="menu-title et-column-title  " href="/category/water-bottles/" target="_self" title="Jamaican Charms">
+
+                    <h4>Water Bottles</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2976">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-3a5472f">
+
+                    <a class="menu-title et-column-title  " href="/category/thermal-bottles/" target="_self" title="Pendants">
+
+                    <h4>Thermal Bottles</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-6956">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-521d4ec">
+
+                    <a class="menu-title et-column-title  " href="/category/mugs/" target="_self" title="Rings">
+
+                    <h4>Mugs</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-2933">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-895a14f">
+
+                    <a class="menu-title et-column-title  " href="/category/sports-bottles/" target="_self" title="Bangles">
+
+                    <h4>Sports Bottles</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li class="menu-item  menu-item-1898">
+
+
+                <div class="subitem-title-holder    elementor-repeater-item-5ba1b16">
+
+                    <a class="menu-title et-column-title  " href="/category/all-bottles/" target="_self" title="View More">
+
+                    <h4>View More</h4>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+
+
+
+            <!--here   test-->
+
+
+
+
+
+
+
+
+
+
+        </ul></div>
+
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+
+
+
+        <!--hopef-->
+
+
+
+
+
+
+
+
+
+
+
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/Jew/">
+							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.LiquorOG.image.url}}" class="attachment-full size-full wp-image-18376" alt="Island Trinketz Charms" sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+
+		<!--test7-->
+
+
+		<section class="elementor-section elementor-top-section elementor-element elementor-element-b1ee641 elementor-section-boxed elementor-section-height-default elementor-section-height-default animated fadeInUp" data-id="b1ee641" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
 						<div class="elementor-container elementor-column-gap-no">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a1ccafd" data-id="a1ccafd" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
