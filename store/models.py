@@ -13,6 +13,13 @@ class SiteImage(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
+    parent = models.ForeignKey(
+        'self',
+        on_delete=models.CASCADE,
+        related_name='children',
+        null=True,
+        blank=True,
+    )
 
     def __str__(self):
         return self.name
@@ -45,6 +52,30 @@ class Product(models.Model):
         ('visor', 'Visor'),
         ('rasta-tams', 'Rasta Tams'),
         ('cigar', 'Cigar'),
+        ('liquor', 'Liquor'),
+        ('white-rum', 'White Rum'),
+        ('dark-rum', 'Dark Rum'),
+        ('spiced-rum', 'Spiced Rum'),
+        ('gold-rum', 'Gold Rum'),
+        ('rum-cream', 'Rum Cream'),
+        ('coffee', 'Coffee'),
+        ('blue-mountain-coffee', 'Blue Mountain Coffee'),
+        ('jablum-instant', 'Jablum Instant'),
+        ('cafe-coffee-roaster', 'Cafe Coffee Roaster'),
+        ('mocha-island', 'Mocha Island'),
+        ('classic-decaf', 'Classic Decaf'),
+        ('cafe-expresso-blend-coffee', 'Cafe Expresso Blend Coffee'),
+        ('cake', 'Cake'),
+        ('original-jamaican-rum-cake', 'Original Jamaican Rum Cake'),
+        ('black-rum-cake', 'Black Rum Cake'),
+        ('white-rum-cake', 'White Rum Cake'),
+        ('coconut-rum-cake', 'Coconut Rum Cake'),
+        ('pineapple-rum-cake', 'Pineapple Rum Cake'),
+        ('banana-rum-cake', 'Banana Rum Cake'),
+        ('fruit-rum-cake', 'Fruit Rum Cake'),
+        ('chocolate-rum-cake', 'Chocolate Rum Cake'),
+        ('ginger-rum-cake', 'Ginger Rum Cake'),
+        ('mini-rum-cakes-gift-boxes', 'Mini Rum Cakes & Gift Boxes'),
         ('dress', 'Dress'),
         ('bluse', 'Bluse'),
         ('womenshirt', 'Womenshirt'),
@@ -139,3 +170,57 @@ class ProductImage(models.Model):
 
     def __str__(self):
         return f"{self.product.name} image"
+
+
+class Order(models.Model):
+    NOTIFICATION_STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('sent', 'Sent'),
+        ('failed', 'Failed'),
+    ]
+
+    customer_name = models.CharField(max_length=160)
+    phone = models.CharField(max_length=40)
+    delivery_address = models.CharField(max_length=255)
+    room = models.CharField(max_length=80, blank=True)
+    delivery_time = models.CharField(max_length=40)
+    cash_note = models.CharField(max_length=40)
+    delivery_notes = models.TextField(blank=True)
+    promo_code = models.CharField(max_length=40, blank=True)
+    subtotal = models.DecimalField(max_digits=10, decimal_places=2)
+    discount = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    delivery_cost = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
+    notification_status = models.CharField(
+        max_length=10,
+        choices=NOTIFICATION_STATUS_CHOICES,
+        default='pending',
+    )
+    notification_error = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f'Order #{self.pk} - {self.customer_name}'
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='order_items',
+    )
+    product_reference_id = models.PositiveIntegerField()
+    product_name = models.CharField(max_length=100)
+    product_image = models.CharField(max_length=500, blank=True)
+    unit_price = models.DecimalField(max_digits=10, decimal_places=2)
+    quantity = models.PositiveIntegerField()
+    selected_options = models.JSONField(default=dict, blank=True)
+
+    def __str__(self):
+        return f'{self.product_name} x {self.quantity} (Order #{self.order_id})'

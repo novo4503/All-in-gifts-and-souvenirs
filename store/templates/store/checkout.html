@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Island Cash Delivery | Checkout</title>
+<style>
+:root{--blue:#1456d9;--blue-d:#0d3b9e;--blue-l:#e8f0ff;--bg:#fff;--card:#fff;--ink:#0f1c3a;--mute:#5b6784;--line:#d9e3f7;--bar:#0d3b9e;box-sizing:border-box}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:0 18px}.top{background:var(--bar);color:#fff;font-size:13px;text-align:center;padding:8px 12px}header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;height:64px}.logo{font-weight:800;font-size:19px;color:var(--blue)}.logo i{font-style:normal;background:var(--blue);color:#fff;width:34px;height:34px;border-radius:8px;display:inline-grid;place-items:center;margin-right:9px}.cartbtn{margin-left:auto;background:var(--blue);color:#fff;border:0;border-radius:999px;padding:9px 16px;font-weight:700}.hero{background:linear-gradient(120deg,#0d3b9e,#1674d5);color:#fff}.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding-top:42px;padding-bottom:42px}.hero h1{font-size:40px;line-height:1.1;margin:0 0 12px}.hero p{margin:0;max-width:560px;opacity:.94}.badge{background:#fff;color:var(--ink);border-radius:12px;padding:20px;text-align:center}.badge .big{font-size:42px}.badge strong{display:block;font-size:20px;color:var(--blue-d)}section{padding:36px 0}h2{font-size:26px;margin:0 0 5px}h2+p{color:var(--mute);margin:0 0 20px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{background:var(--blue-l);padding:15px;border-radius:8px}.step b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--blue);color:white}.step h3{font-size:15px;margin:8px 0 3px}.step p{font-size:13px;color:var(--mute);margin:0}.checkout{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}.order-section{background:var(--blue-l)}label{display:block;font-size:13px;font-weight:700;margin:12px 0 4px}input,select,textarea{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--ink);font:inherit}input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-color:transparent}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.line{display:grid;grid-template-columns:54px minmax(0,1fr) auto;gap:11px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}.line img{width:54px;height:54px;object-fit:cover;border-radius:6px;background:var(--blue-l)}.line-name{font-weight:700}.muted{font-size:12px;color:var(--mute)}.qty{display:flex;align-items:center;gap:6px;margin-top:5px}.qty button{min-width:26px;height:26px;border:1px solid var(--blue);border-radius:50%;background:white;color:var(--blue);font-weight:800;cursor:pointer}.qty .remove{border:0;border-radius:0;width:auto;color:#a22;font-size:12px}.promo{display:flex;gap:8px;margin-top:14px}.promo input{flex:1}.small-button{background:var(--blue-l);color:var(--blue);border:0;border-radius:7px;padding:0 15px;font-weight:700;cursor:pointer}.tot{display:flex;justify-content:space-between;padding:6px 0}.tot.g{font-size:19px;font-weight:800;color:var(--blue);border-top:2px solid var(--blue);margin-top:7px;padding-top:12px}.pay{background:var(--blue-l);border-radius:8px;padding:12px;margin-top:14px;font-size:14px}.submit,.primary{display:inline-block;background:var(--blue);color:#fff;border:0;border-radius:8px;padding:13px 18px;font-size:15px;font-weight:800;cursor:pointer}.submit{width:100%;margin-top:14px}.submit:disabled{opacity:.5}.empty{text-align:center;color:var(--mute);padding:24px 0}.notice{padding:11px 13px;margin:12px 0;border-radius:7px;background:#e9f7ed;color:#185b2c}.notice.error{background:#fff0ed;color:#9d2817}.messages{padding:0;list-style:none}.messages li{padding:9px 12px;background:#fff0ed;color:#9d2817;border-radius:7px;margin-bottom:7px}.ok{text-align:center;padding:28px}.ok .big{font-size:48px}footer{background:var(--bar);color:#d8e5ff;text-align:center;padding:22px 12px;font-size:14px}@media(max-width:800px){.hero .wrap,.checkout{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.two{grid-template-columns:1fr}.line{grid-template-columns:46px minmax(0,1fr) auto;gap:8px}.line img{width:46px;height:46px}.panel{padding:15px}}
+</style>
+</head>
+<body>
+<div class="top">Same-day delivery to most resorts &nbsp;|&nbsp; Pay cash when your order arrives</div>
+<header><div class="wrap nav"><a class="logo" href="{% url 'home' %}"><i>$</i>Island Cash Delivery</a><a class="cartbtn" href="#order">Cart ({{ cart_items|length }})</a></div></header>
+<div class="hero"><div class="wrap"><div><h1>Order now.<br>Pay cash when it arrives.</h1><p>Gifts, souvenirs and island essentials delivered to your hotel, villa or door. No card needed, just cash at your doorstep.</p></div><div class="badge"><div class="big">💵</div><strong>Cash on Delivery</strong><span>Pay the rider when your items arrive</span></div></div></div>
+<section><div class="wrap"><h2>How it works</h2><p>Four easy steps, no online payment.</p><div class="steps"><div class="step"><b>1</b><h3>Choose your items</h3><p>Add products from our store.</p></div><div class="step"><b>2</b><h3>Tell us where</h3><p>Hotel, room number and delivery time.</p></div><div class="step"><b>3</b><h3>We deliver</h3><p>Our rider brings your order.</p></div><div class="step"><b>4</b><h3>Pay cash</h3><p>Pay on delivery.</p></div></div></div></section>
+<section class="order-section" id="order"><div class="wrap"><h2>Checkout</h2><p>Cash only. Pay the rider on arrival.</p>
+{% if messages %}<ul class="messages">{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>{% endif %}
+{% if whatsapp_order %}<div class="panel ok"><div class="big">💬</div><h2>Continue in WhatsApp</h2><p>Your order details are ready. Press Send in WhatsApp to place the order. It has not been sent yet.</p><div class="notice">Order #{{ whatsapp_order.id }} · Cash due: ${{ whatsapp_order.total }}</div><a id="whatsapp-link" class="primary" href="https://wa.me/18762058967">Open WhatsApp</a></div>
+{% else %}<div class="checkout">
+<form id="order-form" class="panel" method="post" action="{% url 'submit_order' %}">{% csrf_token %}
+{% if form_errors %}<div class="notice error">{% for error in form_errors %}<div>{{ error }}</div>{% endfor %}</div>{% endif %}
+<div class="two"><div><label for="nm">Full name</label><input id="nm" name="customer_name" maxlength="160" required value="{{ form_data.customer_name|default:'' }}" placeholder="Your name"></div><div><label for="ph">Phone / WhatsApp</label><input id="ph" name="phone" type="tel" maxlength="40" required value="{{ form_data.phone|default:'' }}" placeholder="876-000-0000"></div></div>
+<div class="two"><div><label for="ht">Hotel / address</label><input id="ht" name="delivery_address" maxlength="255" required value="{{ form_data.delivery_address|default:'' }}" placeholder="Resort or street address"></div><div><label for="rm">Room / unit</label><input id="rm" name="room" maxlength="80" value="{{ form_data.room|default:'' }}" placeholder="e.g. 214"></div></div>
+<div class="two"><div><label for="tm">Preferred delivery time</label><select id="tm" name="delivery_time"><option>ASAP</option><option>Morning (9-12)</option><option>Afternoon (12-4)</option><option>Evening (4-7:30)</option></select></div><div><label for="chg">Cash note / change required</label><select id="chg" name="cash_note"><option>Exact amount</option><option>$20 bill</option><option>$50 bill</option><option>$100 bill</option></select></div></div>
+<label for="nt">Delivery notes (optional)</label><textarea id="nt" name="delivery_notes" rows="3" maxlength="2000" placeholder="Gate code, lobby, call on arrival...">{{ form_data.delivery_notes|default:'' }}</textarea>
+{% if not cart_items %}<div class="empty">Your cart is empty. <a href="{% url 'home' %}">Browse products</a>.</div>{% endif %}</form>
+<div class="panel"><div>
+{% for item in cart_items %}<div class="line">{% if item.product.image %}<img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">{% else %}<div class="line-image"></div>{% endif %}<div><div class="line-name">{{ item.product.name }}</div><div class="muted">${{ item.product.price }} each · Line total ${{ item.line_total }}</div><form class="qty" method="post" action="{% url 'change_cart' item.product.id %}">{% csrf_token %}<button name="action" value="decrease" aria-label="Decrease quantity">−</button><span>{{ item.quantity }}</span><button name="action" value="increase" aria-label="Increase quantity">+</button><button class="remove" name="action" value="remove">Remove</button></form></div><strong>${{ item.line_total }}</strong></div>{% empty %}<div class="empty">Your cart is empty. Add items from the store.</div>{% endfor %}
+</div><form class="promo" method="post" action="{% url 'apply_promo' %}">{% csrf_token %}<input name="promo_code" value="{{ promo_code }}" placeholder="Promo code"><button class="small-button">Apply</button></form>{% if promo_notice %}<div class="muted" style="margin-top:6px">{{ promo_notice }}</div>{% endif %}
+<div style="margin-top:14px"><div class="tot"><span>Subtotal</span><span>${{ subtotal }}</span></div><div class="tot"><span>Discount</span><span>-${{ discount }}</span></div><div class="tot"><span>Delivery</span><span>${{ delivery_cost }}</span></div><div class="tot g"><span>Cash due on delivery</span><span>${{ total }}</span></div></div><div class="pay">💵 Please have the selected cash note ready. Delivery is cash on arrival.</div><button class="submit" type="submit" form="order-form" {% if not cart_items %}disabled{% endif %}>Place Cash Order</button>
+</div></div>
+{% endif %}</div></section>
+<footer>Island Cash Delivery · Cash on delivery · Same-day delivery to most resorts</footer>
+{% if whatsapp_order_data %}{{ whatsapp_order_data|json_script:"whatsapp-order-data" }}
+<script>
+const order = JSON.parse(document.getElementById('whatsapp-order-data').textContent);
+const itemLines = order.items.map(item =>
+	`${item.name} | Qty: ${item.quantity} | Unit price: $${item.unit_price} | Line total: $${item.line_total}`
+);
+const message = [
+	`Cash-on-delivery order #${order.order_id}`,
+	'',
+	'CUSTOMER DETAILS',
+	`Name: ${order.customer_name}`,
+	`Phone: ${order.phone}`,
+	`Delivery address / hotel: ${order.delivery_address}`,
+	`Room / unit: ${order.room}`,
+	`Preferred delivery time: ${order.delivery_time}`,
+	`Delivery instructions: ${order.delivery_notes}`,
+	`Cash note: ${order.cash_note}`,
+	'',
+	'ITEMS',
+	...itemLines,
+	'',
+	`Subtotal: $${order.subtotal}`,
+	`Discount: $${order.discount}`,
+	`Delivery: $${order.delivery_cost}`,
+	`Total cash due: $${order.total}`,
+].join('\n');
+const phoneNumber = "18762058967";
+const whatsappURL =
+	`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+document.getElementById('whatsapp-link').href = whatsappURL;
+window.location.href = whatsappURL;
+</script>{% endif %}
+</body>
+</html>

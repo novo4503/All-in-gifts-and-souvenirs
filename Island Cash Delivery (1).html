@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Island Cash Delivery | Pay When It Arrives</title>
+<style>
+:root{--blue:#1456d9;--blue-d:#0d3b9e;--blue-l:#e8f0ff;--bg:#fff;--card:#fff;--ink:#0f1c3a;--mute:#5b6784;--line:#d9e3f7;--bar:#0d3b9e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1226;--card:#121c38;--ink:#eaf0ff;--mute:#9db0d6;--line:#25356040;--blue-l:#16254d;--blue:#4d8dff;--blue-d:#2f6be0;--bar:#060b1a}}
+:root[data-theme="dark"]{--bg:#0b1226;--card:#121c38;--ink:#eaf0ff;--mute:#9db0d6;--line:#25356040;--blue-l:#16254d;--blue:#4d8dff;--blue-d:#2f6be0;--bar:#060b1a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.top{background:var(--bar);color:#fff;font-size:13px;text-align:center;padding:8px 12px}
+.top b{background:#fff;color:#0d3b9e;border-radius:4px;padding:1px 7px;margin:0 3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;color:var(--blue)}
+.logo i{font-style:normal;background:var(--blue);color:#fff;width:34px;height:34px;border-radius:9px;display:grid;place-items:center}
+nav{display:flex;gap:18px;margin-left:auto;font-size:14px;font-weight:600}
+nav a:hover{color:var(--blue)}
+.cartbtn{background:var(--blue);color:#fff;border:0;border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;font-size:14px}
+.hero{background:linear-gradient(135deg,var(--blue-d),var(--blue));color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding-top:56px;padding-bottom:56px}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.1;margin:0 0 14px}
+.hero p{font-size:17px;opacity:.92;margin:0 0 22px;max-width:520px}
+.btn{display:inline-block;background:#fff;color:var(--blue-d);font-weight:800;border-radius:999px;padding:13px 26px;border:0;cursor:pointer;font-size:15px}
+.hero .ghost{background:transparent;color:#fff;border:2px solid #fff;margin-left:8px}
+.badge{background:#fff;color:#0f1c3a;border-radius:20px;padding:26px;text-align:center;box-shadow:0 14px 40px #0004}
+.badge .big{font-size:56px}
+.badge strong{display:block;font-size:22px;color:var(--blue-d)}
+.badge span{color:#5b6784;font-size:14px}
+section{padding:46px 0}
+h2{font-size:26px;margin:0 0 6px;color:var(--ink)}
+h2+p{color:var(--mute);margin:0 0 22px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{background:var(--blue-l);border-radius:16px;padding:18px}
+.step b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;margin-bottom:8px}
+.step h3{margin:0 0 4px;font-size:16px}.step p{margin:0;color:var(--mute);font-size:14px}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 8px;text-align:center;font-weight:700;font-size:14px;cursor:pointer}
+.cat span{display:block;font-size:30px;margin-bottom:4px}
+.cat:hover,.cat.on{border-color:var(--blue);background:var(--blue-l);color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{height:120px;display:grid;place-items:center;font-size:48px;background:var(--blue-l)}
+.card .b{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font-size:15px}
+.price{color:var(--blue);font-weight:800}
+.add{margin-top:auto;background:var(--blue);color:#fff;border:0;border-radius:10px;padding:9px;font-weight:700;cursor:pointer}
+.add:hover{background:var(--blue-d)}
+.checkout{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+label{display:block;font-size:13px;font-weight:700;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);border-color:transparent}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.line{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--blue);background:var(--bg);color:var(--blue);font-weight:800;cursor:pointer}
+.qty span{display:inline-block;min-width:22px;text-align:center}
+.tot{display:flex;justify-content:space-between;padding:6px 0}
+.tot.g{font-size:20px;font-weight:800;color:var(--blue);border-top:2px solid var(--blue);margin-top:6px;padding-top:12px}
+.promo{display:flex;gap:8px;margin-top:12px}.promo input{flex:1}
+.promo button{background:var(--blue-l);color:var(--blue);border:0;border-radius:10px;padding:0 16px;font-weight:700;cursor:pointer}
+.pay{background:var(--blue-l);border-radius:12px;padding:12px 14px;font-size:14px;margin-top:14px}
+.submit{width:100%;margin-top:14px;background:var(--blue);color:#fff;border:0;border-radius:12px;padding:14px;font-size:16px;font-weight:800;cursor:pointer}
+.submit:disabled{opacity:.5;cursor:not-allowed}
+.empty{color:var(--mute);text-align:center;padding:24px 0}
+.ok{display:none;text-align:center}
+.ok .big{font-size:52px}
+footer{background:var(--bar);color:#cfdcff;text-align:center;padding:26px 12px;font-size:14px}
+@media(max-width:860px){.hero .wrap,.checkout{grid-template-columns:1fr}.steps,.grid{grid-template-columns:repeat(2,1fr)}.cats{grid-template-columns:repeat(3,1fr)}nav{display:none}.cartbtn{margin-left:auto}}
+@media(max-width:420px){.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top">Sun – Sat 9:30 am – 7:30 pm &nbsp;|&nbsp; Same-day delivery to most resorts &nbsp;|&nbsp; Promo code <b>ISLAND10</b> = 10% off</div>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><i>$</i>Island Cash Delivery</a>
+  <nav><a href="#how">How it works</a><a href="#shop">Shop</a><a href="#order">Checkout</a></nav>
+  <button class="cartbtn" onclick="location.hash='order'">Cart (<span id="cc">0</span>)</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Order now.<br>Pay cash when it arrives.</h1>
+    <p>Gifts, souvenirs and island essentials delivered to your hotel, villa or door. No card needed, just cash at your doorstep.</p>
+    <a class="btn" href="#shop">Start Shopping</a><a class="btn ghost" href="#how">How it works</a>
+  </div>
+  <div class="badge"><div class="big">💵</div><strong>Cash on Delivery</strong><span>Free same-day delivery in most resorts</span></div>
+</div></div>
+
+<section id="how"><div class="wrap">
+  <h2>How it works</h2><p>Four easy steps, no online payment.</p>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Pick items</h3><p>Add what you like to your cart.</p></div>
+    <div class="step"><b>2</b><h3>Tell us where</h3><p>Hotel, room number and a time that suits you.</p></div>
+    <div class="step"><b>3</b><h3>We deliver</h3><p>Our rider brings your order the same day.</p></div>
+    <div class="step"><b>4</b><h3>Pay cash</h3><p>Check your items, then hand over the cash.</p></div>
+  </div>
+</div></section>
+
+<section id="shop" style="padding-top:0"><div class="wrap">
+  <h2>Shop</h2><p>Add what you like, then pay cash on delivery.</p>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="order" style="background:var(--blue-l)"><div class="wrap">
+  <h2>Checkout</h2><p>Cash only. Pay the rider on arrival.</p>
+  <div class="checkout">
+    <div class="panel" id="formPanel">
+      <div class="two"><div><label for="nm">Full name</label><input id="nm" placeholder="Your name"></div>
+      <div><label for="ph">Phone / WhatsApp</label><input id="ph" type="tel" placeholder="876-000-0000"></div></div>
+      <div class="two"><div><label for="ht">Hotel / address</label><input id="ht" placeholder="Resort or street address"></div>
+      <div><label for="rm">Room / unit</label><input id="rm" placeholder="e.g. 214"></div></div>
+      <div class="two"><div><label for="tm">Delivery time</label>
+        <select id="tm"><option>ASAP</option><option>Morning (9–12)</option><option>Afternoon (12–4)</option><option>Evening (4–7:30)</option></select></div>
+      <div><label for="chg">I'll pay with (cash note)</label>
+        <select id="chg"><option>Exact amount</option><option>$20 bill</option><option>$50 bill</option><option>$100 bill</option></select></div></div>
+      <label for="nt">Delivery notes (optional)</label><textarea id="nt" rows="2" placeholder="Gate code, lobby, call on arrival..."></textarea>
+    </div>
+    <div class="panel">
+      <div id="lines"></div>
+      <div class="promo"><input id="pc" placeholder="Promo code"><button onclick="applyPromo()">Apply</button></div>
+      <div id="pm" style="font-size:13px;color:var(--mute);margin-top:6px"></div>
+      <div style="margin-top:12px">
+        <div class="tot"><span>Subtotal</span><span id="st">$0.00</span></div>
+        <div class="tot"><span>Discount</span><span id="ds">-$0.00</span></div>
+        <div class="tot"><span>Delivery (resort zone)</span><span style="color:var(--blue);font-weight:700">FREE</span></div>
+        <div class="tot g"><span>Cash due on delivery</span><span id="gt">$0.00</span></div>
+      </div>
+      <div class="pay">💵 Please have the exact cash ready. Our rider will bring change for the bill you pick.</div>
+      <button class="submit" id="sub" onclick="placeOrder()" disabled>Place Cash Order</button>
+      <div id="err" style="color:#d12;font-size:13px;margin-top:8px"></div>
+    </div>
+  </div>
+  <div class="panel ok" id="ok">
+    <div class="big">✅</div><h2>Order received!</h2>
+    <p id="okt" style="color:var(--mute)"></p>
+    <button class="btn" style="background:var(--blue);color:#fff" onclick="resetAll()">New Order</button>
+  </div>
+</div></section>
+
+<footer>© Island Cash Delivery · Cash on delivery · Free same-day delivery in most resorts</footer>
+
+<script>
+var P=[
+{id:1,n:"Bob Marley T-Shirt",p:28,c:"Clothing",e:"👕"},
+{id:2,n:"Classic Souvenir Mug",p:12.99,c:"Souvenirs",e:"☕"},
+{id:3,n:"Jamaican Beach Tote",p:35,c:"Bags",e:"👜"},
+{id:4,n:"Blue Mountain Coffee",p:24,c:"Treats",e:"🫘"},
+{id:5,n:"Rasta Tam",p:18,c:"Hats",e:"🧢"},
+{id:6,n:"Sunscreen SPF 50",p:9,c:"Essentials",e:"🧴"},
+{id:7,n:"Striped Beach Towel",p:22,c:"Essentials",e:"🏖️"},
+{id:8,n:"Jerk Seasoning",p:8,c:"Treats",e:"🌶️"}];
+var C=[["All","🛍️"],["Clothing","👕"],["Hats","🧢"],["Bags","👜"],["Souvenirs","🎁"],["Treats","🍯"]];
+var cart={},cat="All",disc=0;
+function $(i){return document.getElementById(i)}
+function m(x){return "$"+x.toFixed(2)}
+function drawGrid(){$("grid").innerHTML=P.filter(function(x){return cat=="All"||x.c==cat}).map(function(x){
+return '<div class="card"><div class="thumb">'+x.e+'</div><div class="b"><h3>'+x.n+'</h3><div class="price">'+m(x.p)+'</div><button class="add" onclick="add('+x.id+')">Add to cart</button></div></div>'}).join("")||'<div class="empty">Nothing here yet.</div>'}
+function add(i){cart[i]=(cart[i]||0)+1;draw()}
+function chg(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];draw()}
+function sub(){return P.reduce(function(s,x){return s+(cart[x.id]||0)*x.p},0)}
+function draw(){
+ var ids=Object.keys(cart),n=0;
+ $("lines").innerHTML=ids.length?ids.map(function(k){var x=P.filter(function(y){return y.id==k})[0];n+=cart[k];
+  return '<div class="line"><span>'+x.e+' '+x.n+'</span><span class="qty"><button onclick="chg('+k+',-1)">−</button><span>'+cart[k]+'</span><button onclick="chg('+k+',1)">+</button></span><b>'+m(x.p*cart[k])+'</b></div>'}).join(""):'<div class="empty">Your cart is empty. Add items from the shop.</div>';
+ var s=sub(),d=s*disc;
+ $("cc").textContent=n;$("st").textContent=m(s);$("ds").textContent="-"+m(d);$("gt").textContent=m(s-d);
+ $("sub").disabled=!ids.length}
+function applyPromo(){
+ if($("pc").value.trim().toUpperCase()=="ISLAND10"){disc=.1;$("pm").textContent="Promo applied: 10% off."}
+ else{disc=0;$("pm").textContent="Invalid code."}draw()}
+function placeOrder(){
+ var f=["nm","ph","ht"],bad=f.filter(function(i){return !$(i).value.trim()});
+ if(bad.length){$("err").textContent="Please fill in your name, phone and hotel/address.";$(bad[0]).focus();return}
+ $("err").textContent="";
+ var t=sub()*(1-disc);
+ $("okt").textContent="Thanks "+$("nm").value.trim()+"! Please have "+m(t)+" in cash ready. We will deliver to "+$("ht").value.trim()+($("rm").value?" (room "+$("rm").value+")":"")+" — "+$("tm").value+". We'll text "+$("ph").value.trim()+" to confirm.";
+ document.querySelector(".checkout").style.display="none";$("ok").style.display="block"}
+function resetAll(){cart={};disc=0;$("pm").textContent="";$("pc").value="";
+ document.querySelector(".checkout").style.display="";$("ok").style.display="none";draw()}
+drawGrid();draw();
+</script>
+</body>
+</html>

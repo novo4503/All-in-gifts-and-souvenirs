@@ -467,13 +467,59 @@ Specificity: (0,2,1)
 
 
 .extra-category-image {
-    width: 250px !important;
-    height: 250px !important;
+    width: 150px !important;
+    max-width: 100% !important;
+    height: 150px !important;
     object-fit: contain !important;
-
+    object-position: center !important;
     display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 auto !important;
+}
+
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) > .elementor-container {
+    display: flex !important;
+    align-items: center !important;
+}
+
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) > .elementor-container > .elementor-column:first-of-type {
+    width: 60% !important;
+}
+
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) > .elementor-container > .elementor-column:last-of-type {
+    width: 40% !important;
+}
+
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) .elementor-element-edb6f59 {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    inset: auto !important;
+    transform: none !important;
+}
+
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) .elementor-column:last-of-type .elementor-widget-wrap,
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) .elementor-column:last-of-type .elementor-widget-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) .elementor-element-edb6f59 img,
+:is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) img.extra-category-image {
+    width: 150px !important;
+    max-width: 100% !important;
+    height: 150px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 auto !important;
+}
+
+@media screen and (max-width: 768px) {
+    :is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) .elementor-element-edb6f59 img,
+    :is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) img.extra-category-image {
+        width: 112px !important;
+        height: 112px !important;
+    }
 }
 
 
@@ -3293,7 +3339,7 @@ a.menu-title.et-column-title[title="View More"] {
 
 		<!--test-->
 
-		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+        <section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
 						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
 					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
 			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
@@ -3309,7 +3355,7 @@ a.menu-title.et-column-title[title="View More"] {
 
                     <a class="menu-title et-column-title  " href="/category/toys/" target="_self" title="Sterling Silver Jewelry">
 
-                    <h3>Toys</h3>
+                    <h3 class="extra-category-heading">Toys</h3>
                     </a>
 
                 </div>
@@ -3454,7 +3500,7 @@ a.menu-title.et-column-title[title="View More"] {
 					</div>
 		</section>
 		<!--test-->
-		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
+        <section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
 						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
 					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
 			</a><div class="elementor-widget-wrap elementor-element-populated"><a href="/Jew/">
@@ -3470,7 +3516,7 @@ a.menu-title.et-column-title[title="View More"] {
 
                     <a class="menu-title et-column-title  " href="/category/sunscreen/" target="_self" title="Sterling Silver Jewelry">
 
-                    <h3>Sunscreen</h3>
+                    <h3 class="extra-category-heading">Sunscreen</h3>
                     </a>
 
                 </div>
@@ -3621,7 +3667,7 @@ a.menu-title.et-column-title[title="View More"] {
 
                     <a class="menu-title et-column-title  " href="/category/bottles/" target="_self" title="Sterling Silver Jewelry">
 
-                    <h3>Jamaican  Treats</h3>
+                    <h3 class="extra-category-heading">Jamaican  Treats</h3>
                     </a>
 
                 </div>
@@ -3771,7 +3817,7 @@ a.menu-title.et-column-title[title="View More"] {
 
                     <a class="menu-title et-column-title  " href="/category/cigars/" target="_self" title="Sterling Silver Jewelry">
 
-                    <h3>Cigars</h3>
+                    <h3 class="extra-category-heading">Cigars</h3>
                     </a>
 
                 </div>
@@ -3933,7 +3979,7 @@ a.menu-title.et-column-title[title="View More"] {
 
                     <a class="menu-title et-column-title  " href="/category/towels/" target="_self" title="Sterling Silver Jewelry">
 
-                    <h3>Towels</h3>
+                    <h3 class="extra-category-heading">Towels</h3>
                     </a>
 
                 </div>
@@ -4071,7 +4117,7 @@ a.menu-title.et-column-title[title="View More"] {
 
                     <a class="menu-title et-column-title  " href="/category/spices/" target="_self" title="Sterling Silver Jewelry">
 
-                    <h3>Spices</h3>
+                    <h3 class="extra-category-heading">Spices</h3>
                     </a>
 
                 </div>
@@ -4218,7 +4264,16 @@ a.menu-title.et-column-title[title="View More"] {
 		</div>
 					</div>
 		</section>
-		<!--test6-->
+        {% if category_groups.coffee %}
+        {% include 'store/category_box.html' with category=category_groups.coffee image=images.Coffee %}
+        {% endif %}
+        {% if category_groups.cake %}
+        {% include 'store/category_box.html' with category=category_groups.cake image=images.Cake %}
+        {% endif %}
+        {% if category_groups.liquor %}
+        {% include 'store/category_box.html' with category=category_groups.liquor image=images.LiquorOG %}
+        {% else %}
+        <!--test6-->
 		<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section"><a href="/Jew/">
 						</a><div class="elementor-container elementor-column-gap-no"><a href="/Jew/">
 					</a><div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column"><a href="/Jew/">
@@ -4235,7 +4290,7 @@ a.menu-title.et-column-title[title="View More"] {
 
                     <a class="menu-title et-column-title  " href="/category/bottles/" target="_self" title="Sterling Silver Jewelry">
 
-                    <h3>Liquor</h3>
+                    <h3 class="extra-category-heading">Liquor</h3>
                     </a>
 
                 </div>
@@ -4369,7 +4424,8 @@ a.menu-title.et-column-title[title="View More"] {
 					</div>
 		</section>
 
-		<!--test7-->
+        {% endif %}
+        <!--test7-->
 
 
 		<section class="elementor-section elementor-top-section elementor-element elementor-element-b1ee641 elementor-section-boxed elementor-section-height-default elementor-section-height-default animated fadeInUp" data-id="b1ee641" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">

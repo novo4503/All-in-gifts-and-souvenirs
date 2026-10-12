@@ -29,12 +29,16 @@ urlpatterns = [
     path('about-us/', views.about_us, name='about_us'),
     path('Jew/', views.Jew, name='Jew'),
     path('product/<slug:slug>/', views.product_detail, name='Product_Detail'),
+    path('cart/add/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
+    path('cart/change/<int:product_id>/', views.change_cart, name='change_cart'),
+    path('checkout/', views.checkout, name='checkout'),
+    path('checkout/promo/', views.apply_promo, name='apply_promo'),
+    path('checkout/submit/', views.submit_order, name='submit_order'),
     path('category/<str:category>/', views.category_products, name='category_products'),
     path('shorts/', views.shorts, name='shorts'),
     path('pants/', views.pants, name='pants'),
     path('contact-us/', views.contact_us, name='contact_us'),
     path('search/', views.search_products, name='search_products'),
-    path("category/<slug:slug>/", views.category_products, name="category_products"),
     
     
 ]

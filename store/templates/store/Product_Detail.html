@@ -1755,9 +1755,12 @@ function changeMainImage(imageUrl) {
         <p>Tesla is one of the world&#x27;s leading electric vehicle manufacturers, known for its innovative approach to sustainable transportation and clean energy. Founded in 2003, the company has transformed the automotive industry by producing high-performance electric cars that combine advanced technology, impressive range, and modern design. Beyond vehicles, Tesla develops energy solutions such as solar panels, solar roofs, and large-scale battery storage systems aimed at reducing reliance on fossil fuels. Through continuous innovation in artificial intelligence, autonomous driving technology, and renewable energy, Tesla has become a major force in shaping the future of transportation and sustainable living.</p>
     </div>-->
 
-    <a href="#" class="button alt">
-        Add to Cart
-    </a>
+	<form method="post" action="{% url 'add_to_cart' product.id %}">
+		{% csrf_token %}
+		<label for="cart-quantity">Quantity</label>
+		<input id="cart-quantity" type="number" name="quantity" value="1" min="1" max="99" required>
+		<button type="submit" class="button alt">Add to Cart</button>
+	</form>
 </div>
 
 

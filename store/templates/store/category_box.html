@@ -1,0 +1,54 @@
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default extra-category-box" data-category="{{ category.slug }}">
+    <div class="elementor-container elementor-column-gap-no">
+        <div class="elementor-column elementor-col-50 elementor-inner-column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-widget elementor-widget-et_menu_list">
+                    <div class="elementor-widget-container">
+                        <ul class="et-menu-list menu-list-3580 text-left">
+                            <li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item">
+                                <div class="item-title-holder">
+                                    <a class="menu-title et-column-title" href="{% url 'category_products' category.slug %}">
+                                        <h3>{{ category.name }}</h3>
+                                    </a>
+                                </div>
+                                <div class="menu-sublist">
+                                    <ul>
+                                        {% for subcategory in category.children.all %}
+                                        <li class="menu-item">
+                                            <div class="subitem-title-holder">
+                                                <a class="menu-title et-column-title" href="{% url 'category_products' subcategory.slug %}">
+                                                    <h4>{{ subcategory.name }}</h4>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        {% endfor %}
+                                        <li class="menu-item">
+                                            <div class="subitem-title-holder">
+                                                <a class="menu-title et-column-title" href="{% url 'category_products' category.slug %}" title="View More">
+                                                    <h4>View More</h4>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-column elementor-col-50 elementor-inner-column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                {% if image %}
+                <div class="elementor-widget elementor-widget-image">
+                    <div class="elementor-widget-container">
+                        <a href="{% url 'category_products' category.slug %}">
+                            <img src="{{ image.image.url }}" class="extra-category-image" alt="{{ category.name }}" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
