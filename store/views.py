@@ -125,19 +125,6 @@ def tshirt(request):
     })
 
 
-def category_products(request, category):
-    images = {img.name: img for img in SiteImage.objects.all()}
-    products = Product.objects.filter(category=category)
-
-    return render(request, 'store/Jew.html', {
-        'images': images,
-        'products': products,
-        'category': category,
-    })
-
-
- 
-
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
 
@@ -154,8 +141,19 @@ def product_detail(request, slug):
 
 def category_products(request, category):
     images = {img.name: img for img in SiteImage.objects.all()}
+    category_record = Category.objects.filter(slug=category).prefetch_related(
+        'children'
+    ).first()
+    category_slugs = [category]
+    if category_record:
+        category_slugs.extend(
+            category_record.children.values_list('slug', flat=True)
+        )
+        category_title = category_record.name
+    else:
+        category_title = category
 
-    products = Product.objects.filter(category=category)
+    products = Product.objects.filter(category__in=category_slugs).order_by('name')
 
     paginator = Paginator(products, 5)  # 5 products per page
     page_number = request.GET.get("page")
@@ -164,7 +162,7 @@ def category_products(request, category):
     return render(request, 'store/Jew.html', {
         'images': images,
         'page_obj': page_obj,
-        'category': category,
+        'category': category_title,
     })
 
 

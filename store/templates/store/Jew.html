@@ -1,5 +1,23 @@
 {%load static%}
 <html lang="en-US"><head>
+	<style>
+		.gtranslate_wrapper,
+		.gtranslate_wrapper *,
+		a.glink,
+		#google_translate_element2,
+		.skiptranslate,
+		.goog-te-gadget,
+		[id^="gt-wrapper"] {
+			display: none !important;
+			visibility: hidden !important;
+			opacity: 0 !important;
+		}
+		.et_b_header-mobile-menu.et-content_toggle > .et-mini-content,
+		.et_b_header-mobile-menu.et-content_toggle > .et-mini-content.active {
+			background-color: skyblue !important;
+			transition-property: opacity, visibility, transform;
+		}
+	</style>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -1521,6 +1539,8 @@ footer .container {
 
                 </div>
             </div>
+		{% empty %}
+			<p class="woocommerce-info">There are no products in this category yet.</p>
         {% endfor %}
 
     </div>
@@ -2115,24 +2135,6 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 				};
 			})();
 		</script>
-
-
-<script>
-function removeGTranslateFlags() {
-    document.querySelectorAll(
-        ".gtranslate_wrapper, .glink, #google_translate_element2, .skiptranslate, [id^='gt-wrapper']"
-    ).forEach(function (element) {
-        element.remove();
-    });
-}
-
-document.addEventListener("DOMContentLoaded", removeGTranslateFlags);
-window.addEventListener("load", removeGTranslateFlags);
-
-setInterval(removeGTranslateFlags, 500);
-</script>
-
-
 
 
 <div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div><iframe aria-hidden="true" src="/wp-content/plugins/web-worker-offloading/build/partytown-sandbox-sw.html?1781296404444" style="display: block; width: 0px; height: 0px; border: 0px; visibility: hidden;"></iframe></div></body></html>

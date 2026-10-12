@@ -1,4 +1,6 @@
 from decimal import Decimal
+from django.contrib import admin
+from django.contrib.auth import get_user_model
 from django.test import Client, TestCase
 from django.urls import reverse
 
@@ -57,7 +59,7 @@ class CheckoutFlowTests(TestCase):
 		item = OrderItem.objects.get(order=order)
 		self.assertEqual(response.status_code, 200)
 		self.assertContains(response, 'Press Send in WhatsApp to place the order.')
-		self.assertContains(response, 'const phoneNumber = "18762058967";')
+		self.assertContains(response, 'const phoneNumber = "18765801043";')
 		self.assertContains(response, 'window.location.href = whatsappURL;')
 		self.assertContains(response, 'John Brown')
 		self.assertContains(response, 'Example Resort')
@@ -144,3 +146,80 @@ class CategoryHierarchyTests(TestCase):
 		self.assertLess(content.index('>Spices</h3>'), content.index('data-category="coffee"'))
 		self.assertLess(content.index('data-category="coffee"'), content.index('data-category="cake"'))
 		self.assertLess(content.index('data-category="cake"'), content.index('data-category="liquor"'))
+		self.assertIn('src="/media/categories/coffeeimage.jpeg"', content)
+		self.assertIn('src="/media/categories/cake101.jpeg"', content)
+		self.assertIn('href="/category/coffee/"', content)
+		self.assertIn('href="/category/cake/"', content)
+
+	def test_parent_category_pages_include_direct_and_subcategory_products_only(self):
+		cases = (
+			('coffee', 'blue-mountain-coffee', 'Coffee', 'Blue Mountain Coffee'),
+			('cake', 'original-jamaican-rum-cake', 'Cake', 'Original Jamaican Rum Cake'),
+		)
+		for parent_slug, child_slug, parent_name, child_name in cases:
+			direct_product = Product.objects.create(
+				name=f'{parent_name} Direct Product',
+				slug=f'{parent_slug}-direct-product',
+				description='Direct category product',
+				price=Decimal('12.00'),
+				category=parent_slug,
+			)
+			child_product = Product.objects.create(
+				name=f'{child_name} Product',
+				slug=f'{parent_slug}-child-product',
+				description='Subcategory product',
+				price=Decimal('15.00'),
+				category=child_slug,
+			)
+			unrelated_product = Product.objects.create(
+				name=f'{parent_name} Unrelated Product',
+				slug=f'{parent_slug}-unrelated-product',
+				description='Unrelated product',
+				price=Decimal('18.00'),
+				category='men',
+			)
+
+			parent_response = self.client.get(
+				reverse('category_products', args=[parent_slug])
+			)
+			parent_names = {
+				product.name for product in parent_response.context['page_obj'].object_list
+			}
+			self.assertSetEqual(
+				parent_names,
+				{direct_product.name, child_product.name},
+			)
+			self.assertNotContains(parent_response, unrelated_product.name)
+
+			child_response = self.client.get(
+				reverse('category_products', args=[child_slug])
+			)
+			child_names = {
+				product.name for product in child_response.context['page_obj'].object_list
+			}
+			self.assertSetEqual(child_names, {child_product.name})
+			self.assertNotContains(child_response, direct_product.name)
+
+	def test_empty_category_page_shows_empty_state(self):
+		response = self.client.get(reverse('category_products', args=['coffee']))
+		self.assertContains(response, 'There are no products in this category yet.')
+
+	def test_admin_can_manage_category_images_and_product_assignments(self):
+		user = get_user_model().objects.create_superuser(
+			username='category-admin',
+			email='category-admin@example.com',
+			password='test-password',
+		)
+		self.client.force_login(user)
+
+		category_form = self.client.get(reverse('admin:store_category_add'))
+		self.assertEqual(category_form.status_code, 200)
+		self.assertContains(category_form, 'id="id_image"')
+		self.assertContains(category_form, 'id="id_parent"')
+
+		product_form = self.client.get(reverse('admin:store_product_add'))
+		self.assertEqual(product_form.status_code, 200)
+		self.assertContains(product_form, 'value="coffee"')
+		self.assertContains(product_form, 'value="cake"')
+		self.assertTrue(admin.site.is_registered(Category))
+		self.assertTrue(admin.site.is_registered(Product))

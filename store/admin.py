@@ -43,10 +43,21 @@ class SiteImageAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ("name", "slug", "parent")
+    list_display = ("name", "slug", "parent", "image_preview")
     list_filter = ("parent",)
     search_fields = ("name", "slug")
     prepopulated_fields = {"slug": ("name",)}
+    readonly_fields = ("image_preview",)
+
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html(
+                '<img src="{}" width="100" height="100" style="object-fit: contain;" />',
+                obj.image.url,
+            )
+        return "No image uploaded"
+
+    image_preview.short_description = "Image Preview"
 
 
 @admin.register(ProductImage)

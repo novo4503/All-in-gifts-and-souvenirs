@@ -39,11 +39,17 @@
         </div>
         <div class="elementor-column elementor-col-50 elementor-inner-column">
             <div class="elementor-widget-wrap elementor-element-populated">
-                {% if image %}
+                {% if category.image or image or fallback_image_url %}
                 <div class="elementor-widget elementor-widget-image">
                     <div class="elementor-widget-container">
                         <a href="{% url 'category_products' category.slug %}">
+                            {% if category.image %}
+                            <img src="{{ category.image.url }}" class="extra-category-image" alt="{{ category.name }}" loading="lazy">
+                            {% elif image %}
                             <img src="{{ image.image.url }}" class="extra-category-image" alt="{{ category.name }}" loading="lazy">
+                            {% else %}
+                            <img src="{{ fallback_image_url }}" class="extra-category-image" alt="{{ category.name }}" loading="lazy">
+                            {% endif %}
                         </a>
                     </div>
                 </div>

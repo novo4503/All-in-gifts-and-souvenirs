@@ -2,6 +2,12 @@
 <html lang="en-US" style="height: 100%;"><head>
 <style>
 /* Make search-button and search-icon hover use skyblue and ensure readable icon */
+.et_b_header-mobile-menu.et-content_toggle > .et-mini-content,
+.et_b_header-mobile-menu.et-content_toggle > .et-mini-content.active {
+	background-color: skyblue !important;
+	transition-property: opacity, visibility, transform;
+}
+
 .search-button, .search-icon { background-color: transparent !important; color: skyblue !important; border: none !important; }
 .search-button svg, .search-icon svg { fill: skyblue !important; color: skyblue !important; }
 .search-button:hover, .search-icon:hover, .search-button:focus, .search-icon:focus { background-color: skyblue !important; color: black !important; }

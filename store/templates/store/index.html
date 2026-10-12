@@ -103,9 +103,16 @@ a.return-shop-button:hover span {
     padding-left: 15px !important;
 }
 
-.et-mini-content.active {
-    background-color: skyblue !important;
+.et_b_header-mobile-menu.et-content_toggle .et-mini-content,
+.et_b_header-mobile-menu.et-content_toggle .et-mini-content.active {
+    background-color: skyblue;
+    transition-property: opacity, visibility, transform;
+}
 
+.et_b_header-cart.et-content_toggle > .et-mini-content,
+.et_b_header-cart.et-content_toggle > .et-mini-content.active {
+    background-color: skyblue !important;
+    transition-property: opacity, visibility, transform;
 }
 
 
@@ -333,12 +340,54 @@ marquee {
 }
 
 
-/* ONLY the big Bottles image */
-.elementor-element-edb6f59 img {
-    width: 300px !important;
-    height: 300px !important;
-    object-fit: contain !important;
+/* Keep the Bottles category image inside its right-hand column. */
+.bottles-category-box > .elementor-container {
+    display: flex !important;
+    align-items: stretch !important;
+    overflow: hidden !important;
+}
+
+.bottles-category-box > .elementor-container > .elementor-column {
+    min-width: 0 !important;
+}
+
+.bottles-category-box > .elementor-container > .elementor-column:last-child,
+.bottles-category-box > .elementor-container > .elementor-column:last-child .elementor-widget-wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+.bottles-category-image-widget {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.bottles-category-image-widget .elementor-widget-container,
+.bottles-category-image-widget a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+.bottles-category-image-widget img {
     display: block !important;
+    width: 200px !important;
+    max-width: 100% !important;
+    height: 200px !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
     margin: 0 auto !important;
 }
 
@@ -470,15 +519,24 @@ Specificity: (0,2,1)
     width: 150px !important;
     max-width: 100% !important;
     height: 150px !important;
+    max-height: 100% !important;
     object-fit: contain !important;
     object-position: center !important;
     display: block !important;
     margin: 0 auto !important;
 }
 
+.extra-category-box {
+    overflow: hidden !important;
+}
+
 :is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) > .elementor-container {
     display: flex !important;
     align-items: center !important;
+}
+
+.extra-category-box > .elementor-container {
+    overflow: hidden !important;
 }
 
 :is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) > .elementor-container > .elementor-column:first-of-type {
@@ -502,6 +560,23 @@ Specificity: (0,2,1)
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+}
+
+.extra-category-box .elementor-column:last-of-type .elementor-widget {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.extra-category-box .elementor-column:last-of-type a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
 }
 
 :is(.extra-category-box, .elementor-inner-section:has(.extra-category-heading)) .elementor-element-edb6f59 img,
@@ -1046,6 +1121,13 @@ a.glink img {
     display: none !important;
 }
 
+.et_b_header-search .input-row > a.glink,
+.et_b_header-search .input-row > #google_translate_element2,
+.et_b_header-search .input-row > #google_translate_element2 * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
 
 
 
@@ -2076,7 +2158,7 @@ a.menu-title.et-column-title[title="View More"] {
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-ffbd5c2 elementor-position-top elementor-widget elementor-widget-image-box" data-id="ffbd5c2" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/Jew/" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[3][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="/media/site_images/bob__marley__collection_joIURWA.png" class="attachment-full size-full wp-image-20048" alt="Blue Mountain Coffee" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="{% url 'category_products' 'all-bob-marley' %}" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[3][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="/media/site_images/bob__marley__collection_joIURWA.png" class="attachment-full size-full wp-image-20048" alt="Blue Mountain Coffee" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
 				</div>
 					</div>
 		</div>
@@ -2093,7 +2175,7 @@ a.menu-title.et-column-title[title="View More"] {
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-130408e elementor-position-top elementor-widget elementor-widget-image-box" data-id="130408e" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="/category/bag/" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[4][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="/media/site_images/hat_og.png" class="attachment-full size-full wp-image-20015" alt="Clothing" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="{% url 'category_products' 'all-caps-and-hats' %}" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[4][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="/media/site_images/hat_og.png" class="attachment-full size-full wp-image-20015" alt="Clothing" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
 				</div>
 					</div>
 		</div>
@@ -3077,7 +3159,7 @@ a.menu-title.et-column-title[title="View More"] {
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-02ccf69 elementor-absolute elementor-widget elementor-widget-image" data-id="02ccf69" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="{% url 'category_products' 'bag' %}">
+																<a href="{% url 'category_products' 'all-bags' %}">
 							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src="{{images.bago1.image.url}}" class="attachment-full size-full wp-image-23841" alt=""  sizes="auto, (max-width: 1080px) 100vw, 1080px">								</a>
 															</div>
 				</div>
@@ -3199,7 +3281,7 @@ a.menu-title.et-column-title[title="View More"] {
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-23ec157 elementor-absolute elementor-widget elementor-widget-image" data-id="23ec157" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="/Jew/">
+																<a href="{% url 'category_products' 'all-caps-and-hats' %}">
 							<img src="{{images.AllAX.image.url}}" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2
      width="1080"
      height="1080"
@@ -3214,7 +3296,7 @@ a.menu-title.et-column-title[title="View More"] {
 		</div>
 				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ddf9ba1" data-id="ddf9ba1" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="87f9416" data-element_type="section">
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-87f9416 elementor-section-boxed elementor-section-height-default elementor-section-height-default bottles-category-box" data-id="87f9416" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-no">
 					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-38ddcac" data-id="38ddcac" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
@@ -3322,7 +3404,7 @@ a.menu-title.et-column-title[title="View More"] {
 		</div>
 				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-814ff83" data-id="814ff83" data-element_type="column">
 			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+						<div class="elementor-element elementor-element-edb6f59 elementor-absolute elementor-widget elementor-widget-image bottles-category-image-widget" data-id="edb6f59" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
 				<div class="elementor-widget-container">
 																<a href="/Jew/">
 							<img data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[8][self::SECTION]/*[1][self::DIV]/*[3][self::DIV]/*[1][self::DIV]/*[1][self::SECTION]/*[1][self::DIV]/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::A]/*[1][self::IMG]" loading="lazy" decoding="async" width="1080" height="1080" src={{images.AllA1.image.url}} class="attachment-full size-full wp-image-18376" alt="Island Trinketz Charms"  sizes="auto, (max-width: １０８０px) １００vw, １０８０px">								</a>

@@ -14,7 +14,7 @@ python manage.py migrate
 
 - `DELIVERY_COST`: optional non-negative decimal delivery charge, defaults to `0`.
 
-No WhatsApp API credentials are required. The browser opens `https://wa.me/18762058967` with the order message URL-encoded. WhatsApp works through its app on mobile or WhatsApp Web/Desktop where available. The customer reviews the prefilled message and presses Send to deliver it.
+No WhatsApp API credentials are required. The browser opens https://wa.me/18765801043 with the order message URL-encoded. WhatsApp works through its app on mobile or WhatsApp Web/Desktop where available. The customer reviews the prefilled message and presses Send to deliver it.
 
 ## Checkout behavior
 

@@ -17,7 +17,7 @@
 <section><div class="wrap"><h2>How it works</h2><p>Four easy steps, no online payment.</p><div class="steps"><div class="step"><b>1</b><h3>Choose your items</h3><p>Add products from our store.</p></div><div class="step"><b>2</b><h3>Tell us where</h3><p>Hotel, room number and delivery time.</p></div><div class="step"><b>3</b><h3>We deliver</h3><p>Our rider brings your order.</p></div><div class="step"><b>4</b><h3>Pay cash</h3><p>Pay on delivery.</p></div></div></div></section>
 <section class="order-section" id="order"><div class="wrap"><h2>Checkout</h2><p>Cash only. Pay the rider on arrival.</p>
 {% if messages %}<ul class="messages">{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>{% endif %}
-{% if whatsapp_order %}<div class="panel ok"><div class="big">💬</div><h2>Continue in WhatsApp</h2><p>Your order details are ready. Press Send in WhatsApp to place the order. It has not been sent yet.</p><div class="notice">Order #{{ whatsapp_order.id }} · Cash due: ${{ whatsapp_order.total }}</div><a id="whatsapp-link" class="primary" href="https://wa.me/18762058967">Open WhatsApp</a></div>
+{% if whatsapp_order %}<div class="panel ok"><div class="big">💬</div><h2>Continue in WhatsApp</h2><p>Your order details are ready. Press Send in WhatsApp to place the order. It has not been sent yet.</p><div class="notice">Order #{{ whatsapp_order.id }} · Cash due: ${{ whatsapp_order.total }}</div><a id="whatsapp-link" class="primary" href="https://wa.me/18765801043">Open WhatsApp</a></div>
 {% else %}<div class="checkout">
 <form id="order-form" class="panel" method="post" action="{% url 'submit_order' %}">{% csrf_token %}
 {% if form_errors %}<div class="notice error">{% for error in form_errors %}<div>{{ error }}</div>{% endfor %}</div>{% endif %}
@@ -59,7 +59,7 @@ const message = [
 	`Delivery: $${order.delivery_cost}`,
 	`Total cash due: $${order.total}`,
 ].join('\n');
-const phoneNumber = "18762058967";
+const phoneNumber = "18765801043";
 const whatsappURL =
 	`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 document.getElementById('whatsapp-link').href = whatsappURL;
