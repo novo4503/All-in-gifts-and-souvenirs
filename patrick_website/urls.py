@@ -16,12 +16,13 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 from store import views
 
 urlpatterns = [
+    path('_nested_admin/', include('nested_admin.urls')),
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('women/', views.women, name='women'),
@@ -34,7 +35,7 @@ urlpatterns = [
     path('checkout/', views.checkout, name='checkout'),
     path('checkout/promo/', views.apply_promo, name='apply_promo'),
     path('checkout/submit/', views.submit_order, name='submit_order'),
-    path('category/<str:category>/', views.category_products, name='category_products'),
+    path('category/<slug:category>/', views.category_products, name='category_products'),
     path('shorts/', views.shorts, name='shorts'),
     path('pants/', views.pants, name='pants'),
     path('contact-us/', views.contact_us, name='contact_us'),

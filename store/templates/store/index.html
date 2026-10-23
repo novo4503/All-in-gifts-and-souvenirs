@@ -604,6 +604,83 @@ Specificity: (0,2,1)
     background-image: none !important;
 }
 
+.homepage-category-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.homepage-category-boxes > .extra-category-box {
+    min-width: 0;
+    margin: 0;
+}
+
+.homepage-category-boxes .extra-category-box > .elementor-container > .elementor-column:first-of-type,
+.homepage-category-boxes .extra-category-box > .elementor-container > .elementor-column:last-of-type {
+    width: 50% !important;
+}
+
+.homepage-category-boxes .extra-category-box img.extra-category-image {
+    width: 300px !important;
+    max-width: 100% !important;
+    height: 300px !important;
+    object-fit: contain !important;
+}
+
+.homepage-category-boxes .extra-category-box .item-title-holder > a:is(:hover, :focus, :active),
+.homepage-category-boxes .extra-category-box .item-title-holder > a:is(:hover, :focus, :active) h3,
+.homepage-category-boxes .extra-category-box .subitem-title-holder > a:is(:hover, :focus, :active),
+.homepage-category-boxes .extra-category-box .subitem-title-holder > a:is(:hover, :focus, :active) h4 {
+    color: #87CEEB !important;
+}
+
+.homepage-category-boxes .extra-category-box .item-title-holder > a:focus-visible,
+.homepage-category-boxes .extra-category-box .subitem-title-holder > a:focus-visible {
+    outline: 2px solid #24799b;
+    outline-offset: 3px;
+}
+
+.extra-category-image-placeholder {
+    display: grid;
+    width: min(300px, 100%);
+    height: 300px;
+    place-items: center;
+    border-radius: 12px;
+    background: #87CEEB;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+    .homepage-category-boxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .homepage-category-boxes .extra-category-box img.extra-category-image {
+        width: 224px !important;
+        height: 224px !important;
+    }
+
+    .homepage-category-boxes .extra-category-box > .elementor-container {
+        flex-wrap: wrap !important;
+    }
+
+    .homepage-category-boxes .extra-category-box > .elementor-container > .elementor-column:first-of-type,
+    .homepage-category-boxes .extra-category-box > .elementor-container > .elementor-column:last-of-type {
+        width: 100% !important;
+    }
+
+    .extra-category-image-placeholder {
+        width: min(224px, 100%);
+        height: 224px;
+    }
+}
+
 
 
 
@@ -2149,7 +2226,7 @@ a.menu-title.et-column-title[title="View More"] {
 			<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-a0c4738 elementor-position-top elementor-widget elementor-widget-image-box" data-id="a0c4738" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="{% url 'category_products' 'men' %}" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[3][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="{{images.mens.image.url}}" class="attachment-full size-full wp-image-20032 top-seller-image" alt="T-Shirt Top Seller" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="{% url 'category_products' 'men' %}" tabindex="-1"><img data-od-removed-loading="lazy" data-od-replaced-sizes="auto, (max-width: 1024px) 100vw, 1024px" data-od-xpath="/HTML/BODY/DIV[@class='template-container']/*[2][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[3][self::SECTION]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::DIV]/*[1][self::FIGURE]/*[1][self::A]/*[1][self::IMG]" decoding="async" width="1024" height="1024" src="{{ top_seller_products.0.image.url }}" class="attachment-full size-full wp-image-20032 top-seller-image" alt="T-Shirt Top Seller" sizes="(max-width: 1024px) 100vw, 1024px"></a></figure></div>				</div>
 				</div>
 					</div>
 		</div>
@@ -2302,6 +2379,8 @@ a.menu-title.et-column-title[title="View More"] {
 
 </div>
 		</section>
+<!-- Existing category-card markup is retained below; live cards are rendered from Category records. -->
+{% comment %}
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-b05ecff elementor-section-boxed elementor-section-height-default elementor-section-height-default animated fadeInUp" data-id="b05ecff" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_mobile&quot;:&quot;fadeIn&quot;}">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-53ffb83" data-id="53ffb83" data-element_type="column">
@@ -4517,6 +4596,12 @@ a.menu-title.et-column-title[title="View More"] {
         <!--test7-->
 
 
+{% endcomment %}
+                <div class="homepage-category-boxes" aria-label="Shop categories">
+                    {% for category in homepage_categories %}
+                        {% include 'store/category_box.html' with category=category %}
+                    {% endfor %}
+                </div>
 		<section class="elementor-section elementor-top-section elementor-element elementor-element-b1ee641 elementor-section-boxed elementor-section-height-default elementor-section-height-default animated fadeInUp" data-id="b1ee641" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
 						<div class="elementor-container elementor-column-gap-no">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a1ccafd" data-id="a1ccafd" data-element_type="column">

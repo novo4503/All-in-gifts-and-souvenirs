@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ category_name }} | All In Gifts &amp; Souvenirs</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --category-blue: #87ceeb;
+            --category-blue-dark: #24799b;
+            --category-ink: #24323a;
+            --category-muted: #5d6b72;
+            --category-border: #d8e7ed;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: #f5fbfd;
+            color: var(--category-ink);
+            font-family: Arial, sans-serif;
+        }
+
+        a { color: inherit; }
+
+        .category-header {
+            padding: 20px max(20px, calc((100% - 1200px) / 2));
+            background: #fff;
+            border-bottom: 1px solid var(--category-border);
+        }
+
+        .category-header a {
+            color: var(--category-blue-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .category-page {
+            width: min(1200px, calc(100% - 32px));
+            margin: 36px auto 64px;
+        }
+
+        .category-intro {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 28px;
+            background: #fff;
+            border: 1px solid var(--category-border);
+            border-radius: 14px;
+        }
+
+        .category-intro img {
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+        }
+
+        h1, h2, h3 { margin-top: 0; }
+        h1 { margin-bottom: 8px; font-size: clamp(28px, 4vw, 40px); }
+        h2 { margin: 36px 0 18px; font-size: 26px; }
+        .category-description { margin: 0; color: var(--category-muted); line-height: 1.6; }
+
+        .subcategory-grid,
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 20px;
+        }
+
+        .subcategory-card,
+        .product-card {
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid var(--category-border);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: box-shadow .2s ease, transform .2s ease;
+        }
+
+        .subcategory-card:hover,
+        .product-card:hover {
+            box-shadow: 0 8px 22px rgb(36 121 155 / 14%);
+            transform: translateY(-2px);
+        }
+
+        .subcategory-card img,
+        .product-card img {
+            display: block;
+            width: 100%;
+            height: 210px;
+            padding: 12px;
+            background: #fff;
+            object-fit: contain;
+        }
+
+        .subcategory-card h3,
+        .product-card h3 {
+            margin: 0;
+            padding: 14px 16px;
+            font-size: 18px;
+        }
+
+        .product-card .product-price {
+            display: block;
+            padding: 0 16px 16px;
+            color: var(--category-blue-dark);
+            font-weight: 700;
+        }
+
+        .empty-category {
+            padding: 22px;
+            color: var(--category-muted);
+            background: #fff;
+            border: 1px solid var(--category-border);
+            border-radius: 12px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .pagination a {
+            color: var(--category-blue-dark);
+            font-weight: 700;
+        }
+
+        @media (max-width: 560px) {
+            .category-page { margin-top: 20px; }
+            .category-intro { align-items: flex-start; padding: 20px; }
+            .category-intro img { width: 80px; height: 80px; }
+            .subcategory-grid, .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+            .subcategory-card img, .product-card img { height: 150px; }
+            .subcategory-card h3, .product-card h3 { padding: 12px; font-size: 16px; }
+            .product-card .product-price { padding: 0 12px 12px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="category-header">
+        <a href="{% url 'home' %}">All In Gifts &amp; Souvenirs</a>
+    </header>
+    <main class="category-page">
+        <section class="category-intro">
+            {% if category_record.image %}
+                <img src="{{ category_record.image.url }}" alt="">
+            {% endif %}
+            <div>
+                <h1>{{ category_name }}</h1>
+                {% if category_record.description %}
+                    <p class="category-description">{{ category_record.description }}</p>
+                {% endif %}
+            </div>
+        </section>
+
+        {% if subcategories %}
+            <section aria-labelledby="subcategory-heading">
+                <h2 id="subcategory-heading">Shop {{ category_name }} subcategories</h2>
+                <div class="subcategory-grid">
+                    {% for subcategory in subcategories %}
+                        <a class="subcategory-card" href="{% url 'category_products' subcategory.slug %}">
+                            {% if subcategory.image %}
+                                <img src="{{ subcategory.image.url }}" alt="">
+                            {% elif subcategory.parent.image %}
+                                <img src="{{ subcategory.parent.image.url }}" alt="">
+                            {% endif %}
+                            <h3>{{ subcategory.name }}</h3>
+                        </a>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endif %}
+
+        <section aria-labelledby="product-heading">
+            <h2 id="product-heading">Products</h2>
+            {% if products %}
+                <div class="product-grid">
+                    {% for product in products %}
+                        <a class="product-card" href="{% url 'Product_Detail' product.slug %}">
+                            {% if product.image %}
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            {% endif %}
+                            <h3>{{ product.name }}</h3>
+                            <span class="product-price">${{ product.price }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+                {% if page_obj.has_other_pages %}
+                    <nav class="pagination" aria-label="Product pages">
+                        {% if page_obj.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                        {% endif %}
+                        <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                        {% endif %}
+                    </nav>
+                {% endif %}
+            {% else %}
+                <p class="empty-category">There are no products in this category yet.</p>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

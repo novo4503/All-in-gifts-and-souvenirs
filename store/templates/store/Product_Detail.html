@@ -470,6 +470,19 @@ footer .container {
     text-align: center !important;
 }
 
+.single-product .related-products-section {
+    clear: both;
+}
+
+body.single-product .single_add_to_cart_button::before {
+    content: none !important;
+}
+
+body.single-product #back-top .et-icon::before {
+    content: "\2191" !important;
+    font-family: Arial, sans-serif !important;
+}
+
 
 /* Force old Green Apples product layout to stop trapping content in side columns */
 .single-product .et_product-block,
@@ -760,6 +773,11 @@ body {
     outline-offset: 2px;
 }
 
+@media screen and (max-width: 992px) {
+    body.single-product {
+        padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+}
 
 </style>
 <style id="kirki-inline-styles"></style><style type="text/css" class="et_custom-css">.btn-checkout:hover,.btn-view-wishlist:hover{opacity:1 !important}.content-page,.page-content{padding-bottom:0!important}.products-loop .content-product .product-details,.swiper-container .content-product .product-details{text-align:start}.products-loop .content-product .star-rating,.swiper-container .content-product .star-rating{margin-left:0}.carousel-area.products-slider{padding:13px 12px 0}.content-product .products-page-cats a{font-size:11px;text-transform:uppercase}.grid-post-body,.single-post .post-heading{text-align:center}.sidebar-widget .widget-title span,.upsell-products .widget-title span{font-size:18px}.related-products-title{border-bottom:1px solid #e1e1e1;padding-bottom:15px}.related-products-title span{border-bottom:2px solid #4caf50;padding-bottom:13px}.woocommerce-pagination ul li span,.etheme-pagination span,.after-shop-loop a,.etheme-pagination a{border-radius:4px}.footer .et-mailchimp input[type="submit"],.footer .et-mailchimp input[type="email"]{border-radius:4px !important;border-color:transparent !important}.footer .mc4wp-form .et-mailchimp{background-color:#fff;border-radius:4px !important}input.dokan-form-control,input[type="text"],input[type="number"],input[type="email"],input[type="search"],input[type="password"],input[type="tel"],input[type="url"],.with-border-radius{border-radius:4px}@media (min-width:993px){.container,.et-container{padding-left:30px;padding-right:30px}.products-loop .product:hover,.carousel-area .product-slide:hover{box-shadow:0 0 10px 3px rgba(0,0,0,.1);z-index:2;transform:translateY(-5px) scale(1.007);border-radius:5px}.products-loop .type-product{padding-top:15px}.products-loop .content-product{margin-bottom:15px}.products-loop .product,.swiper-container .product-slide{transition:all .2s ease-in-out}}@media (min-width:768px) and (max-width:992px){.container,.et-container{padding-left:30px;padding-right:30px}}.swiper-custom-right:not(.et-swiper-elementor-nav),.swiper-custom-left:not(.et-swiper-elementor-nav){background:transparent !important}@media only screen and (max-width:1830px){.swiper-custom-left,.middle-inside .swiper-entry .swiper-button-prev,.middle-inside.swiper-entry .swiper-button-prev{left:-15px}.swiper-custom-right,.middle-inside .swiper-entry .swiper-button-next,.middle-inside.swiper-entry .swiper-button-next{right:-15px}.middle-inbox .swiper-entry .swiper-button-prev,.middle-inbox.swiper-entry .swiper-button-prev{left:8px}.middle-inbox .swiper-entry .swiper-button-next,.middle-inbox.swiper-entry .swiper-button-next{right:8px}.swiper-entry:hover .swiper-custom-left,.middle-inside .swiper-entry:hover .swiper-button-prev,.middle-inside.swiper-entry:hover .swiper-button-prev{left:-5px}.swiper-entry:hover .swiper-custom-right,.middle-inside .swiper-entry:hover .swiper-button-next,.middle-inside.swiper-entry:hover .swiper-button-next{right:-5px}.middle-inbox .swiper-entry:hover .swiper-button-prev,.middle-inbox.swiper-entry:hover .swiper-button-prev{left:5px}.middle-inbox .swiper-entry:hover .swiper-button-next,.middle-inbox.swiper-entry:hover .swiper-button-next{right:5px}}.header-main-menu.et_element-top-level .menu{margin-right:-5px;margin-left:-5px}@media only screen and (max-width:992px){.header-wrapper,.site-header-vertical{display:none}}@media only screen and (min-width:993px){.mobile-header-wrapper{display:none}}.swiper-container{width:auto}.content-product .product-content-image img,.category-grid img,.categoriesCarousel .category-grid img{width:100%}.etheme-elementor-slider:not(.swiper-container-initialized,.swiper-initialized) .swiper-slide{max-width:calc(100% / var(--slides-per-view,4))}.etheme-elementor-slider[data-animation]:not(.swiper-container-initialized,.swiper-initialized,[data-animation=slide],[data-animation=coverflow]) .swiper-slide{max-width:100%}body:not([data-elementor-device-mode]) .etheme-elementor-off-canvas__container{transition:none;opacity:0;visibility:hidden;position:fixed}</style><link data-od-added-tag="" rel="preload" fetchpriority="high" as="image" href="https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-600x600.jpeg" imagesrcset="https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-600x600.jpeg 600w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-300x300.jpeg 300w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-1024x1024.jpeg 1024w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-150x150.jpeg 150w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-768x768.jpeg 768w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-100x100.jpeg 100w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-1x1.jpeg 1w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285-10x10.jpeg 10w, https://www.greenapples.store/wp-content/uploads/2024/02/img_2285.jpeg 1080w" imagesizes="auto, (max-width: 600px) 100vw, 600px" media="screen and (782px &lt; width)">
@@ -1798,26 +1816,37 @@ function changeMainImage(imageUrl) {
         <p>Tesla is one of the world&#x27;s leading electric vehicle manufacturers, known for its innovative approach to sustainable transportation and clean energy. Founded in 2003, the company has transformed the automotive industry by producing high-performance electric cars that combine advanced technology, impressive range, and modern design. Beyond vehicles, Tesla develops energy solutions such as solar panels, solar roofs, and large-scale battery storage systems aimed at reducing reliance on fossil fuels. Through continuous innovation in artificial intelligence, autonomous driving technology, and renewable energy, Tesla has become a major force in shaping the future of transportation and sustainable living.</p>
     </div>-->
 
-	<form method="post" action="{% url 'add_to_cart' product.id %}">
-		{% csrf_token %}
-		<label for="cart-quantity">Quantity</label>
-		<input id="cart-quantity" type="number" name="quantity" value="1" min="1" max="99" required>
-		<button type="submit" class="button alt">Add to Cart</button>
-	</form>
+    <form method="post" action="{% url 'add_to_cart' product.id %}">
+        {% csrf_token %}
+	{# Render any ProductOption rows attached to this product #}
+    {% if product_options %}
+        {% for option in product_options %}
+            {% if option.value_list %}
+            <div class="wcpa_wrap wcpa-col-12 option-block" style="margin:12px 0;">
+                <label class="wcpa_field_label" for="option_{{ option.pk }}">{{ option.name }}</label>
+                <select name="option_{{ option.pk }}" id="option_{{ option.pk }}" {% if option.is_required %}required{% endif %} class="wcpa_field_input">
+                    <option value="">{% if option.is_required %}Select{% else %}Choose{% endif %} {{ option.name }}</option>
+                    {% for value in option.value_list %}
+                        <option value="{{ value }}">{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+<div class="wcpa_wrap wcpa-col-12 qty" style="margin-top:18px;">
+    <label class="wcpa_field_label" for="cart-quantity">Quantity</label>
+    <input id="cart-quantity" type="number" name="quantity" value="1" min="1" max="99" required class="wcpa_field_input" />
 </div>
 
-
+<div style="margin-top:18px;">
+    <button type="submit" class="single_add_to_cart_button button alt">Add to cart</button>
+</div>
+</form>
 
 
     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-
-
-
-
-
-							<select id="pa_style" class="" name="attribute_pa_style" data-attribute_name="attribute_pa_style" data-show_option_none="yes"><option value="">Choose an option</option><option value="1" class="attached enabled">1</option><option value="2" class="attached enabled">2</option><option value="3" class="attached enabled">3</option><option value="4" class="attached enabled">4</option><option value="5" class="attached enabled">5</option><option value="6" class="attached enabled">6</option><option value="7" class="attached enabled">7</option><option value="8" class="attached enabled">8</option><option value="9" class="attached enabled">9</option><option value="10" class="attached enabled">10</option><option value="11" class="attached enabled">11</option><option value="12" class="attached enabled">12</option></select><a class="reset_variations" href="#" aria-label="Clear options" style="visibility: hidden;">Clear</a>
-
-
 
 
     <span class="flex flex-wrap align-items-center">
@@ -1917,13 +1946,6 @@ function changeMainImage(imageUrl) {
 			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information" style="display: none;">
 
 
-<table class="woocommerce-product-attributes shop_attributes" aria-label="Product Details">
-			<tbody><tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_style">
-			<th class="woocommerce-product-attributes-item__label" scope="row">Style #</th>
-			<td class="woocommerce-product-attributes-item__value"><p>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12</p>
-</td>
-		</tr>
-	</tbody></table>
 					</div>
 
 					</div>
@@ -1939,7 +1961,7 @@ function changeMainImage(imageUrl) {
 		</div>
 
         </div>
-	        <div class="element-Dbuvt et_column et_product-block mob-full-width mob-full-width-children justify-content-start" style="width:100%;" data-key="element-Dbuvt" data-width="100" data-start="0">
+	        <div class="element-Dbuvt et_column et_product-block mob-full-width mob-full-width-children justify-content-start related-products-section" style="width:100%;" data-key="element-Dbuvt" data-width="100" data-start="0">
 			<div class="related-products-wrapper products-hover-only-icons">
     <h2 class="products-title related-products-title">
         <span>Related products</span>
@@ -2061,8 +2083,6 @@ function changeMainImage(imageUrl) {
 	<input type="hidden" name="variation_id" class="variation_id" value="0">
 </div>
 		</div>
-
-	</form>
 
 
 		                    </div>
